@@ -53,7 +53,7 @@ class Board:
         for i in range(self.height):
             for j in range(self.width):
                 print(self.board[i][j], end="")
-            print("\n", end="")
+            print()
 
 test = Board(10, 10, 1)
 test.displayBoard()
