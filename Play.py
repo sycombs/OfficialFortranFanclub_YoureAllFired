@@ -17,27 +17,27 @@ def inputNumber(prompt):
             break
 
 def show(b):
-    print("  ",end="")
+    print("   ", end="")
     for i in range(b.width):
-        print(" "+str(i)+" ", end="")
-    print("")
-    print("  ",end="")
-    for i in range(3*b.width):
-        print('-', end="")
-    print("")
+        print(" "+f"{i:02}"+" ", end="")
+    print()
+    print("  ", end="")
+    for i in range(b.width):
+        print('----', end="")
+    print()
     for i in range(b.height):
-        print(i, end="")
+        print(f"{i:02}", end="")
         print("|",end="")
         for j in range(b.width):
             if b.grid[i][j].isRevealed:
                 if b.grid[i][j].adj == 0:
-                    print(" _ ", end ='')
+                    print("  _ ", end='')
                 else:
-                    print(str(b.grid[i][j].adj), end ='')
+                    print("  "+str(b.grid[i][j].adj)+" ", end='')
             elif b.grid[i][j].isFlagged:
-                print(" F ", end = '')
+                print("  F ", end='')
             else:
-                print(" X ", end ='')
+                print("  X ", end='')
         print()
 
 def run():
