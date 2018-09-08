@@ -62,7 +62,8 @@ def run():
     board = Board(height, width, mines)
 
     lose = False
-    while not lose:
+    flaggedBombCount = 0
+    while not lose and flaggedBombCount != board.mines:
         """
          action = input("What would you like to do? Enter 'r' to reveal, 'f' to flag, or 's' to show:")
         if action == "r": text = "reveal"
@@ -74,8 +75,10 @@ def run():
         c = input("MENU \n Reveal: r x y\n Flag: f x y\n Show: s\n Quit: q \n <Prompt>: ")#TODO discuss possible promts, like turn counter
         a = c.split()[0]
         if a == "r" or a == "f":
-            column, row = c.split()[1],c.split()[2]
-            lose = click(board,int(row), int(column), a)
+            column, row = int(c.split()[1]),int(c.split()[2])
+            lose = click(board,(row), (column), a)
+            if board.grid[row][column].isBomb and board.grid[row][column].isFlagged:
+                    flaggedBombCount += 1
         elif c == "s":
             show(board)
         elif c == "q":
@@ -83,6 +86,11 @@ def run():
         else:
             print("invalid Command")
             continue
+
+    if lose:
+        print("You need more practice young grasshopper")
+    else:
+        print("you are the weiner! (Mario Voice)")
 
 def click(b,row, column, action):
     if action == "r":
@@ -93,6 +101,10 @@ def click(b,row, column, action):
             return False
     elif action == "f":
         b.grid[row][column].isFlagged = True
+        return False
+
+
+
 
 
 
