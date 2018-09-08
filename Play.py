@@ -1,5 +1,21 @@
 from Board import Board
 
+def inputNumber(prompt):
+    """
+    catches inputs by user for anything other than an integer.
+    :param prompt:
+    :return:
+    """
+    while True:
+        try:
+            userInput = int(input(prompt))
+        except ValueError:
+            print("Pick a whole number silly goose... try again")
+            continue
+        else:
+            return userInput
+            break
+
 def show(b):
     print("  ",end="")
     for i in range(b.width):
@@ -28,21 +44,21 @@ def run():
     """
     Max height and width prompts are set to tell user to put dimensions that we can handle.
     """
-    height = int(input("Enter the height of the board: "))
+    height = inputNumber("Enter the height of the board: ")
     while height > 24:
-        height = int(input("please enter a height less than 25... try again "))
+        height = inputNumber("please enter a height less than 25... try again ")
     while height < 0:
-        height = int(input("You can't have negative height... try again "))
-    width = int(input("Enter the width of the board: "))
+        height = inputNumber("You can't have negative height... try again ")
+    width = inputNumber("Enter the width of the board: ")
     while width > 24:
-        width = int(input("please enter a width less than 25... try again "))
+        width = inputNumber("please enter a width less than 25... try again ")
     while width < 0:
-        width = int(input("you can't have a negative width... try again "))
-    mines = int(input("Enter the number of mines: "))
+        width = inputNumber("you can't have a negative width... try again ")
+    mines = inputNumber("Enter the number of mines: ")
     while mines >= height*width:
-        mines = int(input("please use less than " + str(height*width) + " mines.  Try again: "))
+        mines = inputNumber("please use less than " + str(height*width) + " mines.  Try again: ")
     while mines <= 0:
-        mines = int(input("You have to have at least 1 bomb silly goose... try again "))
+        mines = inputNumber("You have to have at least 1 bomb silly goose... try again ")
     board = Board(height, width, mines)
 
     lose = False
