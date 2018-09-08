@@ -1,5 +1,21 @@
 from Board import Board
 
+def inputNumber(prompt):
+    """
+    catches inputs by user for anything other than an integer.
+    :param prompt:
+    :return:
+    """
+    while True:
+        try:
+            userInput = int(input(prompt))
+        except ValueError:
+            print("Pick a whole number silly goose... try again")
+            continue
+        else:
+            return userInput
+            break
+
 def show(b):
     print("  ",end="")
     for i in range(b.width):
@@ -25,28 +41,44 @@ def show(b):
         print()
 
 def run():
-    #TODO discuss max height/width???
-    height = int(input("Enter the height of the board:"))
-    width = int(input("Enter the width of the board:"))
-    mines = int(input("Enter the number of mines:"))
+    """
+    Max height and width prompts are set to tell user to put dimensions that we can handle.
+    """
+    height = inputNumber("Enter the height of the board: ")
+    while height > 24:
+        height = inputNumber("please enter a height less than 25... try again ")
+    while height < 0:
+        height = inputNumber("You can't have negative height... try again ")
+    width = inputNumber("Enter the width of the board: ")
+    while width > 24:
+        width = inputNumber("please enter a width less than 25... try again ")
+    while width < 0:
+        width = inputNumber("you can't have a negative width... try again ")
+    mines = inputNumber("Enter the number of mines: ")
     while mines >= height*width:
-        mines = int(input("please use less than " + str(height*width) + " mines.  Try again: ")) 
+        mines = inputNumber("please use less than " + str(height*width) + " mines.  Try again: ")
+    while mines <= 0:
+        mines = inputNumber("You have to have at least 1 bomb silly goose... try again ")
     board = Board(height, width, mines)
 
     lose = False
-    while not lose:
-        # action = input("What would you like to do? Enter 'r' to reveal, 'f' to flag, or 's' to show:")
-        # if action == "r": text = "reveal"
-        # elif action == "f": text = "flag"
-        # else: text = ""
-        # row = input(f"For the cell you would like to {text}, enter row:")
-        # column = input(f"For the cell you would like to {text}, enter column:")
-
+    flaggedBombCount = 0
+    while not lose and flaggedBombCount != board.mines:
+        """
+         action = input("What would you like to do? Enter 'r' to reveal, 'f' to flag, or 's' to show:")
+        if action == "r": text = "reveal"
+        elif action == "f": text = "flag"
+        else: text = ""
+        row = input(f"For the cell you would like to {text}, enter row:")
+        column = input(f"For the cell you would like to {text}, enter column:")
+        """
         c = input("MENU \n Reveal: r x y\n Flag: f x y\n Show: s\n Quit: q \n <Prompt>: ")#TODO discuss possible promts, like turn counter
         a = c.split()[0]
         if a == "r" or a == "f":
-            column, row = c.split()[1],c.split()[2]
-            lose = click(board,int(row), int(column), a)
+            column, row = int(c.split()[1]),int(c.split()[2])
+            lose = click(board,(row), (column), a)
+            if board.grid[row][column].isBomb and board.grid[row][column].isFlagged:
+                    flaggedBombCount += 1
         elif c == "s":
             show(board)
         elif c == "q":
@@ -54,6 +86,11 @@ def run():
         else:
             print("invalid Command")
             continue
+
+    if lose:
+        print("You need more practice young grasshopper")
+    else:
+        print("you are the weiner! (Mario Voice)")
 
 def click(b,row, column, action):
     if action == "r":
