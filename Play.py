@@ -3,7 +3,7 @@ from Board import Board
 def show(b):
     print("  ",end="")
     for i in range(b.width):
-        print(" "i, end="")
+        print(" "+str(i)+" ",end="")
     print("")
     print("  ",end="")
     for i in range(3*b.width):
@@ -25,23 +25,30 @@ def show(b):
         print()
 
 def run():
-    #TODO discuss max height/width???
-    height = int(input("Enter the height of the board:"))
-    width = int(input("Enter the width of the board:"))
+    """
+    Max height and width prompts are set to tell user to put dimensions that we can handle.
+    """
+    height = int(input("Enter the height of the board"+"(Max height 24):"))
+    while height > 24:
+        height = int(input("please enter a height less than 25... try again"))
+    width = int(input("Enter the width of the board:"+"Max width 24"))
+    while width > 24:
+        width = int(input("please enter a width less than 25... try again"))
     mines = int(input("Enter the number of mines:"))
     while mines >= height*width:
-        mines = input("please use less than " + str(height*width) + " mines.  Try again: ") 
+        mines = int(input("please use less than " + str(height*width) + " mines.  Try again: "))
     board = Board(height, width, mines)
 
     lose = False
     while not lose:
-        # action = input("What would you like to do? Enter 'r' to reveal, 'f' to flag, or 's' to show:")
-        # if action == "r": text = "reveal"
-        # elif action == "f": text = "flag"
-        # else: text = ""
-        # row = input(f"For the cell you would like to {text}, enter row:")
-        # column = input(f"For the cell you would like to {text}, enter column:")
-
+        """
+         action = input("What would you like to do? Enter 'r' to reveal, 'f' to flag, or 's' to show:")
+        if action == "r": text = "reveal"
+        elif action == "f": text = "flag"
+        else: text = ""
+        row = input(f"For the cell you would like to {text}, enter row:")
+        column = input(f"For the cell you would like to {text}, enter column:")
+        """
         c = input("MENU \n Reveal: r x y\n Flag: f x y\n Show: s\n Quit: q \n <Prompt>: ")#TODO discuss possible promts, like turn counter
         a = c.split()[0]
         if a == "r" or a == "f":
@@ -64,5 +71,7 @@ def click(b,row, column, action):
             return False
     elif action == "f":
         b.grid[row][column].isFlagged = True
+
+
 
 run()
