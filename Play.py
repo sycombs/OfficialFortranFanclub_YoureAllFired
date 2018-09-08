@@ -3,7 +3,7 @@ from Board import Board
 def show(b):
     print("  ",end="")
     for i in range(b.width):
-        print(" "i, end="")
+        print(" "+str(i)+" ", end="")
     print("")
     print("  ",end="")
     for i in range(3*b.width):
@@ -30,7 +30,7 @@ def run():
     width = int(input("Enter the width of the board:"))
     mines = int(input("Enter the number of mines:"))
     while mines >= height*width:
-        mines = input("please use less than " + str(height*width) + " mines.  Try again: ") 
+        mines = int(input("please use less than " + str(height*width) + " mines.  Try again: ")) 
     board = Board(height, width, mines)
 
     lose = False
@@ -58,11 +58,47 @@ def run():
 def click(b,row, column, action):
     if action == "r":
         if b.grid[row][column].isBomb:
+            show(b)
             return True
+            
         else:
             b.grid[row][column].isRevealed = True
-            return False
+            show(b)
+            return spread(b,row,column)
     elif action == "f":
         b.grid[row][column].isFlagged = True
+        show(b)
+        return False
+
+def spread(b,row,column):
+    if (b.grid[row][column].adj >0 or b.grid[row][column].isRevealed):
+        b.grid[row][column].isRevealed=True
+        return False
+    else:
+        b.grid[row][column].isRevealed=True
+        if row-1 >= 0:
+            spread(b,row-1,column)
+            # if column-1 >= 0:
+            #     spread(b,row-1,column-1)
+            # if column+1 < b.width:
+            #     spread(b,row-1,column+1)
+        else:
+            return False
+        if row+1 < b.height:
+            spread(b,row+1,column)
+            # if column-1 >= 0:
+            #     spread(b,row+1,column-1)
+            # if column+1 < b.width:
+            #     spread(b,row+1,column+1)
+        else:
+            return False
+        if column-1 >= 0:
+            spread(b,row,column-1)
+        else:
+            return False
+        if column+1 < b.width:
+            spread(b,row,column+1)
+        else:
+            return False
 
 run()

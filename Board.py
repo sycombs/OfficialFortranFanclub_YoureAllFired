@@ -11,6 +11,8 @@ class Cell:
         if self.isBomb:
             return "X"
         return str(self.adj)
+    def reveal(self):
+        self.isRevealed = True
 
 class Board:
     def __init__(self, height, width, mines):
