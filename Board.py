@@ -18,6 +18,7 @@ class Board:
         self.width = width
         self.mines = mines
         self.grid = []
+        self.flagCount = 0
         for i in range(height):
             temp = []
             for j in range(width):

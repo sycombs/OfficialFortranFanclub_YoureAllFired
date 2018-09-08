@@ -63,6 +63,7 @@ def run():
 
     lose = False
     flaggedBombCount = 0
+
     while not lose and flaggedBombCount != board.mines:
         """
          action = input("What would you like to do? Enter 'r' to reveal, 'f' to flag, or 's' to show:")
@@ -100,7 +101,15 @@ def click(b,row, column, action):
             b.grid[row][column].isRevealed = True
             return False
     elif action == "f":
-        b.grid[row][column].isFlagged = True
+        if b.grid[row][column].isFlagged:
+            b.flagCount -= 1
+            b.grid[row][column].isFlagged = False
+        else:
+            if b.flagCount == b.mines:
+                print("Cannot use more flags than bombs... remove a flag to place another ")
+            else:
+                b.flagCount += 1
+                b.grid[row][column].isFlagged = True
         return False
 
 
