@@ -60,6 +60,7 @@ def run():
     while mines <= 0:
         mines = inputNumber("You have to have at least 1 bomb silly goose... try again ")
     board = Board(height, width, mines)
+    show(board)
 
     lose = False
     flaggedBombCount = 0
