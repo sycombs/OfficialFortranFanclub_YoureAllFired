@@ -73,14 +73,13 @@ def run():
         row = input(f"For the cell you would like to {text}, enter row:")
         column = input(f"For the cell you would like to {text}, enter column:")
         """
-        c = input("MENU \n Reveal: r x y\n Flag: f x y\n Show: s\n Quit: q \n <Prompt>: ")#TODO discuss possible promts, like turn counter
+        c = input("MENU \n Reveal Square: r x y\n Flag: f x y\n Quit: q \n <Prompt>: ")#TODO discuss possible promts, like turn counter
         a = c.split()[0]
         if a == "r" or a == "f":
             column, row = int(c.split()[1]),int(c.split()[2])
             lose = click(board,(row), (column), a)
             if board.grid[row][column].isBomb and board.grid[row][column].isFlagged:
                     flaggedBombCount += 1
-        elif c == "s":
             show(board)
         elif c == "q":
             break
@@ -106,7 +105,8 @@ def click(b,row, column, action):
             b.grid[row][column].isFlagged = False
         else:
             if b.flagCount == b.mines:
-                print("Cannot use more flags than bombs... remove a flag to place another ")
+                print("Cannot use more flags than bombs... remove a flag to place another; \n"
+                      "place a flag on a square that has a flag in order to remove it")
             else:
                 b.flagCount += 1
                 b.grid[row][column].isFlagged = True
