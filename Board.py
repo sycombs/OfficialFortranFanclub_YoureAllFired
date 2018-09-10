@@ -58,5 +58,4 @@ class Board:
                 print(self.grid[i][j], end="")
             print()
 
-# test = Board(10, 10, 1)
-# test.displayBoard()
+
