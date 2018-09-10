@@ -74,4 +74,10 @@ class Board:
         for i in range(self.height):
             for j in range(self.width):
                 print(self.grid[i][j], end="")
+<<<<<<< HEAD
             print()
+=======
+            print()
+
+
+>>>>>>> 2dc43ce10ba947bd3b53748b7bfd0cdc0d3d10cb
