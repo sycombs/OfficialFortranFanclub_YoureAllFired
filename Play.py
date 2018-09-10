@@ -1,6 +1,5 @@
 from Board import Board
-from datetime import time
-d = time
+
 
 
 
