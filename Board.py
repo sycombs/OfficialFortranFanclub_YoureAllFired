@@ -1,37 +1,38 @@
 import random
 
-"""
-Store data for each cell in the grid.
-"""
 class Cell:
     """
-    Initiates a Cell. Upon initiation, a Cell is not a bomb, not revealed, not flagged, and adjacent to no bombs.
+    Store data for each cell in the grid.
     """
     def __init__(self):
+        """
+        Initiates a Cell. Upon initiation, a Cell is not a bomb, not revealed, not flagged, and adjacent to no bombs.
+        """
         self.isBomb = False
         self.isRevealed = False
         self.isFlagged = False
         self.adj = 0
-    """
-    Controls how a Cell is represented. Bombs are represented by Xs; other Cells are represented by the number of adjacent bombs.
-    """
+
     def __repr__(self):
+        """
+        Controls how a Cell is represented. Bombs are represented by Xs; other Cells are represented by the number of adjacent bombs.
+        """
         if self.isBomb:
             return "X"
         return str(self.adj)
 
-"""
-Maintains a 2D array of Cells.
-"""
 class Board:
     """
-    Initiates a Board. Maintains a height, a width, number of mines, and the number of Cells within it that are flagged.
-    Upon initiation, randomly places the mines in the grid and updates each cells adjecency count accordingly.
-    :param height: The height of the grid.
-    :param width: The width of the grid.
-    :param mines: The number of mines distributed across the Board.
+    Maintains a 2D array of Cells.
     """
     def __init__(self, height, width, mines):
+        """
+        Initiates a Board. Maintains a height, a width, number of mines, and the number of Cells within it that are flagged.
+        Upon initiation, randomly places the mines in the grid and updates each cells adjecency count accordingly.
+        :param height: The height of the grid.
+        :param width: The width of the grid.
+        :param mines: The number of mines distributed across the Board.
+        """
         self.height = height
         self.width = width
         self.mines = mines
@@ -67,10 +68,11 @@ class Board:
                 self.grid[row][col-1].adj += 1
             if col+1 < width:
                 self.grid[row][col+1].adj += 1
-    """
-    Prints the Board.
-    """
+
     def displayBoard(self):
+        """
+        Prints the Board.
+        """
         for i in range(self.height):
             for j in range(self.width):
                 print(self.grid[i][j], end="")
