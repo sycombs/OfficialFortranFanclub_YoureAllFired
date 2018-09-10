@@ -89,6 +89,8 @@ def run():
 
     if lose:
         print("You need more practice young grasshopper")
+    elif c == "q":
+        print("Thank you for playing... come again")
     else:
         print("you are the weiner! (Mario Voice)") #FIXME triggers even if quit option selected
 
