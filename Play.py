@@ -90,7 +90,7 @@ def run():
     if lose:
         print("You need more practice young grasshopper")
     else:
-        print("you are the weiner! (Mario Voice)")
+        print("you are the weiner! (Mario Voice)") #FIXME triggers even if quit option selected
 
 def click(b,row, column, action):
     if action == "r":
@@ -99,9 +99,11 @@ def click(b,row, column, action):
             return True
             
         else:
-            b.grid[row][column].isRevealed = True
+            
+            spread(b,row,column)
+            #b.grid[row][column].isRevealed = True
             show(b)
-            return spread(b,row,column)
+            return False
     elif action == "f":
         b.grid[row][column].isFlagged = True
         show(b)
@@ -110,7 +112,7 @@ def click(b,row, column, action):
 def spread(b,row,column):
     if (b.grid[row][column].adj >0 or b.grid[row][column].isRevealed):
         b.grid[row][column].isRevealed=True
-        return False
+        return
     else:
         b.grid[row][column].isRevealed=True
         if row-1 >= 0:
@@ -119,23 +121,16 @@ def spread(b,row,column):
             #     spread(b,row-1,column-1)
             # if column+1 < b.width:
             #     spread(b,row-1,column+1)
-        else:
-            return False
         if row+1 < b.height:
             spread(b,row+1,column)
             # if column-1 >= 0:
             #     spread(b,row+1,column-1)
             # if column+1 < b.width:
             #     spread(b,row+1,column+1)
-        else:
-            return False
         if column-1 >= 0:
             spread(b,row,column-1)
-        else:
-            return False
         if column+1 < b.width:
             spread(b,row,column+1)
-        else:
-            return False
+        return
 
 run()
