@@ -19,6 +19,11 @@ def inputNumber(prompt):
             return userInput
 
 def show(b):
+    """
+    shows current state of board in command line
+    :param Board b:
+    :return None:
+    """
     print("   ", end="")
     for i in range(b.width):
         print(" "+f"{i:02}"+" ", end="")
@@ -68,14 +73,6 @@ def run():
     flaggedBombCount = 0
 
     while not lose and flaggedBombCount != board.mines:
-        """
-         action = input("What would you like to do? Enter 'r' to reveal, 'f' to flag, or 's' to show:")
-        if action == "r": text = "reveal"
-        elif action == "f": text = "flag"
-        else: text = ""
-        row = input(f"For the cell you would like to {text}, enter row:")
-        column = input(f"For the cell you would like to {text}, enter column:")
-        """
         c = input("MENU \n Reveal Square: r x y\n Flag: f x y\n Quit: q \n <Prompt>: ")#TODO discuss possible promts, like turn counter
         a = c.split()[0]
         if a == "r" or a == "f":
@@ -98,6 +95,11 @@ def run():
         print("you are the weiner! (Mario Voice)") #FIXME triggers even if quit option selected
 
 def click(b,row, column, action):
+    """
+    selects cell to perform intended action on
+    :param Board b, int row, int column, string action:
+    :return Bool lose:
+    """
     if action == "r":
         if b.grid[row][column].isBomb:
             show(b)
@@ -122,6 +124,11 @@ def click(b,row, column, action):
         return False
 
 def spread(b,row,column):
+    """
+    Reveals adjacent cells
+    :param Board b, int row, int column:
+    :return None:
+    """
     if (b.grid[row][column].adj >0 or b.grid[row][column].isRevealed):
         b.grid[row][column].isRevealed=True
         return
