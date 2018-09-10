@@ -1,5 +1,8 @@
 from Board import Board
 
+
+
+
 def inputNumber(prompt):
     """
     catches inputs by user for anything other than an integer.
@@ -51,13 +54,13 @@ def run():
     height = inputNumber("Enter the height of the board: ")
     while height > 24:
         height = inputNumber("please enter a height less than 25... try again ")
-    while height < 0:
-        height = inputNumber("You can't have negative height... try again ")
+    while height < 2:
+        height = inputNumber("You have to have at least a height of two... try again ")
     width = inputNumber("Enter the width of the board: ")
     while width > 24:
         width = inputNumber("please enter a width less than 25... try again ")
-    while width < 0:
-        width = inputNumber("you can't have a negative width... try again ")
+    while width < 2:
+        width = inputNumber("you have to at least have width of two... try again ")
     mines = inputNumber("Enter the number of mines: ")
     while mines >= height*width:
         mines = inputNumber("please use less than " + str(height*width) + " mines.  Try again: ")
@@ -85,7 +88,7 @@ def run():
             continue
 
     if lose:
-        print("You need more practice young grasshopper")
+        print("Bomb detonated: You need more practice young grasshopper")
     elif c == "q":
         print("Thank you for playing... come again")
     else:
@@ -99,11 +102,19 @@ def click(b,row, column, action):
     """
     if action == "r":
         if b.grid[row][column].isBomb:
+<<<<<<< HEAD
+=======
+
+>>>>>>> 70ff75aa285f9046af8a71d36f71105baefae2ba
             return True
 
         else:
 
             spread(b,row,column)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 70ff75aa285f9046af8a71d36f71105baefae2ba
             return False
     elif action == "f":
         if b.grid[row][column].isFlagged:
