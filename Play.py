@@ -3,8 +3,8 @@ from Board import Board
 def inputNumber(prompt):
     """
     catches inputs by user for anything other than an integer.
-    :param prompt:
-    :return:
+    :param prompt: string
+    :return: int userInput
     """
     while True:
         try:
@@ -14,7 +14,6 @@ def inputNumber(prompt):
             continue
         else:
             return userInput
-            break
 
 def show(b):
     """
@@ -87,6 +86,8 @@ def run():
 
     if lose:
         print("You need more practice young grasshopper")
+    elif c == "q":
+        print("Thank you for playing... come again")
     else:
         print("you are the weiner! (Mario Voice)") #FIXME triggers even if quit option selected
 
@@ -104,7 +105,6 @@ def click(b,row, column, action):
         else:
             
             spread(b,row,column)
-            #b.grid[row][column].isRevealed = True
             show(b)
             return False
     elif action == "f":
@@ -133,16 +133,8 @@ def spread(b,row,column):
         b.grid[row][column].isRevealed=True
         if row-1 >= 0:
             spread(b,row-1,column)
-            # if column-1 >= 0:
-            #     spread(b,row-1,column-1)
-            # if column+1 < b.width:
-            #     spread(b,row-1,column+1)
         if row+1 < b.height:
             spread(b,row+1,column)
-            # if column-1 >= 0:
-            #     spread(b,row+1,column-1)
-            # if column+1 < b.width:
-            #     spread(b,row+1,column+1)
         if column-1 >= 0:
             spread(b,row,column-1)
         if column+1 < b.width:
