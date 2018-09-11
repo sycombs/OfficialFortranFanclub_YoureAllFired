@@ -1,7 +1,23 @@
 from Board import Board
 
-
-
+def promptCheck(prompt):
+    """
+    Checks for valid inputs at the menu prompt.
+    :param prompt: The input provided by the user as a string.
+    :return: True if the input is valid, False otherwise.
+    """
+    arr = prompt.split(" ")
+    if arr[0] not in ["r", "f", "q"]:
+        return False
+    if arr[0] == "r" or arr[0] == "f":
+        if len(arr) < 3:
+            return False
+        try:
+            int(arr[1])
+            int(arr[2])
+        except ValueError:
+            return False
+    return True
 
 def inputNumber(prompt):
     """
@@ -73,19 +89,19 @@ def run():
     flaggedBombCount = 0
 
     while not lose and flaggedBombCount != board.mines:
-        c = input("MENU \n Reveal Square: r x y\n Flag: f x y\n Quit: q \n <Prompt>: ")#TODO discuss possible promts, like turn counter
-        a = c.split()[0]
-        if a == "r" or a == "f":
-            column, row = int(c.split()[1]),int(c.split()[2])
-            lose = click(board,(row), (column), a)
-            if board.grid[row][column].isBomb and board.grid[row][column].isFlagged:
-                    flaggedBombCount += 1
-            show(board)
-        elif c == "q":
-            break
+        c = input("MENU \n Reveal Square: r x y\n Flag: f x y\n Quit: q \n <Prompt>: ").lower() #TODO discuss possible prompts, like turn counter
+        if promptCheck(c):
+            a = c.split()[0]
+            if a == "r" or a == "f":
+                column, row = int(c.split()[1]), int(c.split()[2])
+                lose = click(board, row, column, a)
+                if board.grid[row][column].isBomb and board.grid[row][column].isFlagged:
+                        flaggedBombCount += 1
+                show(board)
+            elif a == "q":
+                break
         else:
-            print("invalid Command")
-            continue
+            print("Invalid command")
 
     if lose:
         print("Bomb detonated: You need more practice young grasshopper")
