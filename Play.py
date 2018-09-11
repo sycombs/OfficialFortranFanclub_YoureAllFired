@@ -102,19 +102,9 @@ def click(b,row, column, action):
     """
     if action == "r":
         if b.grid[row][column].isBomb:
-<<<<<<< HEAD
-=======
-
->>>>>>> 70ff75aa285f9046af8a71d36f71105baefae2ba
             return True
-
         else:
-
             spread(b,row,column)
-<<<<<<< HEAD
-=======
-
->>>>>>> 70ff75aa285f9046af8a71d36f71105baefae2ba
             return False
     elif action == "f":
         if b.grid[row][column].isFlagged:
