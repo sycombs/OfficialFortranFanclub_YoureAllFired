@@ -29,7 +29,7 @@ def inputNumber(prompt):
         try:
             userInput = int(input(prompt))
         except ValueError:
-            print("Pick a whole number silly goose... try again")
+            print("Pick a whole number, silly goose... try again.")
             continue
         else:
             return userInput
@@ -42,23 +42,23 @@ def show(b):
     """
     print("   ", end="")
     for i in range(b.width):
-        print(" "+f"{i:02}"+" ", end="")
+        print(" "+f"{i: 2}"+" ", end="")
     print()
     print("  ", end="")
     for i in range(b.width):
         print('----', end="")
     print()
     for i in range(b.height):
-        print(f"{i:02}", end="")
+        print(f"{i: 2}", end="")
         print("|",end="")
         for j in range(b.width):
-            if b.grid[i][j].isRevealed:
+            if b.grid[i][j].isFlagged:
+                print("  F ", end='')
+            elif b.grid[i][j].isRevealed:
                 if b.grid[i][j].adj == 0:
                     print("  _ ", end='')
                 else:
                     print("  "+str(b.grid[i][j].adj)+" ", end='')
-            elif b.grid[i][j].isFlagged:
-                print("  F ", end='')
             else:
                 print("  X ", end='')
         print()
@@ -69,19 +69,19 @@ def run():
     """
     height = inputNumber("Enter the height of the board: ")
     while height > 24:
-        height = inputNumber("please enter a height less than 25... try again ")
+        height = inputNumber("Please enter a height less than 25... try again.")
     while height < 2:
-        height = inputNumber("You have to have at least a height of two... try again ")
+        height = inputNumber("You have to have at least a height of 2... try again.")
     width = inputNumber("Enter the width of the board: ")
     while width > 24:
-        width = inputNumber("please enter a width less than 25... try again ")
+        width = inputNumber("Please enter a width less than 25... try again.")
     while width < 2:
-        width = inputNumber("you have to at least have width of two... try again ")
+        width = inputNumber("You have to at least have width of 2... try again.")
     mines = inputNumber("Enter the number of mines: ")
     while mines >= height*width:
-        mines = inputNumber("please use less than " + str(height*width) + " mines.  Try again: ")
+        mines = inputNumber(f"Please use less than {height*width} mines... try again.")
     while mines <= 0:
-        mines = inputNumber("You have to have at least 1 bomb silly goose... try again ")
+        mines = inputNumber("You have to have at least 1 bomb, silly goose... try again.")
     board = Board(height, width, mines)
     show(board)
 
@@ -89,7 +89,7 @@ def run():
     flaggedBombCount = 0
 
     while not lose and flaggedBombCount != board.mines:
-        c = input("MENU \n Reveal Square: r x y\n Flag: f x y\n Quit: q \n <Prompt>: ").lower() #TODO discuss possible prompts, like turn counter
+        c = input("MENU:\n Reveal Square: r x y\n Add or Remove Flag: f x y\n Quit: q\n <Prompt>: ").lower() #TODO discuss possible prompts, like turn counter
         if promptCheck(c):
             a = c.split()[0]
             if a == "r" or a == "f":
@@ -101,14 +101,14 @@ def run():
             elif a == "q":
                 break
         else:
-            print("Invalid command")
+            print("Invalid command. Pick a whole number, silly goose... try again.")
 
     if lose:
-        print("Bomb detonated: You need more practice young grasshopper")
+        print("Bomb detonated! You need more practice, young grasshopper.")
     elif c == "q":
-        print("Thank you for playing... come again")
+        print("Thank you for playing... come again!")
     else:
-        print("you are the weiner! (Mario Voice)") #FIXME triggers even if quit option selected
+        print("*Mario Voice* You are the weiner!")
 
 def click(b,row, column, action):
     """
@@ -119,6 +119,9 @@ def click(b,row, column, action):
     if action == "r":
         if b.grid[row][column].isBomb:
             return True
+        elif b.grid[row][column].isFlagged:
+            print("You can't reveal a flagged square. Please remove the flag and try again.")
+            return False
         else:
             spread(b,row,column)
             return False
@@ -128,8 +131,8 @@ def click(b,row, column, action):
             b.grid[row][column].isFlagged = False
         else:
             if b.flagCount == b.mines:
-                print("Cannot use more flags than bombs... remove a flag to place another; \n"
-                      "place a flag on a square that has a flag in order to remove it")
+                print("You cannot use more flags than bombs... remove a flag to place another;\n"
+                      "place a flag on a square that has a flag in order to remove it.")
             else:
                 b.flagCount += 1
                 b.grid[row][column].isFlagged = True
