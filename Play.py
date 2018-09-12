@@ -51,7 +51,7 @@ def show(board):
         print('----', end="")
     print()
     for i in range(board.height):
-        print(f"{i: 2}", end="")
+        print(f"{i:02}", end="")
         print("|",end="")
         for j in range(board.width):
             if board.grid[i][j].isFlagged:
