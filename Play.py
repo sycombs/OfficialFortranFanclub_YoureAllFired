@@ -159,4 +159,5 @@ def spread(b,row,column):
             spread(b,row,column+1)
         return
 
-run()
+if __name__ == '__main__':
+   run()
