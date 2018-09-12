@@ -44,7 +44,7 @@ def show(board):
     """
     print("   ", end="")
     for i in range(board.width):
-        print(" "+f"{i: 2}"+" ", end="")
+        print(" "+f"{i:02}"+" ", end="")
     print()
     print("  ", end="")
     for i in range(board.width):
