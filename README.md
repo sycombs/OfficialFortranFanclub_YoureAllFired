@@ -1,4 +1,4 @@
-# EECS448_projectGroup
+# Minesweeper Project
 This is a project that is a mock minesweeper game made in python utilized from command line.
 
 1. Clone the repo and run python3 Play.py to initialize the game.
