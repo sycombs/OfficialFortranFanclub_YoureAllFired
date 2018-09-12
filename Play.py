@@ -30,7 +30,6 @@ def inputNumber(prompt):
             userInput = int(input(prompt))
         except ValueError:
             print("Pick a whole number, silly goose... try again.")
-            continue
         else:
             return userInput
 
