@@ -1,4 +1,7 @@
 from Board import Board
+import colorama
+from colorama import Fore
+from colorama import Style
 
 def promptCheck(prompt):
     """
@@ -53,15 +56,15 @@ def show(b):
         print("|",end="")
         for j in range(b.width):
             if b.grid[i][j].isFlagged:
-                print("  F ", end='')
+                print(Fore.RED + "  F ", end='')
             elif b.grid[i][j].isRevealed:
                 if b.grid[i][j].adj == 0:
-                    print("  _ ", end='')
+                    print(Fore.GREEN+ "  _ ", end='')
                 else:
-                    print("  "+str(b.grid[i][j].adj)+" ", end='')
+                    print(Fore.CYAN +"  "+str(b.grid[i][j].adj)+" ", end='')
             else:
-                print("  X ", end='')
-        print()
+                print(Fore.WHITE + "  X ", end="")
+        print(Style.RESET_ALL)
 
 def run():
     """
