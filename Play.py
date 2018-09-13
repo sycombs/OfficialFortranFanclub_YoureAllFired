@@ -56,14 +56,14 @@ def show(board):
     for i in range(board.height):
         print(f"{i:02}", end="")
         print("|",end="")
-        for j in range(b.width):
-            if b.grid[i][j].isFlagged:
+        for j in range(board.width):
+            if board.grid[i][j].isFlagged:
                 print(Fore.RED + "  F ", end='')
-            elif b.grid[i][j].isRevealed:
-                if b.grid[i][j].adj == 0:
+            elif board.grid[i][j].isRevealed:
+                if board.grid[i][j].adj == 0:
                     print(Fore.GREEN+ "  _ ", end='')
                 else:
-                    print(Fore.CYAN +"  "+str(b.grid[i][j].adj)+" ", end='')
+                    print(Fore.CYAN +"  "+str(board.grid[i][j].adj)+" ", end='')
             else:
                 print(Fore.WHITE + "  X ", end="")
         print(Style.RESET_ALL)
