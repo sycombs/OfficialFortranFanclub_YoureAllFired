@@ -6,6 +6,8 @@ This is a project that is a mock minesweeper game made in python utilized from c
 **Warning** 
 This game will not run on versions of python less than 3.6
 
+Must download colorama module "python3 -m pip install colorama"
+
 2. Enter the size of board you want for your minesweeper game.
 
 3. Enter the number of bombs you want in your minesweeper game.
