@@ -1,7 +1,5 @@
 from Board import Board
-import colorama
-from colorama import Fore
-from colorama import Style
+from colorama import Fore, Style
 
 def promptCheck(prompt):
     """
@@ -47,7 +45,7 @@ def show(board, lose=False):
     """
     print("   ", end="")
     for i in range(board.width):
-        print(" "+f"{i:02}"+" ", end="")
+        print(" " + f"{i:02}" + " ", end="")
     print()
     print("  ", end="")
     for i in range(board.width):
@@ -61,9 +59,9 @@ def show(board, lose=False):
                 print(Fore.RED + "  F ", end='')
             elif board.grid[i][j].isRevealed:
                 if board.grid[i][j].adj == 0:
-                    print(Fore.GREEN+ "  _ ", end='')
+                    print(Fore.GREEN + "  _ ", end='')
                 else:
-                    print(Fore.CYAN +"  "+str(board.grid[i][j].adj)+" ", end='')
+                    print(Fore.CYAN + "  " + str(board.grid[i][j].adj)+ " ", end='')
             elif lose:
                 if board.grid[i][j].isBomb:
                     print(Fore.MAGENTA + "  B ", end='')
@@ -143,7 +141,9 @@ def click(board, row, column, action):
             spread(board, row, column)
             return False
     elif action == "f":
-        if board.grid[row][column].isFlagged:
+        if board.grid[row][column].isRevealed:
+            print("You cannot flag an space that's already revealed.")
+        elif board.grid[row][column].isFlagged:
             board.flagCount -= 1
             board.grid[row][column].isFlagged = False
         else:
