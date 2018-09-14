@@ -1,0 +1,100 @@
+Brogrammers Project 1
+
+Retrospective Write-up
+
+Meeting Logs
+
+Meeting 8/31/18 In-Class Tim , Tanner, Matthew
+8 minutes
+Discuss meeting for later today.
+Tim is in charge of meeting logs.
+Set up github account this afternoon.
+Decide on Python,
+Decide on making it command line first and then move to Gui if finished.
+Making more complicated as time goes.
+
+Meeting 8/31/18 Leep 2 - Everyone
+Went over project with Eli,
+Agree to use most recent python
+Created Git Repo for project group
+Use Discord for communication and online meetings
+Schedule next meeting after class next Wendesday
+make sure everyone is attached to repository
+start learning, familiarize with python, come up with any libraries we might
+need.
+
+Meeting 9/5/18 Classroom - Everyone
+Met for 1 hour.
+Do command line to start.  Goal for next Wednesday to be done with command line version.  Have a group testing session next wendesday.  Start diving up work.
+Overview of what map.py will look like.  Tim and Eli will work on map.py and Tanner and Matthew will work on game.py  Friday we will try and meet.  Also, Saturday. So the next time we will meet is friday after this class and then friday and saturday afternoon.  Hopefully be done by saturday afternoon.
+
+
+Meeting 9/7/18 Classroom - Everyone except Eli
+Tanner went over some of the game.py he has written so far.  Tim volunteers to jump off board.py part and start researching and learning html documentation for python.  Will hopefully teach team how to use pydoc on saturday or monday.  Load save capability, and dump into a text file and read it back later is an option.We need to come up with back up plan incase one of our members goes Awol.
+
+Working Session 9/7/18 Leep2 - Everyone except Eli
+2.5 hours
+Tanner and Matthew took over board.py and wrote the first version.  Tim learned python documentation to Html with sphinx.  MEeeting again at 5pm.
+
+Working session 9/7/18 Leep2 - Everyone except Eli
+5 hours
+Tanner, Matthew, Tim worked on game.py. We got a lot done.  Eli had to work late and overlsept alarm and missed the 3 meetings today, We still need to complete spread function and clean up minor details.  We will meet again in person monday in class and during lab.  Make sure we are all running python 3.7.0.  We are going to take a break this weekend after this 10 hour code sesh.
+
+
+Meeting 9/8/18 Classroom - everyone
+15 minutes
+WE are meeting at Leep2 at 1 pm.  We decided our name is "the brogrammers".
+
+Working Session 9/10/18 Leep2 - everyone
+2 hours
+Eli's laptop isnt working and he went to apartment to start on GUI.  Tim Matthew and Tanner added documentation and minor polishes.  Matthew fixed the spread function over the weekend.  We need to test out sphinx to see if we are documenting things correctly.  Next time we are meeting is wendesday after class.  Tim tests documenter by next wendesday.  Tanner fix input menu from crashing.
+
+
+Working Session 9/12/18 Leep2 Tim, Tanner, Matthew
+2 hours
+Eli had ROTC and is off working on the gui.  Tanner updated documentation within the code.  Tim set up sphinx in the github and Matthew is investigating a color feature for the command line.  We are basically done with the project.  Need to meet friday and write up our documenations for meetings and what not.
+
+Final Meeting(hopefully) 9/14/18 Everyone
+2 hour
+Finish code and retrospective write-up.
+
+
+Description on how work was split between teammates
+
+Matthew and Tanner Developed initial Board data structure.  
+Tanner built initial Play.py
+Matthew built spread function in play.
+Matthew Tim and Tanner did a lot of testing and code correcting.  
+Tim Built html documentation engine, took meeting notes, and made lots of small fixes, and wrote Readme.md
+
+
+Challenges and how they were overcome or dealt with:
+
+Challenge #1:  Using same version of python:
+We came across issue of using functionality in python that is not available in versions earlier than 3.6.
+We overcame this by upgrading everyones version to most recent.
+
+Challenge #2: Merging and Branching:
+Our issue was we created an extra branch, and we are still not exactly sure how that happenned.  We resolved this by merging everything into the branch that was supposed to be the only branch, and merging it all to master.
+
+Challenge #3:  Attempting to push commit when you don’t have the most recent version of the code.
+
+We resolved this by pulling it and merging it locally and then pushing it.
+
+Challenge #4: Using modules on python 3.7 instead of 2.7
+We ran into the issue of downloading modules like sphinx and colorama but it was only running on python 2.7
+
+We resolved this by using different unix command to download modules straight into python3,
+
+ Any Features that didn’t make the demo version
+
+GUI-  we had initially planned on making a GUI if we had time but we never did.
+
+Retrospective on what the team would done different
+
+More thorough planning: more research, more scope on project beforehand.  More meetings spread out.  
+
+
+
+
+
