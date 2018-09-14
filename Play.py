@@ -38,7 +38,7 @@ def inputNumber(prompt):
         else:
             return userInput
 
-def show(board):
+def show(board, lose=False):
     """
     Shows current state of board in command line.
 
@@ -64,6 +64,11 @@ def show(board):
                     print(Fore.GREEN+ "  _ ", end='')
                 else:
                     print(Fore.CYAN +"  "+str(board.grid[i][j].adj)+" ", end='')
+            elif lose:
+                if board.grid[i][j].isBomb:
+                    print(Fore.MAGENTA + "  B ", end='')
+                else:
+                    print(Fore.WHITE + "  X ", end="")
             else:
                 print(Fore.WHITE + "  X ", end="")
         print(Style.RESET_ALL)
@@ -112,6 +117,7 @@ def run():
 
     if lose:
         print("Bomb detonated! You need more practice, young grasshopper.")
+        show(board, True)
     elif choice == "q":
         print("Thank you for playing... come again!")
     else:
