@@ -1,0 +1,239 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Auto Generated Documentation &#8212; Project1 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to Project1’s documentation!" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Project1’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Project1 1.0.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-Board">
+<span id="auto-generated-documentation"></span><h1>Auto Generated Documentation<a class="headerlink" href="#module-Board" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="Board.Board">
+<em class="property">class </em><code class="descclassname">Board.</code><code class="descname">Board</code><span class="sig-paren">(</span><em>height</em>, <em>width</em>, <em>mines</em><span class="sig-paren">)</span><a class="headerlink" href="#Board.Board" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maintains a 2D array of Cells. Maintains a height, a width, number of mines,
+and the number of Cells within it that are flagged. Upon initiation,
+randomly places the mines in the grid and updates each cells adjecency count
+accordingly.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>height</strong> – The height of the grid.</li>
+<li><strong>width</strong> – The width of the grid.</li>
+<li><strong>mines</strong> – The number of mines distributed across the Board.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="Board.Board.displayBoard">
+<code class="descname">displayBoard</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Board.Board.displayBoard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints the Board.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Board.Cell">
+<em class="property">class </em><code class="descclassname">Board.</code><code class="descname">Cell</code><a class="headerlink" href="#Board.Cell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Store data for each cell in the grid. Upon initiation, a Cell is not a bomb,
+not revealed, not flagged, and adjacent to no bombs.</p>
+</dd></dl>
+
+<span class="target" id="module-Play"></span><dl class="function">
+<dt id="Play.click">
+<code class="descclassname">Play.</code><code class="descname">click</code><span class="sig-paren">(</span><em>board</em>, <em>row</em>, <em>column</em>, <em>action</em><span class="sig-paren">)</span><a class="headerlink" href="#Play.click" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selects Cell to perform intended action on.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>board</strong> (<a class="reference internal" href="#Board.Board" title="Board.Board"><em>Board</em></a>) – The current Board object.</li>
+<li><strong>row</strong> (<em>int</em>) – The row within the grid.</li>
+<li><strong>column</strong> (<em>int</em>) – The column within the grid.</li>
+<li><strong>action</strong> (<em>string</em>) – The action to perform on the Cell.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return bool:</th><td class="field-body"><p class="first last">True if the user selects a bomb, False otherwise.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Play.inputNumber">
+<code class="descclassname">Play.</code><code class="descname">inputNumber</code><span class="sig-paren">(</span><em>prompt</em><span class="sig-paren">)</span><a class="headerlink" href="#Play.inputNumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Catches inputs by user for anything other than an integer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prompt</strong> (<em>string</em>) – The input provided by the user.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return int:</th><td class="field-body">The prompt converted to an int.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Play.promptCheck">
+<code class="descclassname">Play.</code><code class="descname">promptCheck</code><span class="sig-paren">(</span><em>prompt</em><span class="sig-paren">)</span><a class="headerlink" href="#Play.promptCheck" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks for valid inputs at the menu prompt.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prompt</strong> (<em>string</em>) – The input provided by the user.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return int:</th><td class="field-body">True if the input is valid, False otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Play.run">
+<code class="descclassname">Play.</code><code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Play.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prompts the user for board size and number of mines, then runs the game.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return None:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Play.show">
+<code class="descclassname">Play.</code><code class="descname">show</code><span class="sig-paren">(</span><em>board</em>, <em>lose=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Play.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shows current state of board in command line.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>board</strong> (<a class="reference internal" href="#Board.Board" title="Board.Board"><em>Board</em></a>) – The current Board object.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return None:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Play.spread">
+<code class="descclassname">Play.</code><code class="descname">spread</code><span class="sig-paren">(</span><em>board</em>, <em>row</em>, <em>column</em><span class="sig-paren">)</span><a class="headerlink" href="#Play.spread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recursively reveals adjacent Cells if they are empty.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>board</strong> (<a class="reference internal" href="#Board.Board" title="Board.Board"><em>Board</em></a>) – The current Board object.</li>
+<li><strong>row</strong> (<em>int</em>) – The row within the grid.</li>
+<li><strong>column</strong> (<em>int</em>) – The column within the grid.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to Project1’s documentation!</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/code.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Project1’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Project1 1.0.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, Tim Fox.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.0.
+    </div>
+  </body>
+</html>
