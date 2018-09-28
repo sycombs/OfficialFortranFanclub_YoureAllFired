@@ -96,12 +96,38 @@ def run():
     lose = False
     flaggedBombCount = 0
 
+    #add bounds checking
+
     while not lose and flaggedBombCount != board.mines:
         choice = input("MENU:\n Reveal Square: r x y\n Add or Remove Flag: f x y\n Quit: q\n <Prompt>: ").lower() #TODO discuss possible prompts, like turn counter
         if promptCheck(choice):
             action = choice.split()[0]
+
             if action == "r" or action == "f":
                 column, row = int(choice.split()[1]), int(choice.split()[2])
+
+                if column >= width or column < 0:
+                    print ("Out of bounds x coordinate!")
+                    while True:
+                        try:
+                            column = int(input("x: "))
+                            while column >= width or column < 0:
+                                column = int(input("Out of bounds! x: "))
+                            break
+                        except ValueError:
+                            print ("Invalid input!")
+
+                if row >= height or row < 0:
+                    print ("Out of bounds y coordinate!")
+                    while True:
+                        try:
+                            row = int(input("y: "))
+                            while row >= height or row < 0:
+                                row = int(input("Out of bounds! y: "))
+                            break
+                        except ValueError:
+                            print ("Invalid input!")
+
                 lose = click(board, row, column, action)
                 if board.grid[row][column].isBomb and board.grid[row][column].isFlagged:
                         flaggedBombCount += 1
