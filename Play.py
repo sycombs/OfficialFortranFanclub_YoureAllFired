@@ -77,21 +77,19 @@ def run():
 
     :return None:
     """
+
     height = inputNumber("Enter the height of the board: ")
-    while height > 24:
-        height = inputNumber("Please enter a height less than 25... try again.")
-    while height < 2:
-        height = inputNumber("You have to have at least a height of 2... try again.")
+    while height > 24 or height < 2:
+        height = inputNumber("Please enter a height between 2 and 24: ")
+
     width = inputNumber("Enter the width of the board: ")
-    while width > 24:
-        width = inputNumber("Please enter a width less than 25... try again.")
-    while width < 2:
-        width = inputNumber("You have to at least have width of 2... try again.")
+    while width > 24 or width < 2:
+        width = inputNumber("Please enter a width between 2 and 24: ")
+
     mines = inputNumber("Enter the number of mines: ")
-    while mines >= height*width:
-        mines = inputNumber(f"Please use less than {height*width} mines... try again.")
-    while mines <= 0:
-        mines = inputNumber("You have to have at least 1 bomb, silly goose... try again.")
+    while mines >= height*width or mines <= 0:
+        mines = inputNumber(f"Please use from 1 to {height*width - 1} mines: ")
+
     board = Board(height, width, mines)
     show(board)
 
