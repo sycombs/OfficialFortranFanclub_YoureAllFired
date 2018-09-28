@@ -11,6 +11,16 @@ class Player:
     def __init__(self):
         self.playerID = 0
 
+
+        run = False
+        while run == False:
+            clientSocket = socket(AF_INET, SOCK_DGRAM)
+            clientSocket.sendto(input("Enter a game type: ").encode(), serverInfo)
+            serverResponse, serverAddress = clientSocket.recvfrom(2048)
+            if serverResponse.decode() == "START":
+                run = True
+
+
     def sendA(self, basicData):
         # Assuming we have a string for the data, use this for now
         clientSocket = socket(AF_INET, SOCK_DGRAM)
@@ -18,8 +28,8 @@ class Player:
         #clientSocket.sendto(pNum, (self.serverName, self.serverPort))
 
         # Process response from the server
-        serverResponse, serverAddress = clientSocket.recvfrom(2048)
-        print(serverResponse.decode())
+        #serverResponse, serverAddress = clientSocket.recvfrom(2048)
+        #print(serverResponse.decode())
         clientSocket.close()
 
     def sendB(self, complexData):

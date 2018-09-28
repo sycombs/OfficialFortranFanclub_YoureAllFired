@@ -12,6 +12,7 @@ plyr = Player()
 
 
 
+
 def promptCheck(prompt):
     """
     Checks for valid inputs at the menu prompt.
@@ -83,6 +84,12 @@ def show(board, lose=False):
         print(Style.RESET_ALL)
 
 def run():
+
+
+
+
+
+
     """
     Prompts the user for board size and number of mines, then runs the game.
 

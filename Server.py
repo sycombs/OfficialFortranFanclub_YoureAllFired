@@ -8,13 +8,44 @@ serverPort = 12000
 serverSocket = socket(AF_INET, SOCK_DGRAM)
 serverSocket.bind(('', serverPort))
 
-print("Server is ready to receive")
+
+''' WHEN A GAME IS FIRST RUN THE SERVER ASKS WHAT KIND OF THE GAME THE PLAYER
+    WOULD LIKE TO PLAY. AT THIS POINT IT IS _REQUIRED
+
+    When a game is first run the server asks what kind of the game the player
+    would like to play. At this point in development it will be REQUIRED
+    that a server be running in order to play unless we add a way for the Play
+    method to circumvent that and start up normally
+'''
+
+# On initial connect
+''' WE ARE JUST USING BOOL'S FOR NOW,
+LATER ON WE CAN SEND DIFFERENT DATA TYPES... LIKE MAYBE A BOOL '''
+
+gameRunning = False
+
+while gameRunning == False:
+    gameRequest, clientAddress = serverSocket.recvfrom(2048 * 2 * 2 * 2)
+    if gameRequest.decode() == 'SP': #Single Player
+        gameType = 'SP'
+        gameRunning = True
+        serverSocket.sendto(("START").encode(), clientAddress)
+
+    else:
+        serverSocket.sendto('Write SP'.encode(), clientAddress)
+
+''' GAME STATUS STUFF '''
+#gameType = '' # DON'T START WRITING THINGS TWICE
 
 
 # If a player has won, tell everyone from now on to stop playing
 gameOver = False
-
 cPlayers = 0
+
+
+
+
+print("Minesweeper server is now active")
 
 while True:
     # Receive the data
@@ -37,8 +68,6 @@ while True:
     except:
         print("Error, sent complexData")
 
-    '''
-    COMMENTING THIS BLOCK OUT UNTIL WE SEND MORE THAN JUST TEXT DATA
     try:
         # Try to unpickle the data
         uPick = pickle.loads(data)
@@ -46,4 +75,3 @@ while True:
     except:
         print("Error, things didn't work out well")
         #serverSocket.sendto(str(thing).encode(), clientAddress)
-    '''
