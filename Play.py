@@ -1,5 +1,10 @@
 from Board import Board
 from colorama import Fore, Style
+import time
+
+def cheatMode(board):
+    board.displayBoard()
+    time.sleep(5)
 
 def promptCheck(prompt):
     """
@@ -9,7 +14,7 @@ def promptCheck(prompt):
     :return int: True if the input is valid, False otherwise.
     """
     arr = prompt.split(" ")
-    if arr[0] not in ["r", "f", "q"]:
+    if arr[0] not in ["r", "f", "q", "-c"]:
         return False
     if arr[0] == "r" or arr[0] == "f":
         if len(arr) < 3:
@@ -102,6 +107,9 @@ def run():
         choice = input("MENU:\n Reveal Square: r x y\n Add or Remove Flag: f x y\n Quit: q\n <Prompt>: ").lower() #TODO discuss possible prompts, like turn counter
         if promptCheck(choice):
             action = choice.split()[0]
+
+            if action == "-c":
+                cheatMode(board)
 
             if action == "r" or action == "f":
                 column, row = int(choice.split()[1]), int(choice.split()[2])
