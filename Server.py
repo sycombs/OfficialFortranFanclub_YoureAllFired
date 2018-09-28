@@ -37,6 +37,8 @@ while True:
     except:
         print("Error, sent complexData")
 
+    '''
+    COMMENTING THIS BLOCK OUT UNTIL WE SEND MORE THAN JUST TEXT DATA
     try:
         # Try to unpickle the data
         uPick = pickle.loads(data)
@@ -44,3 +46,4 @@ while True:
     except:
         print("Error, things didn't work out well")
         #serverSocket.sendto(str(thing).encode(), clientAddress)
+    '''
