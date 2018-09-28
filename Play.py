@@ -1,6 +1,17 @@
 from Board import Board
 from colorama import Fore, Style
 
+
+
+# Import a player
+from Client import Player
+
+
+plyr = Player()
+
+
+
+
 def promptCheck(prompt):
     """
     Checks for valid inputs at the menu prompt.
@@ -108,6 +119,7 @@ def run():
                 if board.grid[row][column].isBomb and board.grid[row][column].isFlagged:
                         flaggedBombCount += 1
                 show(board)
+                plyr.sendA("I did something")
             elif action == "q":
                 break
         else:
@@ -119,6 +131,11 @@ def run():
     elif choice == "q":
         print("Thank you for playing... come again!")
     else:
+
+        # SEND A MESSAGE TO THE SERVER SAYING YOU'VE WON
+        plyr.sendA("WIN")
+
+
         print("*Mario Voice* You are the weiner!")
 
 def click(board, row, column, action):
