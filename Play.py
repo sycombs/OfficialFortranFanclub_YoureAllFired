@@ -4,7 +4,9 @@ import time
 
 def cheatMode(board):
     board.displayBoard()
-    time.sleep(5)
+    for x in range(1, 6):
+        print (f"{x}...")
+        time.sleep(1)
 
 def promptCheck(prompt):
     """
