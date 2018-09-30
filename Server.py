@@ -1,36 +1,44 @@
+"""@package docstring
+Server.py handles sending and receiving data, but based on that data
+it will load up the necessary rules to handle the game itself... bad comment
+"""
+
 # Server testing
 from socket import *
-import pickle
-import player
+import json
 
 
 serverPort = 12000
 serverSocket = socket(AF_INET, SOCK_DGRAM)
 serverSocket.bind(('', serverPort))
 
-print("Server is ready to receive")
+def interpret_data(data):
+    """
+    This will be used to deserialize the received data. Once that's done, the
+    kind of data we have will determine what's done next
+    """
 
+    '''
+    Data received should be easily convertable. The following has a table
+    with the encode / decode formats for  JSON to Python
+    https://docs.python.org/3/library/json.html#json-to-py-table
+    '''
+    try:
+        deserializedData = json.loads(data)
 
-# Determine the player's position
+        # Server side print so we can see what's being received
+        print(deserializedData)
+
+    except JSONDecodeError as e:
+        print(e)
+
 
 cPlayers = 0
 
+
+''' SERVER LOOP '''
 while True:
     # Receive the data
     data, clientAddress = serverSocket.recvfrom(2048 * 2 * 2 * 2)
 
-    # Check which type of data we have
-    try:
-        # Try to decode the data. If it's a string, it will work
-        msg = data.decode()
-        print(msg)
-    except:
-        print("Error, sent complexData")
-
-    try:
-        # Try to unpickle the data
-        uPick = pickle.loads(data)
-        uPick()
-    except:
-        print("Error, things didn't work out well")
-        #serverSocket.sendto(str(thing).encode(), clientAddress)
+    interpret_data(data)
