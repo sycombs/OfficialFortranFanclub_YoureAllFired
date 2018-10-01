@@ -2,6 +2,13 @@
 I don't know yet...
 """
 
+
+''' TODO: Remove the client specific code from the Player class and move it
+elsewhere. The client should only be involved in the sending and receiving of
+data but should not interpret any of the data past calling the proper functions
+in response to what was received
+'''
+
 from socket import *
 import json
 
