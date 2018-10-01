@@ -25,6 +25,7 @@ def interpret_data(data):
     '''
     try:
         deserializedData = json.loads(data)
+        print(data)
 
         # Server side print so we can see what's being received
         print(deserializedData)
