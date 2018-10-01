@@ -7,6 +7,11 @@ I don't know yet...
 elsewhere. The client should only be involved in the sending and receiving of
 data but should not interpret any of the data past calling the proper functions
 in response to what was received
+
+GameClient.py should handle the serialization of data. That way the Player
+class is kept separate from the network implementation. This allows us to
+change the player data pretty quickly and easily since all we have to do is
+pass the data and not worry much about how it's formatted or how it's sent
 '''
 
 from socket import *
