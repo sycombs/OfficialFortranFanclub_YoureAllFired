@@ -24,18 +24,13 @@ def interpret_data(data):
     https://docs.python.org/3/library/json.html#json-to-py-table
     '''
     try:
+        # Deserialize the data and then print it to the console so we can
+        # see what's being received
         deserializedData = json.loads(data)
-        print(data)
-
-        # Server side print so we can see what's being received
         print(deserializedData)
 
     except JSONDecodeError as e:
         print(e)
-
-
-cPlayers = 0
-
 
 ''' SERVER LOOP '''
 while True:

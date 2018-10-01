@@ -7,8 +7,7 @@ import json
 
 
 serverName = '127.0.0.1'
-# Running node.js on port 3000
-serverPort = 3000
+serverPort = 12000
 
 serverInfo = (serverName, serverPort)
 
