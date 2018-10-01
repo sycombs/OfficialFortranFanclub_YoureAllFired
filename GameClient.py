@@ -4,7 +4,7 @@ GameClient.py
 
 ''' TODO:
     1) Include proper exceptions for try-catch blocks
-         Sections where this is required are marked with # HERE
+         Sections where this is required are flagged with # HERE
     2) Change 'from socket import *' to 'import socket' and fix any resultant
     issues
     3) Remove hardcoded server data?
@@ -24,6 +24,11 @@ serverPort = 12000
 serverInfo = (serverName, serverPort)
 
 def send_to_server(rawData):
+    """
+    Serialize the data using JSON, then send it to the server and close
+    the socket
+    """
+
     try:
         serializedData = json.dumps(self.rawData)
     except: # HERE

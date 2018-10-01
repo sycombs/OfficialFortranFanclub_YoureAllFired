@@ -40,10 +40,10 @@ class Player:
         self.playerData = {'ID': 0, 'msg': 'Just a message', 'win': False}
 
     def send_player_state(self):
-        """
-        Serialize the data using JSON, then send it to the server and close
-        the socket
-        """
+        '''
+        We can change this to a simple get function and then pass the data
+        to the GameClient function that's in charge of sending data
+        '''
 
         # This will serialize the data using the JSON format
         pData = json.dumps(self.playerData)
