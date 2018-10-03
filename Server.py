@@ -53,8 +53,18 @@ def interpret_data(data):
 
 
 def send_board(clientAddress, rawData):
-    serializedData = pickle.dumps(rawData)
-    serverSocket.sendto(serializedData, clientAddress)
+    try:
+        pickleData = pickle.dumps(rawData)
+        serverSocket.sendto(pickleData, clientAddress)
+    except:
+        print("Error in send_board")
+
+def send_json(clientAddress, rawData):
+    try:
+        jsonData = json.dumps(rawData)
+        serverSocket.sendto(jsonData, clientAddress)
+    except:
+        print("Error in send_json")
 
 
 def send_data(clientAddress, rawData):
