@@ -19,12 +19,14 @@ class Time:
     def time_limit(self, timeLimit):
         if(self.start + timeLimit >= time.time())
         {
-            return True;
+            return True
         }
         else
         {
             return False
         }
+    def time_delay(self, timeLimit):
+        time.sleep(timeLimit)
     # def countDown(hour, min, sec):
     #     self.min, self.sec = divmod(sec, 60)
     #     self.hour, self.min = divmod(min, 60)
