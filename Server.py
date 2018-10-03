@@ -19,17 +19,17 @@ code out of this file... like the server loop
 
 # Server Imports
 from socket import *
-
+from Board import *
 import pickle
 
 import json
 
 # Server Data
 serverPort = 12000
-serverSocket = socket(AF_INET, SOCK_DGRAM)
+#serverSocket = socket(AF_INET, SOCK_DGRAM)
 
 # Bind a server
-serverSocket.bind(('', serverPort))
+#serverSocket.bind(('', serverPort))
 
 def interpret_data(data):
     """
@@ -42,51 +42,50 @@ def interpret_data(data):
     with the encode / decode formats for  JSON to Python
     https://docs.python.org/3/library/json.html#json-to-py-table
     '''
+
     try:
         # Deserialize the data and then print it to the console so we can
         # see what's being received
         deserializedData = json.loads(data)
         print(deserializedData)
 
-    except JSONDecodeError as e:
+    except Exception as e:
         print(e)
 
 
-def send_board(clientAddress, rawData):
+def send_board(serverSocket, clientAddress, rawData):
     try:
         pickleData = pickle.dumps(rawData)
         serverSocket.sendto(pickleData, clientAddress)
-    except:
-        print("Error in send_board")
+    except Exception as e:
+        print(e)
 
-def send_json(clientAddress, rawData):
+def send_json(serverSocket, clientAddress, rawData):
     try:
         jsonData = json.dumps(rawData)
         serverSocket.sendto(jsonData, clientAddress)
-    except:
-        print("Error in send_json")
+    except Exception as e:
+        print(e)
 
+def send_data(serverSocket, clientAddress, rawData):
+    try:
+        serverSocket.sendto(pickleData, clientAddress)
+    except Exception as e:
+        print(e)
 
-def send_data(clientAddress, rawData):
     if isinstance(rawData, Board):
         try:
-            send_board(clientAddress, rawData)
+            print("Sending a board")
+            send_board(serverSocket, clientAddress, rawData)
         except:
             print("Type: Board, had issue in send_data")
 
     elif isinstance(rawData, str):
         try:
-            send_json(clientAddress, rawData)
+            print("Sending json")
+            send_json(serverSocket, clientAddress, rawData)
         except:
-            print("Type: str, had issue in send_data")
+            print(e)
 
     else:
         print("Error, could not determine type")
-
-
-''' SERVER LOOP - PLACE ELSEWHERE'''
-while True:
-    # Receive the data
-    data, clientAddress = serverSocket.recvfrom(2048 * 2 * 2 * 2)
-
-    interpret_data(data)
