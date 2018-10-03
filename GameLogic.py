@@ -54,8 +54,30 @@ def new_game(gameType)
     multiplayer: Communicate with foreign server
 '''
 
+def cheat_show(board):
+    print("   ", end="")
+    for i in range(board.width):
+        print(" " + f"{i:02}" + " ", end="")
+    print()
+    print("  ", end="")
+    for i in range(board.width):
+        print('----', end="")
+    print()
+    for i in range(board.height):
+        print(f"{i:02}", end="")
+        print("|",end="")
+        for j in range(board.width):
+            if board.grid[i][j].isBomb:
+                print(Fore.MAGENTA + "  B ", end='')
+            elif board.grid[i][j].adj == 0:
+                print(Fore.GREEN + "  _ ", end='')
+            else:
+                print(Fore.CYAN + "  " + str(board.grid[i][j].adj)+ " ", end='')
+        print(Style.RESET_ALL)
+
 def cheatMode(board):
-    board.displayBoard()
+    #board.displayBoard(); for checking correct output
+    cheat_show(board);
     for x in range(1, 6):
         print (f"{x}...")
         time.sleep(1)
