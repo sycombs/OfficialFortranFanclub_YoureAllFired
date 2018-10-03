@@ -18,11 +18,6 @@ code out of this file... like the server loop
 
 
 # Server Imports
-from socket import *
-from Board import *
-import pickle
-
-import json
 
 # Server Data
 serverPort = 12000
@@ -51,51 +46,3 @@ def interpret_data(data):
 
     except Exception as e:
         print(e)
-
-
-def send_obj(serverSocket, clientAddress, rawData):
-    """
-    send_obj() sends pickled object data
-    """
-    try:
-        pickleData = pickle.dumps(rawData)
-        serverSocket.sendto(pickleData, clientAddress)
-    except Exception as e:
-        print(e)
-
-def send_json(serverSocket, clientAddress, rawData):
-    """
-    send_json() sends json data
-    """
-    try:
-        jsonData = json.dumps(rawData)
-        serverSocket.sendto(jsonData, clientAddress)
-    except Exception as e:
-        print(e)
-
-def send_data(serverSocket, clientAddress, rawData):
-    """
-    send_data() attempts to act as a router for data by determining the data
-    type and then calling the appropriate send_<type> function
-
-    ...why?
-    """
-    try:
-        serverSocket.sendto(pickleData, clientAddress)
-    except Exception as e:
-        print(e)
-
-    if isinstance(rawData, Board):
-        try:
-            send_board(serverSocket, clientAddress, rawData)
-        except Exception as e:
-            print(e)
-
-    elif isinstance(rawData, str):
-        try:
-            send_json(serverSocket, clientAddress, rawData)
-        except Exception as e:
-            print(e)
-
-    else:
-        print("Error, could not determine type")
