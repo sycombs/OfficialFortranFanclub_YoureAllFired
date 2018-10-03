@@ -47,7 +47,7 @@ def interpret_data(data):
         # Deserialize the data and then print it to the console so we can
         # see what's being received
         deserializedData = json.loads(data)
-        print(deserializedData)
+        return deserializedData
 
     except Exception as e:
         print(e)

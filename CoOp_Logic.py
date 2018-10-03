@@ -5,17 +5,26 @@
 '''
 MY TEST SERVER FOR NOW
 '''
-from Board import *
 from Server import *
+from GameLogic import *
 
 serverSocket = socket(AF_INET, SOCK_DGRAM)
 serverSocket.bind(('', serverPort))
-
+player_count = 0
+set_game_params = False
 while True:
     rawData, clientAddress = serverSocket.recvfrom(2048 * 2 * 2 * 2)
 
-    interpret_data(rawData)
-
+    useable_data = interpret_data(rawData)
+    #since the entire thing runs in a loop, check if params are set
+    if set_game_params == False:
+        serverSocket.sendto("inp".encode(), clientAddress)
+        rawData, clientAddress = serverSocket.recvfrom(2048 * 2 * 2 * 2)
+        player_state = interpret_data(rawData)
+        #this takes the string tuple in playerdata['msg'] converts to board
+        board_tuple = tuple(map(int,player_state['msg'].split(' ')))
+        board = Board(board_tuple[0],board_tuple[1],board_tuple[2])
+        send_board(serverSocket,clientAddress,board)
 
     serverSocket.sendto("Okay".encode(), clientAddress)
 
