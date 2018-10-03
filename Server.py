@@ -57,6 +57,22 @@ def send_board(clientAddress, rawData):
     serverSocket.sendto(serializedData, clientAddress)
 
 
+def send_data(clientAddress, rawData):
+    if isinstance(rawData, Board):
+        try:
+            send_board(clientAddress, rawData)
+        except:
+            print("Type: Board, had issue in send_data")
+
+    elif isinstance(rawData, str):
+        try:
+            send_json(clientAddress, rawData)
+        except:
+            print("Type: str, had issue in send_data")
+
+    else:
+        print("Error, could not determine type")
+
 
 ''' SERVER LOOP - PLACE ELSEWHERE'''
 while True:
