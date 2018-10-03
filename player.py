@@ -14,15 +14,6 @@ change the player data pretty quickly and easily since all we have to do is
 pass the data and not worry much about how it's formatted or how it's sent
 '''
 
-from socket import *
-import json
-
-
-serverName = '127.0.0.1'
-serverPort = 12000
-
-serverInfo = (serverName, serverPort)
-
 class Player:
     def __init__(self):
         """

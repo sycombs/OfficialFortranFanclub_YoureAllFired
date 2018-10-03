@@ -7,6 +7,13 @@ import socket
 import json
 import pickle
 
+# I suspect we'll stick with the same server address and port number for a while
+# so I'm going to set those here
+SERVER_ADDRESS = '127.0.0.1'
+SERVER_PORT    = 12000
+
+SERVER_INFO = (SERVER_ADDRESS, SERVER_PORT)
+
 ''' TRANSMISSION FUNCTIONS '''
 '''
 def send_obj(serverSocket, clientAddress, rawData):
@@ -29,7 +36,7 @@ def send_json(serverSocket, clientAddress, rawData):
     except Exception as e:
         print(e)
 '''
-def send_comm(data, sourceSocket, destination): #serverSocket, clientAddress, rawData):
+def send_comm(data, sourceSocket, destination):
     """
     send_comm() sends a <type: Generic> message to some destination and then
     (for my sake) prints out the sender's response

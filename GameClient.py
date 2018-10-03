@@ -10,15 +10,8 @@ GameClient.py
     3) Remove hardcoded server data?
 '''
 
-# socket allows communication with a server
-from socket import *
-
-# json is used to serialize data
-import json
 
 # Server Data
-serverName = '127.0.0.1'
-serverPort = 12000
 clientSocket = socket(AF_INET, SOCK_DGRAM)
 
 # Store the data as a tuple (?) just to make things look cleaner later on

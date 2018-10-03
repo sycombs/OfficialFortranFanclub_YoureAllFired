@@ -16,11 +16,6 @@ code out of this file... like the server loop
 ''' TODO: Remove the instance of a server loop from here and place it elsewhere
 '''
 
-
-# Server Imports
-
-# Server Data
-serverPort = 12000
 #serverSocket = socket(AF_INET, SOCK_DGRAM)
 
 # Bind a server
