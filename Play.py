@@ -70,4 +70,17 @@ def run():
         print("*Mario Voice* You are the weiner!")
 
 if __name__ == "__main__":
-    run()
+    #prompt for player input
+    mode = 0
+    print("\nWelcome to Minesweeper!\n")
+    while mode < 1 or mode > 3:
+        mode = inputNumber("\nPlease select a mode:\n\nSingle Player: 1\nCo-op: 2\nVersus: 3\n\nYour input: ")
+    if mode == 1:
+        run()
+    elif mode == 2:
+        print("Only single player is working right now")
+    elif mode == 3:
+        print("Only single player is working right now")
+
+    #if co-op: run co-op logic & send & receive player data
+    #if versus: run versus logic & send & receive player data
