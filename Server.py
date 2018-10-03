@@ -53,9 +53,35 @@ def interpret_data(data):
 
 
 def send_board(clientAddress, rawData):
-    serializedData = pickle.dumps(rawData)
-    serverSocket.sendto(serializedData, clientAddress)
+    try:
+        pickleData = pickle.dumps(rawData)
+        serverSocket.sendto(pickleData, clientAddress)
+    except:
+        print("Error in send_board")
 
+def send_json(clientAddress, rawData):
+    try:
+        jsonData = json.dumps(rawData)
+        serverSocket.sendto(jsonData, clientAddress)
+    except:
+        print("Error in send_json")
+
+
+def send_data(clientAddress, rawData):
+    if isinstance(rawData, Board):
+        try:
+            send_board(clientAddress, rawData)
+        except:
+            print("Type: Board, had issue in send_data")
+
+    elif isinstance(rawData, str):
+        try:
+            send_json(clientAddress, rawData)
+        except:
+            print("Type: str, had issue in send_data")
+
+    else:
+        print("Error, could not determine type")
 
 
 ''' SERVER LOOP - PLACE ELSEWHERE'''
