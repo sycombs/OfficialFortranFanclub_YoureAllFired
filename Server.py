@@ -19,6 +19,9 @@ code out of this file... like the server loop
 
 # Server Imports
 from socket import *
+
+import pickle
+
 import json
 
 # Server Data
@@ -47,6 +50,11 @@ def interpret_data(data):
 
     except JSONDecodeError as e:
         print(e)
+
+
+def send_board(clientAddress, rawData):
+    serializedData = pickle.dumps(rawData)
+    serverSocket.sendto(serializedData, clientAddress)
 
 
 

@@ -55,5 +55,8 @@ class Player:
         try:
             clientSocket.sendto(pData.encode(), serverInfo)
             clientSocket.close()
+            response, serverAddress clientSocket.recvfrom(2048)
+            if (response.decode() == "Create stuff"):
+                print("I call create stuff here")
         except:
             print("Error sending data")
