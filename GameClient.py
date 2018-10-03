@@ -24,16 +24,18 @@ clientSocket = socket(AF_INET, SOCK_DGRAM)
 # Store the data as a tuple (?) just to make things look cleaner later on
 serverInfo = (serverName, serverPort)
 
-def send_to_server(rawData):
+def send_data(rawData):
     """
-    Serialize the data using JSON, then send it to the server and close
-    the socket
+    send_data() will... not have to check the type of data we're sending?
+
+    It seems like the sockets module does a pretty good job of taking care of
+    sending data over regardless
     """
 
     try:
         serializedData = json.dumps(self.rawData)
-    except: # HERE
-        print("Error when converting to json format")
+    except Exception as e:
+        print(e)
 
 
     # Create a socket
@@ -60,24 +62,3 @@ def receive_data():
     serData, serverAddress = clientSocket.recvfrom(2048)
 
     return serData
-'''
-    try:
-        serData, serverAddress = cSocket.recvfrom(2048)
-        print(serData.decode())
-        return serData
-    except Exception as e:
-        print(e)
-        waitingForData = False
-        #if serData != None:
-            #waitingForData = False
-    try:
-        rawData = pickle.loads(serData)
-        print("Received pickle data")
-        return rawData
-    except Exception as e:
-        print(e)
-        return
-'''
-
-
-#def receive_board()

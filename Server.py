@@ -53,7 +53,10 @@ def interpret_data(data):
         print(e)
 
 
-def send_board(serverSocket, clientAddress, rawData):
+def send_obj(serverSocket, clientAddress, rawData):
+    """
+    send_obj() sends pickled object data
+    """
     try:
         pickleData = pickle.dumps(rawData)
         serverSocket.sendto(pickleData, clientAddress)
@@ -61,6 +64,9 @@ def send_board(serverSocket, clientAddress, rawData):
         print(e)
 
 def send_json(serverSocket, clientAddress, rawData):
+    """
+    send_json() sends json data
+    """
     try:
         jsonData = json.dumps(rawData)
         serverSocket.sendto(jsonData, clientAddress)
@@ -68,6 +74,12 @@ def send_json(serverSocket, clientAddress, rawData):
         print(e)
 
 def send_data(serverSocket, clientAddress, rawData):
+    """
+    send_data() attempts to act as a router for data by determining the data
+    type and then calling the appropriate send_<type> function
+
+    ...why?
+    """
     try:
         serverSocket.sendto(pickleData, clientAddress)
     except Exception as e:
@@ -75,16 +87,14 @@ def send_data(serverSocket, clientAddress, rawData):
 
     if isinstance(rawData, Board):
         try:
-            print("Sending a board")
             send_board(serverSocket, clientAddress, rawData)
-        except:
-            print("Type: Board, had issue in send_data")
+        except Exception as e:
+            print(e)
 
     elif isinstance(rawData, str):
         try:
-            print("Sending json")
             send_json(serverSocket, clientAddress, rawData)
-        except:
+        except Exception as e:
             print(e)
 
     else:

@@ -39,6 +39,19 @@ class Player:
         '''
         self.playerData = {'ID': 0, 'msg': 'Just a message', 'win': False}
 
+    def get_player_data(self):
+        return self.playerData
+
+    def get_player_ID(self):
+        return self.playerData['ID']
+
+    '''
+    Here's a quick template to return any data that is added later on
+
+    def get_player_INFO(self):
+        return self.playerData['INFO']
+    '''
+
     def send_player_state(self):
         '''
         We can change this to a simple get function and then pass the data
@@ -58,7 +71,7 @@ class Player:
         except Exception as e:
             print(e)
 
-        
+
         print(type(response))
                 #print("I call create stuff here")
 

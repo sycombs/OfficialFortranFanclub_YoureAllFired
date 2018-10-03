@@ -8,6 +8,7 @@ MY TEST SERVER FOR NOW
 from Board import *
 from Server import *
 
+'''
 serverSocket = socket(AF_INET, SOCK_DGRAM)
 serverSocket.bind(('', serverPort))
 
@@ -34,7 +35,7 @@ while True:
 
     #a = False
 
-
+'''
 
 
 '''
