@@ -54,9 +54,13 @@ class Player:
         # Try sending the data, and if it doesn't work then print some error
         try:
             clientSocket.sendto(pData.encode(), serverInfo)
-            clientSocket.close()
-            response, serverAddress clientSocket.recvfrom(2048)
-            if (response.decode() == "Create stuff"):
-                print("I call create stuff here")
-        except:
-            print("Error sending data")
+            response, serverAddress = clientSocket.recvfrom(2048)
+        except Exception as e:
+            print(e)
+
+        
+        print(type(response))
+                #print("I call create stuff here")
+
+            # Make sure to close the socket after we received the data
+            #clientSocket.close()
