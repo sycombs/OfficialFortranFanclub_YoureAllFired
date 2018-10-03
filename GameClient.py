@@ -11,7 +11,7 @@ GameClient.py
 '''
 
 # socket allows communication with a server
-from socket import * 
+from socket import *
 
 # json is used to serialize data
 import json
@@ -44,3 +44,23 @@ def send_to_server(rawData):
         clientSocket.close()
     except: # HERE
         print("Error transmitting data to server")
+
+def receive_data():
+    clientSocket = socket(AF_INET, SOCK_DGRAM)
+
+    waitingForData = True
+    while waitingForData:
+        serData = client.recvfrom(2048)
+        if serData != None:
+            waitingForData = False
+
+    try:
+        rawData = pickle.loads(serData)
+        return rawData
+    except:
+        print("Error, stuff went wrong")
+        retrn
+
+
+
+#def receive_board()

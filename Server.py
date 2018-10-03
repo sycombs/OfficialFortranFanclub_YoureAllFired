@@ -19,6 +19,9 @@ code out of this file... like the server loop
 
 # Server Imports
 from socket import *
+
+import pickle
+
 import json
 
 # Server Data
@@ -48,6 +51,37 @@ def interpret_data(data):
     except JSONDecodeError as e:
         print(e)
 
+
+def send_board(clientAddress, rawData):
+    try:
+        pickleData = pickle.dumps(rawData)
+        serverSocket.sendto(pickleData, clientAddress)
+    except:
+        print("Error in send_board")
+
+def send_json(clientAddress, rawData):
+    try:
+        jsonData = json.dumps(rawData)
+        serverSocket.sendto(jsonData, clientAddress)
+    except:
+        print("Error in send_json")
+
+
+def send_data(clientAddress, rawData):
+    if isinstance(rawData, Board):
+        try:
+            send_board(clientAddress, rawData)
+        except:
+            print("Type: Board, had issue in send_data")
+
+    elif isinstance(rawData, str):
+        try:
+            send_json(clientAddress, rawData)
+        except:
+            print("Type: str, had issue in send_data")
+
+    else:
+        print("Error, could not determine type")
 
 
 ''' SERVER LOOP - PLACE ELSEWHERE'''
