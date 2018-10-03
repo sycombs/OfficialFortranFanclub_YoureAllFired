@@ -55,6 +55,12 @@ def new_game(gameType)
 '''
 
 def cheat_show(board):
+    """
+    Fully displays board, regardless of reveals/flags.
+
+    :param Board board: The current Board object.
+    :return None:
+    """
     print("   ", end="")
     for i in range(board.width):
         print(" " + f"{i:02}" + " ", end="")
@@ -76,6 +82,12 @@ def cheat_show(board):
         print(Style.RESET_ALL)
 
 def cheatMode(board):
+    """
+    Activates cheat mode, which reveals the entire board. Only accessible in single-player mode.
+
+    :param Board board: The current Board object.
+    :return None:
+    """
     #board.displayBoard(); for checking correct output
     cheat_show(board);
     for x in range(1, 6):
