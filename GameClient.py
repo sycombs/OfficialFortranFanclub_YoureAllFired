@@ -11,7 +11,7 @@ GameClient.py
 '''
 
 # socket allows communication with a server
-from socket import
+from socket import * 
 
 # json is used to serialize data
 import json
