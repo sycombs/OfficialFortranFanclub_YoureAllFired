@@ -49,9 +49,12 @@ class Player:
         single dictionary, but here's a quick template to set any data that is
         added later on
 
-        def set_player_INFO(self, dictID, newValue):
-            self.playerINFO[dictID] = newValue
+        def set_player_INFO(self, newValue, dictKey = None):
+            self.playerINFO[dictKey] = newValue
     '''
 
-    def set_player_data(self, dictID, newValue):
-        self.playerData[dictID] = newValue
+    def set_player_data(self, newValue, dictKey = None):
+        if dictKey == None:
+            self.playerData = newValue
+        else
+            self.playerData[dictKey] = newValue
