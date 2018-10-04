@@ -56,5 +56,5 @@ class Player:
     def set_player_data(self, newValue, dictKey = None):
         if dictKey == None:
             self.playerData = newValue
-        else
+        else:
             self.playerData[dictKey] = newValue

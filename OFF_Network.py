@@ -22,10 +22,11 @@ def send_comm(data, sourceSocket, destination):
     I say for my sake because it means I don't want to deal with craziness again
     """
     try:
-        sourceSocket.sendto(data, destination)
+        sourceSocket.sendto(data.encode(), destination)
 
         response, senderAddress = sourceSocket.recvfrom(2048)
-        print("Sender Response: " + response.decode())
+
+        return response
 
     except Exception as e:
         print(e)
