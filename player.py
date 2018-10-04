@@ -1,5 +1,5 @@
 """@package docstring
-player.py should only store, get, and set relevant player data using standard 
+player.py should only store, get, and set relevant player data using standard
 Python data structures, preferrably dictionaries.
 """
 
@@ -27,41 +27,27 @@ class Player:
         '''
         self.playerData = {'ID': 0, 'msg': 'Just a message', 'win': False}
 
-    def get_player_data(self):
-        return self.playerData
 
-    def get_player_ID(self):
-        return self.playerData['ID']
+    ''' GET FUNCTION
+        We only need one function right now since all player data is in a
+        single dictionary, but here's a quick template to return any data that
+        is added later on
 
-    '''
-    Here's a quick template to return any data that is added later on
-
-    def get_player_INFO(self):
-        return self.playerData['INFO']
+        def get_player_INFO(self, dictID):
+            return self.playerINFO[dictID]
     '''
 
-    def send_player_state(self):
-        '''
-        We can change this to a simple get function and then pass the data
-        to the GameClient function that's in charge of sending data
-        '''
+    def get_player_data(self, dictID):
+        return self.playerData[dictID]
 
-        # This will serialize the data using the JSON format
-        pData = json.dumps(self.playerData)
+    ''' SET FUNCTION
+        We only need one function right now since all player data is in a
+        single dictionary, but here's a quick template to set any data that is
+        added later on
 
-        # Create a socket
-        clientSocket = socket(AF_INET, SOCK_DGRAM)
+        def set_player_INFO(self, dictID, newValue):
+            self.playerINFO[dictID] = newValue
+    '''
 
-        # Try sending the data, and if it doesn't work then print some error
-        try:
-            clientSocket.sendto(pData.encode(), serverInfo)
-            response, serverAddress = clientSocket.recvfrom(2048)
-        except Exception as e:
-            print(e)
-
-
-        print(type(response))
-                #print("I call create stuff here")
-
-            # Make sure to close the socket after we received the data
-            #clientSocket.close()
+    def set_player_data(self, dictID, newValue)
+        self.playerData[dictID] = newValue
