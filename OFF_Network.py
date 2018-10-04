@@ -1,11 +1,9 @@
-# Official Fortran Fanclub Network module
+"""@package docstring
+Official Fortran Fanclub Network Module
 
+"""
 # Socket allows us to create and deal with networks
 import socket
-
-# JSON and pickle allow us to serialize game data
-import json
-import pickle
 
 # I suspect we'll stick with the same server address and port number for a while
 # so I'm going to set those here

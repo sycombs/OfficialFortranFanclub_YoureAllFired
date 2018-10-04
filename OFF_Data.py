@@ -1,13 +1,17 @@
 """@package docstring
-  OFF_Data.py will handle all the (de)serialization that's necessary so that
-  any changes to how we handle data is separated from the network code
+Official Fortran Fanclub Data Module
 
-  Currently we use:
+OFF_Data.py will handle all the (de)serialization that's necessary so that any
+changes to how we handle data is separated from the network code
+
+Currently we use:
     JSON
     Python 3.7 Pickle
 """
 
-''' SERIALIZATION FUNCTIONS '''
+import json
+import pickle
+
 
 def pickle_obj(serverSocket, clientAddress, rawData):
     """
