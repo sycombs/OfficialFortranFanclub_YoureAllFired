@@ -3,7 +3,7 @@ Official Fortran Fanclub Network Module
 
 """
 # Socket allows us to create and deal with networks
-import socket
+from socket import *
 
 # I suspect we'll stick with the same server address and port number for a while
 # so I'm going to set those here

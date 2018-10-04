@@ -38,8 +38,14 @@ def deserialize_data(serialData):
     """
     deserialize_data will attempt to unserialize and return data
 
+    Data received should be easily convertable. The following has a table
+    with the encode / decode formats for  JSON to Python
+    https://docs.python.org/3/library/json.html#json-to-py-table
+
     Restrictions:
         serialData is currently limited to JSON only
+
+
 
     If an exception occurs, return ERROR? False? None? What do I do?
     """
