@@ -10,35 +10,26 @@ Currently we use:
 """
 
 import json
-#import pickle
 
 
 '''
     We're going to stick with JSON for testing purposes
-
-def pickle_obj(serverSocket, clientAddress, rawData):
-    """
-    send_obj() sends pickled object data
-    """
-    try:
-        pickleData = pickle.dumps(rawData)
-        serverSocket.sendto(pickleData, clientAddress)
-    except Exception as e:
-        print(e)
 '''
-def send_json(serverSocket, clientAddress, rawData):
+
+def serialize_data(rawData):
     """
-    send_json()
+    serialize_data() will return a JSON object that represents the raw data
+    passed
+
+    Restrictions:
+        rawData must be a dictionary, string, or int
+
+    If an exception occurs, return False?
     """
+
     try:
         jsonData = json.dumps(rawData)
-        serverSocket.sendto(jsonData, clientAddress)
+        return jsonData
     except Exception as e:
         print(e)
-
-
-
-''' How do we best structure this?
-def serialize_data(rawData):
-    Call proper serialization function
-'''
+        return False
