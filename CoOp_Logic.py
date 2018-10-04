@@ -30,7 +30,7 @@ serverSocket.bind(('', SERVER_PORT))
 
 while STAGE_1:
     message, clientAddress = serverSocket.recvfrom(2048)
-
+//
 #while STAGE_1:
     #message, clientAddress = serverSocket.recvfrom(2048)
 
