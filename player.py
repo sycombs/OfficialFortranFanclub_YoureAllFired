@@ -58,8 +58,8 @@ class Player:
         except Exception as e:
             print(e)
 
-        
-        print(type(response))
+
+        return response
                 #print("I call create stuff here")
 
             # Make sure to close the socket after we received the data
