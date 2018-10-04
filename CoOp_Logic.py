@@ -1,60 +1,6 @@
 # Multiplayer stuff
 # Server and game logic stuff
 
-
-'''
-MY TEST SERVER FOR NOW
-'''
-from Board import *
-from Server import *
-
-'''
-serverSocket = socket(AF_INET, SOCK_DGRAM)
-serverSocket.bind(('', serverPort))
-
-while True:
-    rawData, clientAddress = serverSocket.recvfrom(2048 * 2 * 2 * 2)
-
-    interpret_data(rawData)
-
-
-    serverSocket.sendto("Okay".encode(), clientAddress)
-
-#a = True
-
-# Try sending a Board
-#while (a == True):
-    # Get a message
-#    data, clientAddress = serverSocket.recvfrom(2048 * 2 * 2 * 2)
-
-    # Send a board in response
-#    sendBoard = Board(2, 2, 1)
-
-    #pBoard = pickle.dumps(sendBoard)
-    #serverSocket.sendto(pBoard, clientAddress)
-
-    #a = False
-
-'''
-
-
-'''
-while True:
-    # Receive request
-    data, clientAddress = serverSocket.recvfrom(2048 * 2 * 2 * 2)
-    serverSocket.sendto(.encode(), clientAddress)
-    #serverSocket.sendto("Response 2".encode(), clientAddress)
-
-    if isinstance(data, str):
-        try:
-            print("It's a string")
-            interpret_data(data)
-        except Exception as e:
-            print(e)
-
-    #serverSocket.sendto("Response".encode(), clientAddress)
-'''
-
 # *** WAITING FOR PLAYER 1 TO CONNECT ***
 
 # Current player count: 0
