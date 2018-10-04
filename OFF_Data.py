@@ -10,8 +10,11 @@ Currently we use:
 """
 
 import json
-import pickle
+#import pickle
 
+
+'''
+    We're going to stick with JSON for testing purposes
 
 def pickle_obj(serverSocket, clientAddress, rawData):
     """
@@ -22,7 +25,7 @@ def pickle_obj(serverSocket, clientAddress, rawData):
         serverSocket.sendto(pickleData, clientAddress)
     except Exception as e:
         print(e)
-
+'''
 def send_json(serverSocket, clientAddress, rawData):
     """
     send_json()

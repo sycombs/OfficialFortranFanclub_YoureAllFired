@@ -37,8 +37,12 @@ class Player:
             return self.playerINFO[dictID]
     '''
 
-    def get_player_data(self, dictID):
-        return self.playerData[dictID]
+    def get_player_data(self, dictKey = None):
+        # If no value is passed, return the entire playerData structure
+        if dictKey == None:
+            return self.playerData
+        else:
+            return self.playerData[dictKey]
 
     ''' SET FUNCTION
         We only need one function right now since all player data is in a
@@ -49,5 +53,5 @@ class Player:
             self.playerINFO[dictID] = newValue
     '''
 
-    def set_player_data(self, dictID, newValue)
+    def set_player_data(self, dictID, newValue):
         self.playerData[dictID] = newValue
