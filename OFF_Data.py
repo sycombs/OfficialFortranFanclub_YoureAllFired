@@ -24,7 +24,7 @@ def serialize_data(rawData):
     Restrictions:
         rawData must be a dictionary, string, or int
 
-    If an exception occurs, return False?
+    If an exception occurs, return ERROR? False? None? What do I do?
     """
 
     try:
@@ -32,4 +32,21 @@ def serialize_data(rawData):
         return jsonData
     except Exception as e:
         print(e)
-        return False
+        return "ERROR"
+
+def deserialize_data(serialData):
+    """
+    deserialize_data will attempt to unserialize and return data
+
+    Restrictions:
+        serialData is currently limited to JSON only
+
+    If an exception occurs, return ERROR? False? None? What do I do?
+    """
+
+    try:
+        deserialData = json.loads(serialData)
+        return deserialData
+    except Exception as e:
+        print(e)
+        return "ERROR"
