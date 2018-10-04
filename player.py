@@ -1,17 +1,14 @@
 """@package docstring
-I don't know yet...
+player.py should only store, get, and set relevant player data using standard 
+Python data structures, preferrably dictionaries.
 """
 
 
-''' TODO: Remove the client specific code from the Player class and move it
-elsewhere. The client should only be involved in the sending and receiving of
-data but should not interpret any of the data past calling the proper functions
-in response to what was received
+''' TODO:
+    Rename Player.py to something that doesn't look so much like Play.py and
+    doesn't start with a lowercase letter
 
-GameClient.py should handle the serialization of data. That way the Player
-class is kept separate from the network implementation. This allows us to
-change the player data pretty quickly and easily since all we have to do is
-pass the data and not worry much about how it's formatted or how it's sent
+    Suggestions: NetPlayer.py and NetworkPlayer.py
 '''
 
 class Player:
