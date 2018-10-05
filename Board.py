@@ -1,5 +1,25 @@
 import random
 
+
+# BADDY BAD BAD BAD
+def convert_cell_to_dictionary(someCell):
+    cellDict = {'isBomb': someCell.isBomb,
+                'isRevealed': someCell.isRevealed,
+                'isFlagged': someCell.isFlagged,
+                'adj': someCell.adj}
+    return cellDict
+
+
+def convert_dictionary_to_cell(someDict):
+    cell = Cell()
+    cell.isBomb     = someDict['isBomb']
+    cell.isRevealed = someDict['isRevealed']
+    cell.isFlagged  = someDict['isFlagged']
+    cell.adj        = someDict['adj']
+
+    return cell
+
+
 class Cell:
     """
     Store data for each cell in the grid. Upon initiation, a Cell is not a bomb,
@@ -78,3 +98,35 @@ class Board:
         for i in self.grid:
             a.append(str(i))
         return a
+
+    def brute_force(self, cell, i, j):
+        self.grid[i][j] = cell
+
+
+# Create a board
+aBoard = Board(4, 4, 1)
+
+# Print it
+print("Board A")
+aBoard.displayBoard()
+print("")
+
+# Create a new board
+bBoard = Board(4, 4, 5)
+
+# Print it
+print("Board B")
+bBoard.displayBoard()
+print("")
+
+# Replace the first board with the new one
+for r in range(0, bBoard.height):
+    for c in range(0, bBoard.width):
+        tempCell = convert_cell_to_dictionary(bBoard.grid[r][c]) # Yes, test it like this
+        # because of networking stuff
+        newCell  = convert_dictionary_to_cell(tempCell)
+        aBoard.brute_force(newCell, r, c)
+
+# Print the first board again
+print("New Board A")
+aBoard.displayBoard()
