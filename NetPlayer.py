@@ -39,10 +39,11 @@ class NetPlayer:
 
     def get_player_data(self, dictKey = None):
         # If no value is passed, return the entire playerData structure
-        if dictKey == None:
-            return self.playerData
-        else:
-            return self.playerData[dictKey]
+        return self.playerData
+        #if dictKey == None:
+            #return self.playerData
+        #else:
+            #return self.playerData[dictKey]
 
     ''' SET FUNCTION
         We only need one function right now since all player data is in a

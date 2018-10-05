@@ -30,8 +30,8 @@ def serialize_data(rawData):
         jsonData = json.dumps(rawData)
         return jsonData
     except Exception as e:
+        print("ERROR: serialize_data")
         print(e)
-        return "ERROR"
 
 def deserialize_data(serialData):
     """

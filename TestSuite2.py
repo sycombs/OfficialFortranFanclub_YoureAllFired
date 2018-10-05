@@ -16,14 +16,12 @@ from OFF_Network import *
 
 from NetPlayer import *
 
-from time import *
-
 print("Test Suite window")
 
 # Create a player
 testPlayer = NetPlayer()
 
-testPlayer.playerData['ID'] = 1
+testPlayer.playerData['ID'] = 2
 
 pData = json.dumps(testPlayer.get_player_data())
 
@@ -66,5 +64,3 @@ while True:
 
     hopefullyABoard = send_comm(msg, clientSocket, SERVER_INFO, True)
     print(hopefullyABoard)
-
-    sleep(1)

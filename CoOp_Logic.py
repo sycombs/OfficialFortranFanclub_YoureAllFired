@@ -12,14 +12,14 @@ from GameLogic import *
 
 
 STAGE_1 = True
-STAGE_2 = True
+STAGE_2 = False
 MAIN_LOOP = False
 
 
 # *** WAITING FOR PLAYER 1 TO CONNECT ***
 
 # Current player count: 0
-playerCount = 1
+playerCount = 0
 
 # PLAYER CONNECTED
     # Increase player count to 1
@@ -27,6 +27,8 @@ playerCount = 1
 
 serverSocket = socket(AF_INET, SOCK_DGRAM)
 serverSocket.bind(('', SERVER_PORT))
+
+print("Server window")
 
 while STAGE_1:
     dataSerial, clientAddress = serverSocket.recvfrom(2048)
@@ -42,12 +44,15 @@ while STAGE_1:
     newDataSerial = serialize_data(dataDeserial)
     send_comm(newDataSerial, serverSocket, clientAddress)
 
+    # Have the
+    #send_comm(newDataSerial, serverSocket, clientAddress)
+
     # Exit out
     STAGE_1 = False
 
 
 # Assume everything worked...
-
+'''
 # *** WAITING FOR PLAYER 2 TO CONNECT ***
 while STAGE_2:
     dataSerial, clientAddress = serverSocket.recvfrom(2048)
@@ -65,7 +70,7 @@ while STAGE_2:
 
     # Exit out
     STAGE_2 = False
-
+'''
 
 # Current player count: 1
 
