@@ -124,6 +124,11 @@ for r in range(0, bBoard.height):
     for c in range(0, bBoard.width):
         tempCell = convert_cell_to_dictionary(bBoard.grid[r][c]) # Yes, test it like this
         # because of networking stuff
+        send_comm(tempCell, plyr1, plyr2)
+
+for r in range(0, plyr2Board.height):
+    for c in range(0, plyr2Board.width):
+        # Keep getting data
         newCell  = convert_dictionary_to_cell(tempCell)
         aBoard.brute_force(newCell, r, c)
 
