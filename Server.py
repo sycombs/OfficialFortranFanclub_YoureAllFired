@@ -12,3 +12,12 @@ and the server (where the game specific code is handled).
 We may not run a pure client-server model so keep that in mind when moving
 code out of this file... like the server loop
 """
+
+
+''' RECOMMEND: DELETION '''
+
+'''
+I think we've moved all of our core functionality elsewhere and the gameplay
+logic is different enough for each game type that we don't even need this and
+can instead run each server type in its own GameType_Logic file
+'''
