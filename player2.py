@@ -24,3 +24,4 @@ for r in range(0,height):
         board.brute_force(newCell, r, c)
 send_comm("False", clientSocket, SERVER_INFO)
 board.displayBoard()
+run_coop(clientSocket,SERVER_INFO,False,board)

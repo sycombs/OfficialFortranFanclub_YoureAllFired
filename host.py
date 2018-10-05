@@ -2,8 +2,9 @@
 host.py
 '''
 from GameLogic import *
-from OFF_Network import *
 serverSocket = socket(AF_INET, SOCK_DGRAM)
+#below allows us to reuse a socket within an amount of time
+serverSocket.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
 serverSocket.bind(('',SERVER_PORT))
 
 if __name__ == "__main__":
@@ -36,9 +37,10 @@ if __name__ == "__main__":
                 tempCell = convert_cell_to_dictionary(board.grid[r][c])
                 response = send_comm(serialize_data(tempCell), serverSocket, clientAddress,True)
         board.displayBoard()
+        run_coop(serverSocket, clientAddress, True, board)
         #we're here because we got a response
         #receive clientaddress
         #run_coop(hostSocket,clientAddress,board)
-        
+
     elif mode == 3:
         print("Only single player is working right now")
