@@ -46,25 +46,24 @@ while True:
     # Send testPlayer 's data and save the response
     responseData = send_comm(pData, clientSocket, SERVER_INFO, True)
 
-    print(responseData.decode())
+    #print(responseData.decode())
+    if responseData.decode() == "IT'S NOT YOUR TURN YET":
+        print("It's not my turn :(")
 
-    # Deserialize the data and assign it to the player
-    #processedData = deserialize_data(responseData)
+    else:
+        # Deserialize the data and assign it to the player
+        #processedData = deserialize_data(responseData)
 
-    # Print the player's data
-    #testPlayer.set_player_data(processedData)
-    #testPlayer.set_player_data(responseData)
+        # Print the player's data
+        #testPlayer.set_player_data(processedData)
+        #testPlayer.set_player_data(responseData)
 
-    print(testPlayer.get_player_data())
+        print(testPlayer.get_player_data())
 
+        msg = serialize_data("Board, please")
+        #print("msg is of type: " + str(type(msg)))
 
-    #clientSocket.close()
-    #clientSocket = socket(AF_INET, SOCK_DGRAM)
-
-    msg = serialize_data("Board, please")
-    #print("msg is of type: " + str(type(msg)))
-
-    hopefullyABoard = send_comm(msg, clientSocket, SERVER_INFO, True)
-    print(hopefullyABoard)
+        hopefullyABoard = send_comm(msg, clientSocket, SERVER_INFO, True)
+        print(hopefullyABoard)
 
     sleep(1)

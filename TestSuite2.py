@@ -16,6 +16,8 @@ from OFF_Network import *
 
 from NetPlayer import *
 
+from time import *
+
 print("Test Suite window")
 
 # Create a player
@@ -45,22 +47,22 @@ while True:
     responseData = send_comm(pData, clientSocket, SERVER_INFO, True)
 
     print(responseData.decode())
+    if responseData.decode() != "IT'S NOT YOUR TURN YET":
+        # Deserialize the data and assign it to the player
+        #processedData = deserialize_data(responseData)
 
-    # Deserialize the data and assign it to the player
-    #processedData = deserialize_data(responseData)
+        # Print the player's data
+        #testPlayer.set_player_data(processedData)
+        #testPlayer.set_player_data(responseData)
 
-    # Print the player's data
-    #testPlayer.set_player_data(processedData)
-    #testPlayer.set_player_data(responseData)
+        print(testPlayer.get_player_data())
 
-    print(testPlayer.get_player_data())
+        msg = serialize_data("Board, please")
+        #print("msg is of type: " + str(type(msg)))
 
+        hopefullyABoard = send_comm(msg, clientSocket, SERVER_INFO, True)
+        print(hopefullyABoard)
+    else:
+        print("It's not my turn :(")
 
-    #clientSocket.close()
-    #clientSocket = socket(AF_INET, SOCK_DGRAM)
-
-    msg = serialize_data("Board, please")
-    #print("msg is of type: " + str(type(msg)))
-
-    hopefullyABoard = send_comm(msg, clientSocket, SERVER_INFO, True)
-    print(hopefullyABoard)
+    sleep(1)

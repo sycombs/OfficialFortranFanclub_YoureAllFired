@@ -28,41 +28,59 @@ print("Server window")
 
 STAGE_1 = True
 
+playerTurn = 1
+
 while STAGE_1:
     dataSerial, clientAddress = serverSocket.recvfrom(2048)
+
+    dataDeserial = deserialize_data(dataSerial)
+    print("Request from player " + str(dataDeserial['ID']))
+    print("Current turn belongs to: " + str(playerTurn))
 
     # Assuming we only get here after we received something...
     #playerCount = playerCount + 1 # Will this help prevent errors?
 
     # Decode the info and change it
     #dataDeserial = deserialize_data(dataSerial.decode())
-    dataDeserial = deserialize_data(dataSerial)
-    print("Hello, player " + str(dataDeserial['ID']))
-    #dataDeserial['ID'] = playerCount
 
-    # Send a hello message
-    msg = "You're so beautiful"
-    send_comm(msg, serverSocket, clientAddress, False)
+    if int(dataDeserial['ID']) != playerTurn:
+        msg = "IT'S NOT YOUR TURN YET"
+        send_comm(msg, serverSocket, clientAddress, False)
 
-    # Serialize it and send it back
-    #newDataSerial = serialize_data(dataDeserial)
-    #send_comm(newDataSerial, serverSocket, clientAddress, False)
+    else:
+        #dataDeserial['ID'] = playerCount
 
-    # Start listening for a new request
-    dataSerial, clientAddress = serverSocket.recvfrom(2048)
+        # Send a hello message
+        msg = "You're so beautiful"
+        send_comm(msg, serverSocket, clientAddress, False)
 
-    # TRYING TO SEND A BOARD!
-    #serverSocket.sendto("Got a request".encode(), clientAddress)
+        # Serialize it and send it back
+        #newDataSerial = serialize_data(dataDeserial)
+        #send_comm(newDataSerial, serverSocket, clientAddress, False)
 
-    # Serialize the board and send it
-    a = tB.get_string_rep()
-    s = serialize_data(str(a))
-    #print("Type a is: " + str(type(a)))
+        # Start listening for a new request
+        dataSerial, clientAddress = serverSocket.recvfrom(2048)
 
-    serverSocket.sendto(s.encode(), clientAddress)
-    #result = send_comm(a, serverSocket, clientAddress, False)
-    #if result != None:
-        #print(result)
+        # TRYING TO SEND A BOARD!
+        #serverSocket.sendto("Got a request".encode(), clientAddress)
+
+        # Serialize the board and send it
+        a = tB.get_string_rep()
+        s = serialize_data(str(a))
+        #print("Type a is: " + str(type(a)))
+
+        serverSocket.sendto(s.encode(), clientAddress)
+        #result = send_comm(a, serverSocket, clientAddress, False)
+        #if result != None:
+            #print(result)
+        if playerTurn == 1:
+            playerTurn = 2
+        elif playerTurn == 2:
+            playerTurn = 1
+
+        print("EXITING WITH PLAYER TURN SET TO: " + str(playerTurn))
+
+
 
     print("DONE WITH LOOP")
 
