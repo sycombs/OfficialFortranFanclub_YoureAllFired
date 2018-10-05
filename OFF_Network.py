@@ -25,7 +25,7 @@ def send_comm(data, sourceSocket, destination):
         # Send the data
         sourceSocket.sendto(data.encode(), destination)
 
-        # Return the response. We keep senderAddress because... ...
+        # Return the response. We keep senderAddress because... ... ...!
         response, senderAddress = sourceSocket.recvfrom(2048)
         return response
 
