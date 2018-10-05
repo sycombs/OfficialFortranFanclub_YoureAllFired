@@ -14,10 +14,10 @@ end of the test, the player's ID number should be 1
 from OFF_Data import *
 from OFF_Network import *
 
-from player import *
+from NetPlayer import *
 
 # Create a player
-testPlayer = Player()
+testPlayer = NetPlayer()
 
 # Serialize the player's data
 serializedPlayerData = serialize_data(testPlayer.get_player_data())

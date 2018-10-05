@@ -11,7 +11,7 @@ Python data structures, preferrably dictionaries.
     Suggestions: NetPlayer.py and NetworkPlayer.py
 '''
 
-class Player:
+class NetPlayer:
     def __init__(self):
         """
         Doxygen Comments Doxygen Comments Doxygen Comments
