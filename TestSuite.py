@@ -20,13 +20,13 @@ from player import *
 testPlayer = Player()
 
 # Serialize the player's data
-serializedPlayereData = serialize_data(testPlayer.get_player_data())
+serializedPlayerData = serialize_data(testPlayer.get_player_data())
 
 # Create the socket to send the data
 clientSocket = socket(AF_INET, SOCK_DGRAM)
 
 # Send testPlayer 's data and save the response
-responseData = send_comm(serializedPlayereData, clientSocket, SERVER_INFO)
+responseData = send_comm(serializedPlayerData, clientSocket, SERVER_INFO)
 
 # Deserialize the data and assign it to the player
 processedData = deserialize_data(responseData)
