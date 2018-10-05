@@ -22,10 +22,11 @@ def send_comm(data, sourceSocket, destination):
     I say for my sake because it means I don't want to deal with craziness again
     """
     try:
+        # Send the data
         sourceSocket.sendto(data.encode(), destination)
 
+        # Return the response. We keep senderAddress because... ...
         response, senderAddress = sourceSocket.recvfrom(2048)
-
         return response
 
     except Exception as e:
