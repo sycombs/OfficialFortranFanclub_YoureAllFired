@@ -6,7 +6,6 @@ changes to how we handle data is separated from the network code
 
 Currently we use:
     JSON
-    Python 3.7 Pickle
 """
 
 import json
