@@ -14,24 +14,27 @@ end of the test, the player's ID number should be 1
 from OFF_Data import *
 from OFF_Network import *
 
-from NetPlayer import *
+#from NetPlayer import *
 
 # Create a player
-testPlayer = NetPlayer()
+#testPlayer = NetPlayer()
 
 # Serialize the player's data
-serializedPlayerData = serialize_data(testPlayer.get_player_data())
+#serializedPlayerData = serialize_data(testPlayer.get_player_data())
 
 # Create the socket to send the data
 clientSocket = socket(AF_INET, SOCK_DGRAM)
 
 # Send testPlayer 's data and save the response
-responseData = send_comm(serializedPlayerData, clientSocket, SERVER_INFO)
+#responseData = send_comm(serializedPlayerData, clientSocket, SERVER_INFO)
 
 # Deserialize the data and assign it to the player
-processedData = deserialize_data(responseData)
+#processedData = deserialize_data(responseData)
 
 # Print the player's data
-testPlayer.set_player_data(processedData)
+#testPlayer.set_player_data(processedData)
 
-print(testPlayer.get_player_data())
+#print(testPlayer.get_player_data())
+
+hopefullyABoard = nice_send_comm("Board, please", clientSocket, SERVER_INFO)
+print(hopefullyABoard)

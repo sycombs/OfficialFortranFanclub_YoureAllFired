@@ -72,3 +72,9 @@ class Board:
             for j in range(self.width):
                 print(self.grid[i][j], end="")
             print()
+
+    def get_string_rep(self):
+        a = []
+        for i in self.grid:
+            a.append(str(i))
+        return a

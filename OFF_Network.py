@@ -7,7 +7,7 @@ from socket import *
 
 # I don't like this... I wanted to keep things separate, but time is off
 # the essence and not doing this is sort of annoying :(
-from OFF_Network import *
+from OFF_Data import *
 
 # I suspect we'll stick with the same server address and port number for a while
 # so I'm going to set those here
@@ -30,8 +30,8 @@ def send_comm(data, sourceSocket, destination):
         sourceSocket.sendto(data.encode(), destination)
 
         # Return the response. We keep senderAddress because... ... ...!
-        response, senderAddress = sourceSocket.recvfrom(2048)
-        return response
+        #response, senderAddress = sourceSocket.recvfrom(2048)
+        #return response
 
     except Exception as e:
         print(e)
