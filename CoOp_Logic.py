@@ -31,6 +31,15 @@ serverSocket.bind(('', SERVER_PORT))
 while STAGE_1:
     dataSerial, clientAddress = serverSocket.recvfrom(2048)
 
+    ''' BOARD CREATION '''
+
+    # Send a response to the game client telling it we want the player
+    # to send board parameters
+    command = serialize_data("GENERATE_BOARD")
+
+
+
+
     # Assuming we only get here after we received something...
     playerCount = playerCount + 1 # Will this help prevent errors?
 

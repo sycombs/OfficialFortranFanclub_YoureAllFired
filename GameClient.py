@@ -27,3 +27,6 @@ def receive_data():
     serData, serverAddress = clientSocket.recvfrom(2048)
 
     return serData
+
+# Connect to the server
+# Once connected, check to see what the server wants from us
