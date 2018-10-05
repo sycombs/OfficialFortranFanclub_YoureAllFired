@@ -1,7 +1,7 @@
 class Leaderboard:
     #score variable
-    def __init__(self):
-        self.fileName = 'leaderboard.txt'
+    def __init__(self, fname):
+        self.fileName = fname
 
     def get_leaderboard(self, number):
         #return top 10...20 scores

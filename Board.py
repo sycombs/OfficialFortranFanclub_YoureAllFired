@@ -73,27 +73,48 @@ class Board:
                 print(self.grid[i][j], end="")
             print()
 
-    def stringify_board(self):
-        temp = "   "
-        for i in range(self.width):
-            temp += (" " + f"{i:02}" + " ")
-        temp += '\n   '
-        for i in range(self.width):
-            temp +=('----')
-        temp += '\n'
+    def calculate_3bv(self):
+        total = 0
         for i in range(self.height):
-            temp += (f"{i:02}")
-            temp += ("|")
-            for j in range(self.width):
-                if self.grid[i][j].isFlagged:
-                    temp += ("  F ")
-                elif self.grid[i][j].isRevealed:
-                    if self.grid[i][j].adj == 0:
-                        temp += ("  _ ")
-                    else:
-                        temp += ("  " + str(board.grid[i][j].adj) + " ")
-                else:
-                    temp +=("  X ")
-            temp += '\n'
-        temp += '\n'
-        return temp
+            for j in range(self.height):
+                self.grid[i][j].isRevealed = False
+        for i in range(self.height):
+            for j in range(self.height):
+                if self.grid[i][j].isRevealed==False and self.grid[i][j].adj==0:
+                    total+=1
+                    self.recReveal(i,j)
+        for i in range(self.height):
+            for j in range(self.height):
+                if self.grid[i][j].isRevealed==False:
+                    total+=1
+                    self.grid[i][j].isRevealed=True
+        return total
+
+    def recReveal(self, rows, cols):
+        """ @pre    Grid is a valid object of type Board, rows and cols is the location in the board to reveal
+            @post   will reveal all
+            @return returns true if the cell in question is a mine, false if it is not
+        """
+        if rows>=self.height or rows<0 or cols>=self.width or cols<0 or self.grid[rows][cols].isRevealed==True:
+            return
+
+        self.grid[rows][cols].isRevealed=True
+
+        if self.grid[rows][cols]=='X':
+            return
+
+        elif self.grid[rows][cols]!='0':
+            return
+
+        elif self.grid[rows][cols]=='0':
+            recReveal(rows-1, cols-1)
+            recReveal(rows-1, cols)
+            recReveal(rows-1, cols+1)
+            recReveal(rows, cols+1)
+            recReveal(rows+1, cols+1)
+            recReveal(rows+1, cols)
+            recReveal(rows+1, cols-1)
+            recReveal(rows, cols-1)
+
+
+        return

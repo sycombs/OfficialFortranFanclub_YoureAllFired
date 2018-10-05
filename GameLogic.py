@@ -15,6 +15,8 @@ import time
 import player
 import pickle
 from Server import *
+from Leaderboard import *
+from Time import *
 
 def receive_pickle(serverSocket):
     '''
@@ -66,6 +68,12 @@ def show(board, lose=False):
     :param Board board: The current Board object.
     :return None:
     """
+    if lose:
+        for i in range(board.height):
+            for j in range(board.width):
+                if board.grid[i][j].isBomb==False:
+                    board.grid[i][j].isRevealed=True
+
     print("   ", end="")
     for i in range(board.width):
         print(" " + f"{i:02}" + " ", end="")
@@ -257,13 +265,14 @@ def run_singleplayer():
 
     board = Board(height, width, mines)
     show(board)
+    leaders = Leaderboard('leaderboard.txt')
 
     lose = False
     flaggedBombCount = 0
 
     #begin game loop
     while not lose and flaggedBombCount != board.mines:
-        choice = input("MENU:\n Reveal Square: r x y\n Add or Remove Flag: f x y\n Quit: q\n <Prompt>: ").lower() #TODO discuss possible prompts, like turn counter
+        choice = input("MENU:\n Reveal Square: r x y\n Add or Remove Flag: f x y\n Quit: q\n Show Leaderboard: l\n <Prompt>: ").lower() #TODO discuss possible prompts, like turn counter
         if promptCheck(choice):
             action = choice.split()[0]
 
@@ -301,16 +310,27 @@ def run_singleplayer():
                 show(board)
             elif action == "q":
                 break
+            elif action == "l":
+                leaders.get_leaderboard()
+                input("Press Enter to return to game...")
+
+
+
+
         else:
             print("Invalid command. Pick a whole number, silly goose... try again.")
 
     if lose:
         print("Bomb detonated! You need more practice, young grasshopper.")
         show(board, True)
+        score = board.calculate_3bv()
+        print(score)
     elif choice == "q":
         print("Thank you for playing... come again!")
     else:
         print("*Mario Voice* You are the weiner!")
+        score = board.calculate_3bv()
+        print(score)
 
 def run_coop():
     """

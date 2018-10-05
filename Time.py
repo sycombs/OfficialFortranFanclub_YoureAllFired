@@ -13,21 +13,17 @@ class Time:
     def compare_time(self, other):
         if self.totalTime>other.showTotal:
             print("You Win!")
-        else if self.totalTime<other.showTotal:
+        elif self.totalTime<other.showTotal:
             print("You Lose...")
         else:
             print("It's a draw?")
     def turn_start(self):
         self.turnStart=time.time()
     def time_limit(self, timeLimit):
-        if(self.turnStart + timeLimit >= time.time())
-        {
+        if (self.turnStart + timeLimit) >= time.time():
             return True
-        }
-        else
-        {
+        else:
             return False
-        }
     def time_delay(self, timeLimit):
         time.sleep(timeLimit)
     # def countDown(hour, min, sec):
