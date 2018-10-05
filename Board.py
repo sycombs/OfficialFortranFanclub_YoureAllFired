@@ -102,7 +102,7 @@ class Board:
     def brute_force(self, cell, i, j):
         self.grid[i][j] = cell
 
-
+'''
 # Create a board
 aBoard = Board(4, 4, 1)
 
@@ -135,3 +135,4 @@ for r in range(0, plyr2Board.height):
 # Print the first board again
 print("New Board A")
 aBoard.displayBoard()
+'''
