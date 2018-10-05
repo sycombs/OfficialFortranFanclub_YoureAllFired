@@ -72,3 +72,28 @@ class Board:
             for j in range(self.width):
                 print(self.grid[i][j], end="")
             print()
+
+    def stringify_board(self):
+        temp = "   "
+        for i in range(self.width):
+            temp += (" " + f"{i:02}" + " ")
+        temp += '\n   '
+        for i in range(self.width):
+            temp +=('----')
+        temp += '\n'
+        for i in range(self.height):
+            temp += (f"{i:02}")
+            temp += ("|")
+            for j in range(self.width):
+                if self.grid[i][j].isFlagged:
+                    temp += ("  F ")
+                elif self.grid[i][j].isRevealed:
+                    if self.grid[i][j].adj == 0:
+                        temp += ("  _ ")
+                    else:
+                        temp += ("  " + str(board.grid[i][j].adj) + " ")
+                else:
+                    temp +=("  X ")
+            temp += '\n'
+        temp += '\n'
+        return temp

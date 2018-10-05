@@ -64,9 +64,12 @@ plyr2.playerData['ID'] = 2
 #plyr2.send_player_state()
 
 playerArray = [plyr1, plyr2]
-
+board = Board(20,20,5)
+board_string = board.stringify_board()
+print (board_string)
+'''
 while True:
     n = random.randint(0, 1)
 
     playerArray[n].send_player_state()
-    
+'''

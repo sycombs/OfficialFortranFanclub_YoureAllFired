@@ -5,31 +5,62 @@
 '''
 MY TEST SERVER FOR NOW
 '''
-from Server import *
+
 from GameLogic import *
 
-serverSocket = socket(AF_INET, SOCK_DGRAM)
-serverSocket.bind(('', serverPort))
+
+
 player_count = 0
 set_game_params = False
-while True:
-    rawData, clientAddress = serverSocket.recvfrom(2048 * 2 * 2 * 2)
+game_start = False
+turn_counter = 0
+client_addresses = [0,0,0]
 
-    useable_data = interpret_data(rawData)
-    #since the entire thing runs in a loop, check if params are set
-    if set_game_params == False:
-        serverSocket.sendto("inp".encode(), clientAddress)
+def start_inp(serverSocket, clientAddress):
+    '''
+    function called at beginning of game
+    '''
+    serverSocket.sendto("inp".encode(), clientAddress)
+    rawData, clientAddress = serverSocket.recvfrom(2048 * 2 * 2 * 2)
+    player_state = interpret_data(rawData)
+    #this takes the string tuple in playerdata['msg'] converts to board
+    board_tuple = tuple(map(int,player_state['msg'].split(' ')))
+    board = Board(board_tuple[0],board_tuple[1],board_tuple[2])
+    #return board to player to print it client side
+    send_board(serverSocket, clientAddress, board)
+    return board
+
+while True:
+    try:
         rawData, clientAddress = serverSocket.recvfrom(2048 * 2 * 2 * 2)
         player_state = interpret_data(rawData)
-        #this takes the string tuple in playerdata['msg'] converts to board
-        board_tuple = tuple(map(int,player_state['msg'].split(' ')))
-        board = Board(board_tuple[0],board_tuple[1],board_tuple[2])
-        send_board(serverSocket,clientAddress,board)
+        if not game_start:
+            if player_state['msg'] == 'uninitialized':
+                if set_game_params == False:
+                    client_addresses[1] = clientAddress
+                    board = start_inp(serverSocket, client_addresses[1])
+                    set_game_params = True
+                    print ("Player 1 has joined")
+                    player_count+= 1
+                elif player_count == 1 and clientAddress != client_addresses[1]:
+                    client_addresses[2] = clientAddress
+                    serverSocket.sendto("p2".encode(), client_addresses[2])
+                    print("Player 2 has joined")
+                    player_count+= 1
+        else:
+            useable_data = interpret_data(rawData)
+            serverSocket.sendto("Okay".encode(), clientAddress)
+    finally:
+        serverSocket.close()
+        serverSocket = socket(AF_INET, SOCK_DGRAM)
+        serverSocket.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
+        serverSocket.bind(('', serverPort))
 
-    serverSocket.sendto("Okay".encode(), clientAddress)
+#def player_turn(serverSocket, clientAddress):
+
+
 
 #a = True
-
 # Try sending a Board
 #while (a == True):
     # Get a message

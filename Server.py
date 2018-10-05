@@ -26,10 +26,10 @@ import json
 
 # Server Data
 serverPort = 12000
-#serverSocket = socket(AF_INET, SOCK_DGRAM)
-
-# Bind a server
-#serverSocket.bind(('', serverPort))
+serverSocket = socket(AF_INET, SOCK_DGRAM)
+serverSocket.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
+serverSocket.bind(('', serverPort))
+blocksize = 4096
 
 def interpret_data(data):
     """
@@ -54,9 +54,17 @@ def interpret_data(data):
 
 
 def send_board(serverSocket, clientAddress, rawData):
+    '''
+    TODO: Fix this
+    attempts to send multiple packets over pickle
+    '''
     try:
+        end = b'\x00\x00END_MESSAGE!\x00\x00'[:blocksize]
         pickleData = pickle.dumps(rawData)
-        serverSocket.sendto(pickleData, clientAddress)
+        #following lines separate pickled board into pieces & send
+        for n in range(len(pickleData) // blocksize + 1):
+            serverSocket.sendto(pickleData[n * blocksize: (n + 1) * blocksize], clientAddress)
+        serverSocket.sendto(end)
     except Exception as e:
         print(e)
 

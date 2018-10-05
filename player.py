@@ -37,7 +37,7 @@ class Player:
         (Just make sure to use a dictionary, string, or int and and everything
         will work fine)
         '''
-        self.playerData = {'ID': 0, 'msg': 'Just a message', 'win': False}
+        self.playerData = {'ID': 0, 'msg': 'uninitialized', 'win': False}
 
     def send_player_state(self):
         '''

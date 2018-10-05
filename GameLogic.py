@@ -9,9 +9,55 @@ logic here and then just have the three modes do everything on their own?
 That way there's no need to worry about client/server stuff if you're in
 single player mode
 """
-from Board import Board
+from Board import *
 from colorama import Fore, Style
 import time
+import player
+import pickle
+from Server import *
+
+def receive_pickle(serverSocket):
+    '''
+    TODO: get this working
+    attempts to receive multiple packets by pickle
+    '''
+    print ("Receiving Pickles now:")
+    end = b'\x00\x00END_MESSAGE!\x00\x00'[:blocksize]
+    blocks = []
+    while True:
+        blocks.append(serverSocket.recv(blocksize))
+        print ("doin stuff?")
+        if blocks[-1] == end:
+            blocks.pop()
+            break
+    data = b''.join(blocks)
+
+    print ("about to return unpickled stuff")
+    return data
+
+def mult_start_inp(player, board=None):
+    '''
+    @brief called on game start to initialize players in multiplayer game,
+    1st decides board parameters
+    '''
+    if player.send_player_state() == b'inp':
+        #b'inp' means this is first player so set id to 1
+        player.playerData['ID'] = 1
+        #ask for board input (only first player)
+        board_params = game_input()
+        #msg in playerdata is used to convey any string info, could add more elements
+        player.playerData['msg'] = " ".join(str(x) for x in board_params)
+        player.send_player_state()
+        return receive_pickle(serverSocket)
+
+    elif player.send_player_state() == b'p2':
+        player.playerData['ID'] = 2
+        print ("Welcome to Minesweeper!\nThe board parameters are:")
+        print("Height: " + board_params[0] + "\nWidth: " + board_params[1] + "\nMines: " + board_params[2])
+
+
+
+
 
 def show(board, lose=False):
     """
@@ -47,12 +93,6 @@ def show(board, lose=False):
             else:
                 print(Fore.WHITE + "  X ", end="")
         print(Style.RESET_ALL)
-
-'''
-def new_game(gameType)
-    single player: Start a local server
-    multiplayer: Communicate with foreign server
-'''
 
 def cheat_show(board):
     """
@@ -229,6 +269,61 @@ def run_singleplayer():
 
             if action == "-c":
                 cheatMode(board)
+
+            if action == "r" or action == "f":
+                column, row = int(choice.split()[1]), int(choice.split()[2])
+
+                if column >= width or column < 0:
+                    print ("Out of bounds x coordinate!")
+                    while True:
+                        try:
+                            column = int(input("x: "))
+                            while column >= width or column < 0:
+                                column = int(input("Out of bounds! x: "))
+                            break
+                        except ValueError:
+                            print ("Invalid input!")
+
+                if row >= height or row < 0:
+                    print ("Out of bounds y coordinate!")
+                    while True:
+                        try:
+                            row = int(input("y: "))
+                            while row >= height or row < 0:
+                                row = int(input("Out of bounds! y: "))
+                            break
+                        except ValueError:
+                            print ("Invalid input!")
+
+                lose = click(board, row, column, action)
+                if board.grid[row][column].isBomb and board.grid[row][column].isFlagged:
+                        flaggedBombCount += 1
+                show(board)
+            elif action == "q":
+                break
+        else:
+            print("Invalid command. Pick a whole number, silly goose... try again.")
+
+    if lose:
+        print("Bomb detonated! You need more practice, young grasshopper.")
+        show(board, True)
+    elif choice == "q":
+        print("Thank you for playing... come again!")
+    else:
+        print("*Mario Voice* You are the weiner!")
+
+def run_coop():
+    """
+    client side version of coop multiplayer
+    """
+    lose = False
+    flaggedBombCount = 0
+
+    #begin game loop
+    while not lose and flaggedBombCount != board.mines:
+        choice = input("MENU:\n Reveal Square: r x y\n Add or Remove Flag: f x y\n Quit: q\n <Prompt>: ").lower() #TODO discuss possible prompts, like turn counter
+        if promptCheck(choice):
+            action = choice.split()[0]
 
             if action == "r" or action == "f":
                 column, row = int(choice.split()[1]), int(choice.split()[2])
