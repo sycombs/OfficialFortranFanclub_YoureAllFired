@@ -68,12 +68,6 @@ def show(board, lose=False):
     :param Board board: The current Board object.
     :return None:
     """
-    if lose:
-        for i in range(board.height):
-            for j in range(board.width):
-                if board.grid[i][j].isBomb==False:
-                    board.grid[i][j].isRevealed=True
-
     print("   ", end="")
     for i in range(board.width):
         print(" " + f"{i:02}" + " ", end="")
@@ -165,7 +159,7 @@ def promptCheck(prompt):
     :return int: True if the input is valid, False otherwise.
     """
     arr = prompt.split(" ")
-    if arr[0] not in ["r", "f", "q", "-c"]:
+    if arr[0] not in ["r", "f", "q", "-c", "l"]:
         return False
     if arr[0] == "r" or arr[0] == "f":
         if len(arr) < 3:
@@ -264,6 +258,7 @@ def run_singleplayer():
     height,width,mines = game_input()
 
     board = Board(height, width, mines)
+    timeTaken = Time()
     show(board)
     leaders = Leaderboard('leaderboard.txt')
 
@@ -319,18 +314,18 @@ def run_singleplayer():
 
         else:
             print("Invalid command. Pick a whole number, silly goose... try again.")
-
+    timeTaken.game_over_time()
     if lose:
         print("Bomb detonated! You need more practice, young grasshopper.")
         show(board, True)
-        score = board.calculate_3bv()
-        print(score)
+
     elif choice == "q":
         print("Thank you for playing... come again!")
     else:
         print("*Mario Voice* You are the weiner!")
-        score = board.calculate_3bv()
+        score = int(float(board.calculate_3bv()/timeTaken.show_total()))
         print(score)
+        leaders.add_entry(score)
 
 def run_coop():
     """
