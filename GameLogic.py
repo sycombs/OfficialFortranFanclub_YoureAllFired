@@ -269,6 +269,7 @@ def run_singleplayer(board):
     if lose:
         print("Bomb detonated! You need more practice, young grasshopper.")
         show(board, True)
+        leaders.get_leaderboard(10)
 
     elif choice == "q":
         print("Thank you for playing... come again!")
@@ -279,6 +280,7 @@ def run_singleplayer(board):
         if leaders.get_score(10) < score:
             print("Congratulations, you made the leaderboard!")
             leaders.add_entry(score)
+        leaders.get_leaderboard(10)
 
 def run_coop(socket,address,turn,board):
     """
