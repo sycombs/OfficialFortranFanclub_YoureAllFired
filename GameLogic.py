@@ -13,6 +13,8 @@ from Board import *
 from colorama import Fore, Style
 import time
 from OFF_Network import *
+from Time import *
+from Leaderboard import *
 
 
 def show(board, lose=False):
