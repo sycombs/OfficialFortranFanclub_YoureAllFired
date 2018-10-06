@@ -212,7 +212,7 @@ def run_singleplayer(board):
     show(board)
     lose = False
     flaggedBombCount = 0
-
+    leaders = Leaderboard('leaderboard.txt')
     #begin game loop
     while not lose and flaggedBombCount != board.mines:
         choice = input("MENU:\n Reveal Square: r x y\n Add or Remove Flag: f x y\n Quit: q\n <Prompt>: ").lower() #TODO discuss possible prompts, like turn counter
