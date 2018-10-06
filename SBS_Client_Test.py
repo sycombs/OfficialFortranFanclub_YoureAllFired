@@ -4,11 +4,16 @@ from SideBySide_Play import *
 p1 = NetPlayer()
 p1.set_player_data('Connect', 'msg')
 
+print("Test Player")
 clientSocket = socket(AF_INET, SOCK_DGRAM)
 
-serialP1Data = serialize_data(p1.get_player_data())
+connect_to_server(clientSocket)
 
-mode = send_comm(serialP1Data, clientSocket, SERVER_INFO, True)
+#serialP1Data = serialize_data(p1.get_player_data())
+
+#mode = send_comm(serialP1Data, clientSocket, SERVER_INFO, True)
+
+#p1.set_player_data(mode)
 
 # Player 2 connects to Player 1
 
