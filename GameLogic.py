@@ -26,7 +26,8 @@ def show(board, lose=False):
     if lose:
         for i in range(board.height):
             for j in range(board.width):
-                board.grid[i][j].isRevealed = True
+                if not board.grid[i][j].isBomb:
+                    board.grid[i][j].isRevealed = True
     print("   ", end="")
     for i in range(board.width):
         print(" " + f"{i:02}" + " ", end="")
