@@ -108,12 +108,13 @@ class Board:
                 self.grid[i][j].isRevealed = False
         for i in range(self.height):
             for j in range(self.height):
-                if self.grid[i][j].isRevealed==False and self.grid[i][j].adj==0:
-                    total+=1
-                    self.recReveal(i,j)
+                if not self.grid[i][j].isRevealed:
+                    if self.grid[i][j].adj==0 and not self.grid[i][j].isBomb:
+                        total+=1
+                        self.recReveal(i,j)
         for i in range(self.height):
             for j in range(self.height):
-                if self.grid[i][j].isRevealed==False:
+                if not self.grid[i][j].isRevealed and not self.grid[i][j].isBomb:
                     total+=1
                     self.grid[i][j].isRevealed=True
         return total
@@ -123,26 +124,26 @@ class Board:
             @post   will reveal all
             @return returns true if the cell in question is a mine, false if it is not
         """
-        if rows>=self.height or rows<0 or cols>=self.width or cols<0 or self.grid[rows][cols].isRevealed==True:
+        if rows>=self.height or rows<0 or cols>=self.width or cols<0 or self.grid[rows][cols].isRevealed:
             return
-
         self.grid[rows][cols].isRevealed=True
 
-        if self.grid[rows][cols]=='X':
+        if self.grid[rows][cols].isBomb:
             return
 
-        elif self.grid[rows][cols]!='0':
+        elif self.grid[rows][cols].adj!=0:
             return
 
-        elif self.grid[rows][cols]=='0':
-            recReveal(rows-1, cols-1)
-            recReveal(rows-1, cols)
-            recReveal(rows-1, cols+1)
-            recReveal(rows, cols+1)
-            recReveal(rows+1, cols+1)
-            recReveal(rows+1, cols)
-            recReveal(rows+1, cols-1)
-            recReveal(rows, cols-1)
+        elif self.grid[rows][cols].adj==0:
+
+            self.recReveal(rows-1, cols-1)
+            self.recReveal(rows-1, cols)
+            self.recReveal(rows-1, cols+1)
+            self.recReveal(rows, cols+1)
+            self.recReveal(rows+1, cols+1)
+            self.recReveal(rows+1, cols)
+            self.recReveal(rows+1, cols-1)
+            self.recReveal(rows, cols-1)
 
 
         return

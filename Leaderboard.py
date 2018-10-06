@@ -26,7 +26,7 @@ class Leaderboard:
                 currentLine = line[:-1]
                 players.append(currentLine)
         def player_key(s):
-            return int(s[14:len(s)-1])
+            return int(float(s[14:len(s)-1]))
         players2=sorted(players, key=player_key)
         with open(self.fileName, 'w') as self.file:
             for items in players2:
