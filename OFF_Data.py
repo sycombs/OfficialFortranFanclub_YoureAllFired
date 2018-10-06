@@ -10,11 +10,6 @@ Currently we use:
 
 import json
 
-
-'''
-    We're going to stick with JSON for testing purposes
-'''
-
 def serialize_data(rawData):
     """
     serialize_data() will return a JSON object that represents the raw data
@@ -43,8 +38,6 @@ def deserialize_data(serialData):
 
     Restrictions:
         serialData is currently limited to JSON only
-
-
 
     If an exception occurs, return ERROR? False? None? What do I do?
     """
