@@ -221,7 +221,7 @@ def run_singleplayer(board):
     leaders = Leaderboard('leaderboard.txt')
     #begin game loop
     while not lose and flaggedBombCount != board.mines:
-        choice = input("MENU:\n Reveal Square: r x y\n Add or Remove Flag: f x y\n Quit: q\n <Prompt>: ").lower() #TODO discuss possible prompts, like turn counter
+        choice = input("MENU:\n Reveal Square: r x y\n Add or Remove Flag: f x y\n Quit: q\n Show Leaderboard: l\n <Prompt>: ").lower() #TODO discuss possible prompts, like turn counter
         if promptCheck(choice):
             action = choice.split()[0]
 
@@ -259,6 +259,10 @@ def run_singleplayer(board):
                 show(board)
             elif action == "q":
                 break
+            elif action == 'l':
+                leaders.get_leaderboard(10)
+                input("Press enter to return to game: ")
+                show(board)
         else:
             print("Invalid command. Pick a whole number, silly goose... try again.")
     timeTaken.game_over_time()
@@ -270,9 +274,11 @@ def run_singleplayer(board):
         print("Thank you for playing... come again!")
     else:
         print("*Mario Voice* You are the weiner!")
-        score = int(float(board.calculate_3bv()/timeTaken.show_total()))
-        print(score)
-        leaders.add_entry(score)
+        score = int(float((board.calculate_3bv()*100)/timeTaken.show_total()))
+        print("Your score calculated by board difficulty times time is", score)
+        if leaders.get_score(10) < score:
+            print("Congratulations, you made the leaderboard!")
+            leaders.add_entry(score)
 
 def run_coop(socket,address,turn,board):
     """

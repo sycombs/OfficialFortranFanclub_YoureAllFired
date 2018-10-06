@@ -17,6 +17,19 @@ class Leaderboard:
             if number==0:
                 return
 
+    def get_score(self, number):
+        scores = 0
+        players = []
+        with open(self.fileName, 'r') as self.file:
+            for line in self.file:
+                currentLine = line[:-1]
+                players.append(currentLine)
+        for items in players:
+            scores = int(items[14:len(items)-1])
+            number-=1
+            if number==0:
+                return scores
+        return scores
 
     def sort_leaderboard(self):
         #sorts Leaderboard
@@ -27,7 +40,7 @@ class Leaderboard:
                 players.append(currentLine)
         def player_key(s):
             return int(float(s[14:len(s)-1]))
-        players2=sorted(players, key=player_key)
+        players2=sorted(players, key=player_key, reverse=True)
         with open(self.fileName, 'w') as self.file:
             for items in players2:
                 items=items+'\n'
