@@ -92,7 +92,6 @@ class Board:
             for j in range(self.width):
                 print(self.grid[i][j], end="")
             print()
-
     def get_string_rep(self):
         a = []
         for i in self.grid:
@@ -102,37 +101,48 @@ class Board:
     def brute_force(self, cell, i, j):
         self.grid[i][j] = cell
 
-'''
-# Create a board
-aBoard = Board(4, 4, 1)
+    def calculate_3bv(self):
+        total = 0
+        for i in range(self.height):
+            for j in range(self.height):
+                self.grid[i][j].isRevealed = False
+        for i in range(self.height):
+            for j in range(self.height):
+                if self.grid[i][j].isRevealed==False and self.grid[i][j].adj==0:
+                    total+=1
+                    self.recReveal(i,j)
+        for i in range(self.height):
+            for j in range(self.height):
+                if self.grid[i][j].isRevealed==False:
+                    total+=1
+                    self.grid[i][j].isRevealed=True
+        return total
 
-# Print it
-print("Board A")
-aBoard.displayBoard()
-print("")
+    def recReveal(self, rows, cols):
+        """ @pre    Grid is a valid object of type Board, rows and cols is the location in the board to reveal
+            @post   will reveal all
+            @return returns true if the cell in question is a mine, false if it is not
+        """
+        if rows>=self.height or rows<0 or cols>=self.width or cols<0 or self.grid[rows][cols].isRevealed==True:
+            return
 
-# Create a new board
-bBoard = Board(4, 4, 5)
+        self.grid[rows][cols].isRevealed=True
 
-# Print it
-print("Board B")
-bBoard.displayBoard()
-print("")
+        if self.grid[rows][cols]=='X':
+            return
 
-# Replace the first board with the new one
-for r in range(0, bBoard.height):
-    for c in range(0, bBoard.width):
-        tempCell = convert_cell_to_dictionary(bBoard.grid[r][c]) # Yes, test it like this
-        # because of networking stuff
-        send_comm(tempCell, plyr1, plyr2)
+        elif self.grid[rows][cols]!='0':
+            return
 
-for r in range(0, plyr2Board.height):
-    for c in range(0, plyr2Board.width):
-        # Keep getting data
-        newCell  = convert_dictionary_to_cell(tempCell)
-        aBoard.brute_force(newCell, r, c)
+        elif self.grid[rows][cols]=='0':
+            recReveal(rows-1, cols-1)
+            recReveal(rows-1, cols)
+            recReveal(rows-1, cols+1)
+            recReveal(rows, cols+1)
+            recReveal(rows+1, cols+1)
+            recReveal(rows+1, cols)
+            recReveal(rows+1, cols-1)
+            recReveal(rows, cols-1)
 
-# Print the first board again
-print("New Board A")
-aBoard.displayBoard()
-'''
+
+        return

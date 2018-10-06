@@ -22,6 +22,12 @@ def show(board, lose=False):
     :param Board board: The current Board object.
     :return None:
     """
+    if lose:
+        for i in range(board.height):
+            for j in range(board.width):
+                if board.grid[i][j].isBomb==False:
+                    board.grid[i][j].isRevealed=True
+
     print("   ", end="")
     for i in range(board.width):
         print(" " + f"{i:02}" + " ", end="")
@@ -259,6 +265,8 @@ def run_singleplayer(board):
     if lose:
         print("Bomb detonated! You need more practice, young grasshopper.")
         show(board, True)
+        score = board.calculate_3bv()
+        print(score)
     elif choice == "q":
         print("Thank you for playing... come again!")
     else:
@@ -309,8 +317,8 @@ def run_coop(socket,address,turn,board):
                             break
                         except ValueError:
                             print ("Invalid input!")
+
                 lose = click(board, row, column, action)
-                print (lose)
                 if board.grid[row][column].isBomb and board.grid[row][column].isFlagged:
                         flaggedBombCount += 1
                 show(board)

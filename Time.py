@@ -4,6 +4,7 @@ class Time:
         self.start = time.time()
         self.end = time.time()
         self.totalTime = self.totalTime = self.end-self.start
+        self.turnStart = time.time()
     def game_over_time(self):
         self.end = time.time()
         self.totalTime = self.end-self.start
@@ -16,15 +17,13 @@ class Time:
             print("You Lose...")
         else:
             print("It's a draw?")
+    def turn_start(self):
+        self.turnStart=time.time()
     def time_limit(self, timeLimit):
-        if(self.start + timeLimit >= time.time())
-        {
+        if (self.turnStart + timeLimit) >= time.time():
             return True
-        }
-        else
-        {
+        else:
             return False
-        }
     def time_delay(self, timeLimit):
         time.sleep(timeLimit)
     # def countDown(hour, min, sec):
