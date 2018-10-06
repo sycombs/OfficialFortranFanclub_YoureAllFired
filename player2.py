@@ -1,5 +1,6 @@
 '''
 player2.py
+initiates client connection to host
 '''
 
 from GameLogic import *
@@ -23,5 +24,4 @@ for r in range(0,height):
         newCell  = convert_dictionary_to_cell(tempCell)
         board.brute_force(newCell, r, c)
 send_comm("False", clientSocket, SERVER_INFO)
-board.displayBoard()
 run_coop(clientSocket,SERVER_INFO,False,board)

@@ -230,23 +230,23 @@ def run_singleplayer():
             if action == "r" or action == "f":
                 column, row = int(choice.split()[1]), int(choice.split()[2])
 
-                if column >= width or column < 0:
+                if column >= board.width or column < 0:
                     print ("Out of bounds x coordinate!")
                     while True:
                         try:
                             column = int(input("x: "))
-                            while column >= width or column < 0:
+                            while column >= board.width or column < 0:
                                 column = int(input("Out of bounds! x: "))
                             break
                         except ValueError:
                             print ("Invalid input!")
 
-                if row >= height or row < 0:
+                if row >= board.height or row < 0:
                     print ("Out of bounds y coordinate!")
                     while True:
                         try:
                             row = int(input("y: "))
-                            while row >= height or row < 0:
+                            while row >= board.height or row < 0:
                                 row = int(input("Out of bounds! y: "))
                             break
                         except ValueError:
@@ -273,7 +273,7 @@ def run_coop(socket,address,turn,board):
     """
     client side version of coop multiplayer
     """
-    print("Entered coop and I'm: ")
+    print("You are: ", end="")
     if turn:
         print("player 1")
     else:
@@ -284,55 +284,60 @@ def run_coop(socket,address,turn,board):
     #begin game loop
     while not lose and flaggedBombCount != board.mines:
         if turn:
-            choice = input("MENU:\n Reveal Square: r x y\n Add or Remove Flag: f x y\n Quit: q\n <Prompt>: ").lower() #TODO discuss possible prompts, like turn counter
-            if promptCheck(choice):
-                action = choice.split()[0]
-
-                if action == "r" or action == "f":
-                    column, row = int(choice.split()[1]), int(choice.split()[2])
-
-                    if column >= board.width-1 or column < 0:
-                        print ("Out of bounds x coordinate!")
-                        while True:
-                            try:
-                                column = int(input("x: "))
-                                while column >= width or column < 0:
-                                    column = int(input("Out of bounds! x: "))
-                                break
-                            except ValueError:
-                                print ("Invalid input!")
-
-                    if row >= board.height-1 or row < 0:
-                        print ("Out of bounds y coordinate!")
-                        while True:
-                            try:
-                                row = int(input("y: "))
-                                while row >= height or row < 0:
-                                    row = int(input("Out of bounds! y: "))
-                                break
-                            except ValueError:
-                                print ("Invalid input!")
-
-                    lose = click(board, row, column, action)
-                    if board.grid[row][column].isBomb and board.grid[row][column].isFlagged:
-                            flaggedBombCount += 1
-                    show(board)
-                elif action == "q":
-                    break
-            else:
+            choice = input("MENU:\n Reveal Square: r x y\n Add or Remove Flag: f x y\n Quit: q\n <Prompt>: ").lower()
+            while not promptCheck(choice):
                 print("Invalid command. Pick a whole number, silly goose... try again.")
-            choice = serialize_data(choice)
-            send_comm(choice, socket,address,True)
+                choice = input("MENU:\n Reveal Square: r x y\n Add or Remove Flag: f x y\n Quit: q\n <Prompt>: ").lower()
+
+            action = choice.split()[0]
+            if action == "r" or action == "f":
+                column, row = int(choice.split()[1]), int(choice.split()[2])
+
+                if column >= board.width or column < 0:
+                    print ("Out of bounds x coordinate!")
+                    while True:
+                        try:
+                            column = int(input("x: "))
+                            while column >= board.width or column < 0:
+                                column = int(input("Out of bounds! x: "))
+                            break
+                        except ValueError:
+                            print ("Invalid input!")
+
+                if row >= board.height or row < 0:
+                    print ("Out of bounds y coordinate!")
+                    while True:
+                        try:
+                            row = int(input("y: "))
+                            while row >= board.height or row < 0:
+                                row = int(input("Out of bounds! y: "))
+                            break
+                        except ValueError:
+                            print ("Invalid input!")
+                lose = click(board, row, column, action)
+                print (lose)
+                if board.grid[row][column].isBomb and board.grid[row][column].isFlagged:
+                        flaggedBombCount += 1
+                show(board)
+            elif action == "q":
+                choice = serialize_data(choice)
+                send_comm(choice, socket,address)
+                break
+            #choice = serialize_data(choice)
+            choice = action + ' ' + str(column) + ' ' + str(row)
+            send_comm(choice, socket,address)
             turn = False
         else:
             print("Waiting for the other player's turn!")
             response = False
-            while not response:
+            while response == False or response == 'False':
                 try:
                     response, address = socket.recvfrom(2048 * 2 * 2)
+                    response = response.decode()
                 except:
-                    print ("Something went wrong")
-            other_player_choice = deserialize_data(response)
+                    print("Something went wrong")
+            print (response)
+            other_player_choice = response
             action = other_player_choice.split()[0]
             if action == "r" or action == "f":
                 column, row = int(other_player_choice.split()[1]), int(other_player_choice.split()[2])
@@ -343,6 +348,7 @@ def run_coop(socket,address,turn,board):
             elif action == "q":
                 print("Other player quit the game!")
                 break
+            turn = True
 
     if lose:
         print("Bomb detonated! You need more practice, young grasshopper.")
