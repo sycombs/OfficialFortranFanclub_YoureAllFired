@@ -11,8 +11,9 @@ single player mode
 """
 from Board import *
 from colorama import Fore, Style
-import time
+from Time import *
 from OFF_Network import *
+from Leaderboard import *
 
 
 def show(board, lose=False):
