@@ -72,5 +72,7 @@ def respond_to_message(serialMsg, sender):
         if msg['ID'] == 2:
             print("Sending player 1 stuff")
 
+    # Connect message?
+
     # Only let people set parameters on their connect
     #if msg['Message'] == 'SetParam':
