@@ -1,9 +1,11 @@
 # Minesweeper Project
 This is a project that is a mock minesweeper game made in python utilized from command line.
 
-1. Clone the repo and run python3 Play.py to initialize the game.
+1. Clone the repo and run python3 Host.py to initialize the game.
 
-**Warning** 
+2. For Co-op, run Host.py, select option 2, then run player2.py.
+
+**Warning**
 This game will not run on versions of python less than 3.6
 
 Must download colorama module "python3 -m pip install colorama"
@@ -26,4 +28,3 @@ The number that appears is the number of adjacent bombs.
 7. If you try and remove a space that has a bomb,  the bomb will detonate and you will lose.
 
 8.  Enjoy and Good Luck!
-

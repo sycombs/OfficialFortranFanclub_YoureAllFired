@@ -12,7 +12,6 @@ single player mode
 from Board import *
 from colorama import Fore, Style
 import time
-
 from OFF_Network import *
 
 
@@ -203,18 +202,14 @@ def spread(board, row, column):
         if column+1 < board.width:
             spread(board, row, column+1)
 
-def run_singleplayer():
+def run_singleplayer(board):
     """
-    Prompts the user for board size and number of mines, then runs the game.
-
+    User is prompted for board params in host,
+    run_singleplayer plays game
     :return None:
     """
 
-    height,width,mines = game_input()
-
-    board = Board(height, width, mines)
     show(board)
-
     lose = False
     flaggedBombCount = 0
 
@@ -358,7 +353,39 @@ def run_coop(socket,address,turn,board):
     else:
         print("*Mario Voice* You are the weiner!")
 
+def run_versus(socket, address, board):
+    print("Starting game with these parameters:\n")
+    print("Height: " + str(board.height))
+    print("Width: " + str(board.width))
+    print("Mines: " + str(board.mines))
+    time.sleep(1)
+    for x in range(3,0,-1):
+        print (f"{x}...")
+        time.sleep(1)
+    print("GO!")
+    #start timer
+    run_singleplayer(board)
+    #end timer
+    #my_time is this player's time
+    my_time = 0
+    print("Your time is: " + str(my_time))
+    print("Waiting for your opponent's time...")
+    time_dict = {'time' : my_time}
+    time_dict = serialize_data(time_dict)
+    their_time = send_comm(time_dict,socket,address,True)
+    their_time = deserialize_data(their_time)
+    time_diff = my_time - their_time['time']
+    if time_diff < 0:
+        print("You won!")
+    elif time_diff > 0:
+        print("You lost :(")
 
+    #countdown
+    #run_singleplayer
+    #receive other player's time
+    #compare em
+    #say who won
+    #the end
 '''
 def end_game()
     player won

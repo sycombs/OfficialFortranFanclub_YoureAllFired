@@ -12,7 +12,7 @@ class Time:
     def compare_time(self, other):
         if self.totalTime>other.showTotal:
             print("You Win!")
-        else if self.totalTime<other.showTotal:
+        elif self.totalTime<other.showTotal:
             print("You Lose...")
         else:
             print("It's a draw?")

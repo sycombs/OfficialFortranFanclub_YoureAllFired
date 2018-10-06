@@ -44,18 +44,16 @@ def send_comm(data, sourceSocket, destination, requiresResponse = None):
 
     I say for my sake because it means I don't want to deal with craziness again
     """
-    
+
     try:
         sourceSocket.sendto(data.encode(), destination)
         # Return the response. We keep senderAddress because... ... ...!
-        print("WAITING FOR A RESPONSE")
+        #print("WAITING FOR A RESPONSE")
 
         if requiresResponse:
             response, senderAddress = sourceSocket.recvfrom(2048)
-            print("GOT A RESPONSE")
+            #print("GOT A RESPONSE")
             return response
-        else:
-            print("No response required")
     except Exception as e:
         print(e)
 
