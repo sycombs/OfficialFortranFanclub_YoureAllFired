@@ -24,8 +24,8 @@ def show(board, lose=False):
     :return None:
     """
     if lose:
-        for i in range(board.height)
-            for j in range(board.width)
+        for i in range(board.height):
+            for j in range(board.width):
                 board.grid[i][j].isRevealed = True
     print("   ", end="")
     for i in range(board.width):
