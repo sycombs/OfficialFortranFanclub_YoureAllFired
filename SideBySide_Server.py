@@ -12,7 +12,7 @@ def generate_board(parameters):
     return serverGeneratedBoard
 
 
-plyr1Board = generate_board(parameters)
+#plyr1Board = generate_board(parameters)
 plyr1MoveBuffer = {'Move1': '',
                 'Move2': '',
                 'Move3': '',
@@ -26,7 +26,7 @@ plyr1MoveBuffer = {'Move1': '',
                 'Move10': ''}
 
 
-plyr1Board = generate_board(parameters)
+#plyr2Board = generate_board(parameters)
 plyr2MoveBuffer = {'Move1': '',
                 'Move2': '',
                 'Move3': '',
@@ -57,13 +57,14 @@ def respond_to_message(serialMsg, sender):
         # Flush the player's buffer
 
         # Generate and send a new board
-        newBoard = generate_board(parameters)
+        #newBoard = generate_board(parameters)
+        print("New Board called")
 
     if msg['msg'] == 'Win':
         # Do win stuff
         print("Congrats")
 
-    if msg['msg'] == 'Action'
+    if msg['msg'] == 'Action':
         add_to_buffer(msg['ID'], msg['moveMade'])
         # Send a response to the player...
         # Send the other player's buffer or new board...

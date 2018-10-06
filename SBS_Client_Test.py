@@ -2,8 +2,13 @@ from SideBySide_Play import *
 
 # Player 1 starts the game and enters parameters
 p1 = NetPlayer()
+p1.set_player_data('Connect', 'msg')
 
-send
+clientSocket = socket(AF_INET, SOCK_DGRAM)
+
+serialP1Data = serialize_data(p1.get_player_data())
+
+mode = send_comm(serialP1Data, clientSocket, SERVER_INFO, True)
 
 # Player 2 connects to Player 1
 
