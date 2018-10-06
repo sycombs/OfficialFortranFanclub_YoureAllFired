@@ -1,7 +1,9 @@
-from NetPlayer import *
-from SideBySide_Logic import *
+from SideBySide_Play import *
 
 # Player 1 starts the game and enters parameters
+p1 = NetPlayer()
+
+send
 
 # Player 2 connects to Player 1
 

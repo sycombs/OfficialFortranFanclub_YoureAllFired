@@ -53,26 +53,28 @@ playerCount = 0
 def respond_to_message(serialMsg, sender):
     msg = deserialize_data(serialMsg)
 
-    if msg['Message'] == 'NewBoard':
+    if msg['msg'] == 'NewBoard':
         # Flush the player's buffer
 
         # Generate and send a new board
         newBoard = generate_board(parameters)
 
-    if msg['Message'] == 'Win':
+    if msg['msg'] == 'Win':
         # Do win stuff
         print("Congrats")
 
-    if msg['Message'] == "Action"
+    if msg['msg'] == 'Action'
         add_to_buffer(msg['ID'], msg['moveMade'])
         # Send a response to the player...
         # Send the other player's buffer or new board...
         if msg['ID'] == 1:
-            print("Sending player 2 stuff")
+            print('Sending player 2 stuff')
         if msg['ID'] == 2:
-            print("Sending player 1 stuff")
+            print('Sending player 1 stuff')
 
     # Connect message?
+    if msg['msg'] == 'Connect':
+        print('Initiating a connection!')
 
     # Only let people set parameters on their connect
     #if msg['Message'] == 'SetParam':

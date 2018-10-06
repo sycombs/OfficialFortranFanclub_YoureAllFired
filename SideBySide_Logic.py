@@ -1,8 +1,9 @@
-from NetPlayer import *
 from Board import *
 
 from OFF_Data import *
 from OFF_Network import *
+
+from GameLogic import *
 
 # Assume we're using SERVER_INFO for all of these requests
 def send_message(message, sourceSocket):
@@ -24,9 +25,15 @@ def connect_to_server(plyrSocket):
     # Do I need to deserialize it?
     deserialResponse = deserialize_data(rawResponse)
 
-    if serverResponse == "Set_Parameters":
-        # Add the request parameter stuff here...
-        # Assign player values
-        print("A")
+    # If we're player 1, then up the parameters
+    if serverResponse['msg'] == "Set_Parameters":
+        parameters = {'Height': 0, 'Width' : 0, 'Mines' : 0}
 
-    #if serverResponse == ""
+        parameters['Height'], parameters['Width'], parameters['Mine'] = game_input()
+
+        serialParam = serialize_data(parameters)
+        send_comm(serialParam, sourceSocket, SERVER_INFO)
+        # Don't get a response yet, we have to wait for the other player
+        # to connect first?
+
+    return deserializeResponse
