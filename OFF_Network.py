@@ -9,12 +9,13 @@ from socket import *
 # the essence and not doing this is sort of annoying :(
 from OFF_Data import *
 
-# I suspect we'll stick with the same server address and port number for a while
-# so I'm going to set those here
-SERVER_ADDRESS = '127.0.0.1'
+
+# Get and print the local network address
+localAddress = gethostbyname(gethostname())
+#SERVER_ADDRESS = '127.0.0.1'
 SERVER_PORT    = 12000
 
-SERVER_INFO = (SERVER_ADDRESS, SERVER_PORT)
+SERVER_INFO = (localAddress, SERVER_PORT)
 
 ''' NETWORK COMMUNICATION FUNCTIONS '''
 

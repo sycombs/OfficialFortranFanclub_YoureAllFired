@@ -50,6 +50,17 @@ if __name__ == "__main__":
         #print("Only single player and co-op are working right now")
         response = False
         print("\nVersus selected! Waiting for Player 2...\n")
+
+        '''
+
+        PRINT OUT THE LOCAL IP ADDRESS IN ORDER TO SEND IT TO THE OTHER PLAYER
+
+        '''
+
+        print("Give the following address to Player 2: " + localAddress)
+
+
+
         while not response:
             try:
                 response, clientAddress = serverSocket.recvfrom(2048 * 2 * 2)

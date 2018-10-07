@@ -8,6 +8,18 @@ from OFF_Network import *
 #create socket
 clientSocket = socket(AF_INET, SOCK_DGRAM)
 
+
+'''
+
+
+NEW ADDRESS GETS ENTERED HERE
+
+
+'''
+
+servAddr = input("Enter Server Address: ")
+SERVER_INFO[0] = servAddr
+
 #send initial connection
 mode = send_comm("True", clientSocket, SERVER_INFO,True)
 mode = mode.decode()
