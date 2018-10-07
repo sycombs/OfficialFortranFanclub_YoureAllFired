@@ -19,8 +19,6 @@ SERVER_INFO = (localAddress, SERVER_PORT)
 
 ''' NETWORK COMMUNICATION FUNCTIONS '''
 
-
-
 def send_byte_data(byteData, sourceSocket, destination):
     """
     send_byte_data() sends <type: bytes> to some destination. It does not
