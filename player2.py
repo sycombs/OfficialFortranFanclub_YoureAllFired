@@ -18,7 +18,7 @@ NEW ADDRESS GETS ENTERED HERE
 '''
 
 servAddr = input("Enter Server Address: ")
-LAN_SERVER_INFO = servAddr
+LAN_SERVER_INFO = (servAddr, SERVER_PORT)
 
 #send initial connection
 mode = send_comm("True", clientSocket, LAN_SERVER_INFO,True)
