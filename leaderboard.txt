@@ -4,6 +4,7 @@
 ('Awesome  ', 140)
 ('Awesome  ', 100)
 ('Awesome  ', 80)
+('Tester 1 ', 53)
 ('Pizza    ', 51)
 ('alpha    ', 50)
 ('Letter   ', 40)

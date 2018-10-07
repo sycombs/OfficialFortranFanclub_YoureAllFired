@@ -104,16 +104,16 @@ class Board:
     def calculate_3bv(self):
         total = 0
         for i in range(self.height):
-            for j in range(self.height):
+            for j in range(self.width):
                 self.grid[i][j].isRevealed = False
         for i in range(self.height):
-            for j in range(self.height):
+            for j in range(self.width):
                 if not self.grid[i][j].isRevealed:
                     if self.grid[i][j].adj==0 and not self.grid[i][j].isBomb:
                         total+=1
                         self.recReveal(i,j)
         for i in range(self.height):
-            for j in range(self.height):
+            for j in range(self.width):
                 if not self.grid[i][j].isRevealed and not self.grid[i][j].isBomb:
                     total+=1
                     self.grid[i][j].isRevealed=True
