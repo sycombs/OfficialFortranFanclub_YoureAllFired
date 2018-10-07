@@ -17,12 +17,18 @@ NEW ADDRESS GETS ENTERED HERE
 
 '''
 
-servAddr = input("Enter Server Address: ")
-LAN_SERVER_INFO = (servAddr, SERVER_PORT)
 
 #send initial connection
-mode = send_comm("True", clientSocket, LAN_SERVER_INFO,True)
-mode = mode.decode()
+mode = False
+while mode == False:
+    servAddr = input("Enter Server Address: ")
+    LAN_SERVER_INFO = (servAddr, SERVER_PORT)
+    try:
+        mode = send_comm("True", clientSocket, LAN_SERVER_INFO,True)
+        mode = mode.decode()
+    except Exception as e:
+        print ("\nAddress incorrect! (Get it from player 1!)\n")
+        mode = False
 data = 0
 print("Waiting for player 1 to input board parameters...")
 while data == 0:

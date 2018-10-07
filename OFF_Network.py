@@ -62,7 +62,7 @@ def send_comm(data, sourceSocket, destination, requiresResponse = None):
             #print("GOT A RESPONSE")
             return response
     except Exception as e:
-        print(e)
+        raise e
 
 ''' I realized it'll quickly get very annoying to manually (de)serialize data
     so often so... use this when you don't want to do all of that

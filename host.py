@@ -23,6 +23,7 @@ if __name__ == "__main__":
         run_singleplayer(board)
     elif mode == 2:
         response = False
+        print("\nYour IP: " + gethostbyname(gethostname()))
         print("\nCo-op selected! Waiting for Player 2...\n")
         while not response:
             try:
@@ -47,7 +48,7 @@ if __name__ == "__main__":
         run_coop(serverSocket, clientAddress, True, board)
 
     elif mode == 3:
-        #print("Only single player and co-op are working right now")
+        print("\nYour IP: " + gethostbyname(gethostname()))
         response = False
         print("\nVersus selected! Waiting for Player 2...\n")
         while not response:

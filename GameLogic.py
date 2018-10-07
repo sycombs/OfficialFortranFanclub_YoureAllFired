@@ -228,7 +228,7 @@ def run_singleplayer(board):
 
             if action == "-c":
                 cheatMode(board)
-
+                show(board)
             if action == "r" or action == "f":
                 column, row = int(choice.split()[1]), int(choice.split()[2])
 
@@ -400,23 +400,9 @@ def run_versus(socket, address, board):
 
     my_time = run_singleplayer(board)
     my_time = str(my_time)
-    print("Your time is: " + my_time)
-    print("Waiting for your opponent's time...")
-    their_time = 'ERROR'
-    while their_time == 'ERROR':
-        try:
-            their_time = send_comm(serialize_data(my_time),socket,address,True)
-            their_time = deserialize_data(their_time)
-        except Exception as e:
-            print(e)
+    print("Your time is: " + my_time + "\nCompare this to your friend!")
 
     my_time = float(my_time)
-    their_time = float(their_time)
-    time_diff = my_time - their_time
-    if time_diff < 0:
-        print("You won!")
-    elif time_diff > 0:
-        print("You lost :(")
 
     #countdown
     #run_singleplayer
