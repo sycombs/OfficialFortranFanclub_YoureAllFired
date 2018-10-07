@@ -21,6 +21,10 @@ SERVER_INFO = (SERVER_ADDRESS, SERVER_PORT)
 
 
 def send_byte_data(byteData, sourceSocket, destination):
+    """
+    send_byte_data() sends <type: bytes> to some destination. It does not
+    accept return data
+    """
     try:
         sourceSocket.sendto(byteData, destination)
     except Exception as e:
@@ -29,6 +33,10 @@ def send_byte_data(byteData, sourceSocket, destination):
         print(e)
 
 def send_string_data(strData, sourceSocket, destination):
+    """
+    send_string_data() sends <type: string> to some destination. It does not
+    accept return data
+    """
     try:
         sourceSocket.send(strData, destination)
     except Exception as e:

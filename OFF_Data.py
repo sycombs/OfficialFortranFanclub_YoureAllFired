@@ -4,21 +4,25 @@ Official Fortran Fanclub Data Module
 OFF_Data.py will handle all the (de)serialization that's necessary so that any
 changes to how we handle data is separated from the network code
 
-Currently we use:
-    JSON
+Currently only JSON formats are acceptable
+
+See https://docs.python.org/3/library/json.html#json-to-py-table for details
+on how the data is being transformmed
+
+I'm sorry that I didn't write this well, you shouldn't need to manually
+(de)serialize data! The first extension anyone adds should be to add automatic
+message (de)serializatin
 """
 
 import json
-
-
-'''
-    We're going to stick with JSON for testing purposes
-'''
 
 def serialize_data(rawData):
     """
     serialize_data() will return a JSON object that represents the raw data
     passed
+
+    *** WARNING: THIS WORKS BEST WHEN rawData IS A DICTIONARY. OTHER FORMATS
+    ARE NOT CURRENTLY HANDLED WELL IN THE OFF_Network send_comm() METHOD ***
 
     Restrictions:
         rawData must be a dictionary, string, or int
@@ -43,8 +47,6 @@ def deserialize_data(serialData):
 
     Restrictions:
         serialData is currently limited to JSON only
-
-
 
     If an exception occurs, return ERROR? False? None? What do I do?
     """
