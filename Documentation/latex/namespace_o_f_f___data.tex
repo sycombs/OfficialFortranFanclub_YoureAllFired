@@ -1,0 +1,65 @@
+\hypertarget{namespace_o_f_f___data}{}\section{O\+F\+F\+\_\+\+Data Namespace Reference}
+\label{namespace_o_f_f___data}\index{O\+F\+F\+\_\+\+Data@{O\+F\+F\+\_\+\+Data}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespace_o_f_f___data_a826cab3cf308a0e882e8386544f49f7b}{serialize\+\_\+data} (raw\+Data)
+\item 
+def \hyperlink{namespace_o_f_f___data_a59279364cc977ebb5b368377494c10ef}{deserialize\+\_\+data} (serial\+Data)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}@package docstring
+Official Fortran Fanclub Data Module
+
+OFF_Data.py will handle all the (de)serialization that's necessary so that any
+changes to how we handle data is separated from the network code
+
+Currently only JSON formats are acceptable
+
+See https://docs.python.org/3/library/json.html#json-to-py-table for details
+on how the data is being transformmed
+
+I'm sorry that I didn't write this well, you shouldn't need to manually
+(de)serialize data! The first extension anyone adds should be to add automatic
+message (de)serializatin
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespace_o_f_f___data_a59279364cc977ebb5b368377494c10ef}\label{namespace_o_f_f___data_a59279364cc977ebb5b368377494c10ef}} 
+\index{O\+F\+F\+\_\+\+Data@{O\+F\+F\+\_\+\+Data}!deserialize\+\_\+data@{deserialize\+\_\+data}}
+\index{deserialize\+\_\+data@{deserialize\+\_\+data}!O\+F\+F\+\_\+\+Data@{O\+F\+F\+\_\+\+Data}}
+\subsubsection{\texorpdfstring{deserialize\+\_\+data()}{deserialize\_data()}}
+{\footnotesize\ttfamily def O\+F\+F\+\_\+\+Data.\+deserialize\+\_\+data (\begin{DoxyParamCaption}\item[{}]{serial\+Data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}deserialize_data will attempt to unserialize and return data
+
+Data received should be easily convertable. The following has a table
+with the encode / decode formats for  JSON to Python
+https://docs.python.org/3/library/json.html#json-to-py-table
+
+Restrictions:
+    serialData is currently limited to JSON only
+
+If an exception occurs, return ERROR? False? None? What do I do?
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_o_f_f___data_a826cab3cf308a0e882e8386544f49f7b}\label{namespace_o_f_f___data_a826cab3cf308a0e882e8386544f49f7b}} 
+\index{O\+F\+F\+\_\+\+Data@{O\+F\+F\+\_\+\+Data}!serialize\+\_\+data@{serialize\+\_\+data}}
+\index{serialize\+\_\+data@{serialize\+\_\+data}!O\+F\+F\+\_\+\+Data@{O\+F\+F\+\_\+\+Data}}
+\subsubsection{\texorpdfstring{serialize\+\_\+data()}{serialize\_data()}}
+{\footnotesize\ttfamily def O\+F\+F\+\_\+\+Data.\+serialize\+\_\+data (\begin{DoxyParamCaption}\item[{}]{raw\+Data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}serialize_data() will return a JSON object that represents the raw data
+passed
+
+*** WARNING: THIS WORKS BEST WHEN rawData IS A DICTIONARY. OTHER FORMATS
+ARE NOT CURRENTLY HANDLED WELL IN THE OFF_Network send_comm() METHOD ***
+
+Restrictions:
+    rawData must be a dictionary, string, or int
+
+If an exception occurs, return ERROR? False? None? What do I do?
+\end{DoxyVerb}
+ 

@@ -1,0 +1,70 @@
+\hypertarget{namespace_server}{}\section{Server Namespace Reference}
+\label{namespace_server}\index{Server@{Server}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespace_server_ad1a623c39628e6a85484ed43248ecd8d}{interpret\+\_\+data} (data)
+\item 
+def \hyperlink{namespace_server_afb89b67e4b9b4c3fe2915449f2a450f6}{send\+\_\+board} (server\+Socket, client\+Address, raw\+Data)
+\item 
+\mbox{\Hypertarget{namespace_server_a7080c6378acbbd9210c0e277a9ff730c}\label{namespace_server_a7080c6378acbbd9210c0e277a9ff730c}} 
+def {\bfseries send\+\_\+json} (server\+Socket, client\+Address, raw\+Data)
+\item 
+\mbox{\Hypertarget{namespace_server_a46433613af0b25ee488da2db17f095c7}\label{namespace_server_a46433613af0b25ee488da2db17f095c7}} 
+def {\bfseries send\+\_\+data} (server\+Socket, client\+Address, raw\+Data)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_server_a61bdcf9181bf23a9f75d4b21bf33f614}\label{namespace_server_a61bdcf9181bf23a9f75d4b21bf33f614}} 
+int {\bfseries server\+Port} = 12000
+\item 
+\mbox{\Hypertarget{namespace_server_add1bf14e8e27f2efbb9dcd74c5344f1b}\label{namespace_server_add1bf14e8e27f2efbb9dcd74c5344f1b}} 
+{\bfseries server\+Socket} = socket(A\+F\+\_\+\+I\+N\+ET, S\+O\+C\+K\+\_\+\+D\+G\+R\+AM)
+\item 
+\mbox{\Hypertarget{namespace_server_a457c766fba7cf0d2ce805c202d2daeed}\label{namespace_server_a457c766fba7cf0d2ce805c202d2daeed}} 
+int {\bfseries blocksize} = 4096
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}@package docstring
+Server.py contains all of the game server functionality. A server should
+1) Be created
+2) Listen for incoming messages
+3) Interpret messages and call other code as necessary
+
+Server.py should not be used to run a server, any instances of a server
+should be created in Play.py . Server.py does not handle game logic either, it
+only facilitates the communication between the client (where the user interacts)
+and the server (where the game specific code is handled).
+
+We may not run a pure client-server model so keep that in mind when moving
+code out of this file... like the server loop
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespace_server_ad1a623c39628e6a85484ed43248ecd8d}\label{namespace_server_ad1a623c39628e6a85484ed43248ecd8d}} 
+\index{Server@{Server}!interpret\+\_\+data@{interpret\+\_\+data}}
+\index{interpret\+\_\+data@{interpret\+\_\+data}!Server@{Server}}
+\subsubsection{\texorpdfstring{interpret\+\_\+data()}{interpret\_data()}}
+{\footnotesize\ttfamily def Server.\+interpret\+\_\+data (\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This will be used to deserialize the received data. Once that's done, the
+kind of data we have will determine what's done next
+\end{DoxyVerb}
+\begin{DoxyVerb}Data received should be easily convertable. The following has a table
+with the encode / decode formats for  JSON to Python
+https://docs.python.org/3/library/json.html#json-to-py-table
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_server_afb89b67e4b9b4c3fe2915449f2a450f6}\label{namespace_server_afb89b67e4b9b4c3fe2915449f2a450f6}} 
+\index{Server@{Server}!send\+\_\+board@{send\+\_\+board}}
+\index{send\+\_\+board@{send\+\_\+board}!Server@{Server}}
+\subsubsection{\texorpdfstring{send\+\_\+board()}{send\_board()}}
+{\footnotesize\ttfamily def Server.\+send\+\_\+board (\begin{DoxyParamCaption}\item[{}]{server\+Socket,  }\item[{}]{client\+Address,  }\item[{}]{raw\+Data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}TODO: Fix this
+attempts to send multiple packets over pickle
+\end{DoxyVerb}
+ 

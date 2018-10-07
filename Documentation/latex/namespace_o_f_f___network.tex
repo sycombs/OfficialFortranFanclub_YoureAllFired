@@ -1,0 +1,61 @@
+\hypertarget{namespace_o_f_f___network}{}\section{O\+F\+F\+\_\+\+Network Namespace Reference}
+\label{namespace_o_f_f___network}\index{O\+F\+F\+\_\+\+Network@{O\+F\+F\+\_\+\+Network}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespace_o_f_f___network_a0ab8439ad8255392538b5966e5168506}{send\+\_\+byte\+\_\+data} (byte\+Data, source\+Socket, destination)
+\item 
+def \hyperlink{namespace_o_f_f___network_ad4c88e602c445d2b5a4a32564decf49c}{send\+\_\+string\+\_\+data} (str\+Data, source\+Socket, destination)
+\item 
+def \hyperlink{namespace_o_f_f___network_a07ee3bf5d20771b38ba37bc09a63988b}{send\+\_\+comm} (data, source\+Socket, destination, requires\+Response=None)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_o_f_f___network_ad232c6acf89aff71164690067844a2d3}\label{namespace_o_f_f___network_ad232c6acf89aff71164690067844a2d3}} 
+string {\bfseries S\+E\+R\+V\+E\+R\+\_\+\+A\+D\+D\+R\+E\+SS} = \textquotesingle{}127.\+0.\+0.\+1\textquotesingle{}
+\item 
+\mbox{\Hypertarget{namespace_o_f_f___network_ad86d6e025f98f77f2513ed47b6a9c9ed}\label{namespace_o_f_f___network_ad86d6e025f98f77f2513ed47b6a9c9ed}} 
+int {\bfseries S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT} = 12000
+\item 
+\mbox{\Hypertarget{namespace_o_f_f___network_a983ac01abcf0c3b7e474984e7ece31b7}\label{namespace_o_f_f___network_a983ac01abcf0c3b7e474984e7ece31b7}} 
+tuple {\bfseries S\+E\+R\+V\+E\+R\+\_\+\+I\+N\+FO} = (S\+E\+R\+V\+E\+R\+\_\+\+A\+D\+D\+R\+E\+SS, S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}@package docstring
+Official Fortran Fanclub Network Module\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespace_o_f_f___network_a0ab8439ad8255392538b5966e5168506}\label{namespace_o_f_f___network_a0ab8439ad8255392538b5966e5168506}} 
+\index{O\+F\+F\+\_\+\+Network@{O\+F\+F\+\_\+\+Network}!send\+\_\+byte\+\_\+data@{send\+\_\+byte\+\_\+data}}
+\index{send\+\_\+byte\+\_\+data@{send\+\_\+byte\+\_\+data}!O\+F\+F\+\_\+\+Network@{O\+F\+F\+\_\+\+Network}}
+\subsubsection{\texorpdfstring{send\+\_\+byte\+\_\+data()}{send\_byte\_data()}}
+{\footnotesize\ttfamily def O\+F\+F\+\_\+\+Network.\+send\+\_\+byte\+\_\+data (\begin{DoxyParamCaption}\item[{}]{byte\+Data,  }\item[{}]{source\+Socket,  }\item[{}]{destination }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}send_byte_data() sends <type: bytes> to some destination. It does not
+accept return data
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_o_f_f___network_a07ee3bf5d20771b38ba37bc09a63988b}\label{namespace_o_f_f___network_a07ee3bf5d20771b38ba37bc09a63988b}} 
+\index{O\+F\+F\+\_\+\+Network@{O\+F\+F\+\_\+\+Network}!send\+\_\+comm@{send\+\_\+comm}}
+\index{send\+\_\+comm@{send\+\_\+comm}!O\+F\+F\+\_\+\+Network@{O\+F\+F\+\_\+\+Network}}
+\subsubsection{\texorpdfstring{send\+\_\+comm()}{send\_comm()}}
+{\footnotesize\ttfamily def O\+F\+F\+\_\+\+Network.\+send\+\_\+comm (\begin{DoxyParamCaption}\item[{}]{data,  }\item[{}]{source\+Socket,  }\item[{}]{destination,  }\item[{}]{requires\+Response = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}send_comm() sends a <type: Generic> message to some destination and then
+(for my sake) prints out the sender's response
+
+I say for my sake because it means I don't want to deal with craziness again
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_o_f_f___network_ad4c88e602c445d2b5a4a32564decf49c}\label{namespace_o_f_f___network_ad4c88e602c445d2b5a4a32564decf49c}} 
+\index{O\+F\+F\+\_\+\+Network@{O\+F\+F\+\_\+\+Network}!send\+\_\+string\+\_\+data@{send\+\_\+string\+\_\+data}}
+\index{send\+\_\+string\+\_\+data@{send\+\_\+string\+\_\+data}!O\+F\+F\+\_\+\+Network@{O\+F\+F\+\_\+\+Network}}
+\subsubsection{\texorpdfstring{send\+\_\+string\+\_\+data()}{send\_string\_data()}}
+{\footnotesize\ttfamily def O\+F\+F\+\_\+\+Network.\+send\+\_\+string\+\_\+data (\begin{DoxyParamCaption}\item[{}]{str\+Data,  }\item[{}]{source\+Socket,  }\item[{}]{destination }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}send_string_data() sends <type: string> to some destination. It does not
+accept return data
+\end{DoxyVerb}
+ 

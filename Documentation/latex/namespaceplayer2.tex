@@ -1,0 +1,42 @@
+\hypertarget{namespaceplayer2}{}\section{player2 Namespace Reference}
+\label{namespaceplayer2}\index{player2@{player2}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceplayer2_ae5f64fc8f7b0b98b23d8ea60c1c6deaa}\label{namespaceplayer2_ae5f64fc8f7b0b98b23d8ea60c1c6deaa}} 
+{\bfseries client\+Socket} = socket(A\+F\+\_\+\+I\+N\+ET, S\+O\+C\+K\+\_\+\+D\+G\+R\+AM)
+\item 
+\mbox{\Hypertarget{namespaceplayer2_ad5d3b4c917dd3f13de162bc446fc95ac}\label{namespaceplayer2_ad5d3b4c917dd3f13de162bc446fc95ac}} 
+{\bfseries mode} = send\+\_\+comm(\char`\"{}True\char`\"{}, client\+Socket, S\+E\+R\+V\+E\+R\+\_\+\+I\+N\+FO,True)
+\item 
+\mbox{\Hypertarget{namespaceplayer2_a70135f2d915e69537aacd2ecca420a9e}\label{namespaceplayer2_a70135f2d915e69537aacd2ecca420a9e}} 
+int {\bfseries data} = 0
+\item 
+\mbox{\Hypertarget{namespaceplayer2_adb60efd98bad791213c17bc6602c7fec}\label{namespaceplayer2_adb60efd98bad791213c17bc6602c7fec}} 
+{\bfseries address}
+\item 
+\mbox{\Hypertarget{namespaceplayer2_a2cf61b54bed5824e48868c19315ea58c}\label{namespaceplayer2_a2cf61b54bed5824e48868c19315ea58c}} 
+{\bfseries height}
+\item 
+\mbox{\Hypertarget{namespaceplayer2_ae56b0f965a4c5af6e38a7a547c03447c}\label{namespaceplayer2_ae56b0f965a4c5af6e38a7a547c03447c}} 
+{\bfseries width}
+\item 
+\mbox{\Hypertarget{namespaceplayer2_a93741307f314f9eb09e964944e05e728}\label{namespaceplayer2_a93741307f314f9eb09e964944e05e728}} 
+{\bfseries mines}
+\item 
+\mbox{\Hypertarget{namespaceplayer2_ad170142e87f5109fa10893b3863dae6a}\label{namespaceplayer2_ad170142e87f5109fa10893b3863dae6a}} 
+{\bfseries board} = \hyperlink{class_board_1_1_board}{Board}(height,width,mines)
+\item 
+\mbox{\Hypertarget{namespaceplayer2_ae13161ccd361fd36c6cbd757f33d639b}\label{namespaceplayer2_ae13161ccd361fd36c6cbd757f33d639b}} 
+{\bfseries temp\+Cell} = send\+\_\+comm(\char`\"{}True\char`\"{},client\+Socket,S\+E\+R\+V\+E\+R\+\_\+\+I\+N\+FO,True)
+\item 
+\mbox{\Hypertarget{namespaceplayer2_a025745245d0584f1418eb0898b79057a}\label{namespaceplayer2_a025745245d0584f1418eb0898b79057a}} 
+{\bfseries new\+Cell} = convert\+\_\+dictionary\+\_\+to\+\_\+cell(temp\+Cell)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}player2.py
+initiates client connection to host
+\end{DoxyVerb}
+ 

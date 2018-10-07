@@ -1,0 +1,59 @@
+\hypertarget{namespacehost}{}\section{host Namespace Reference}
+\label{namespacehost}\index{host@{host}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacehost_a2f80dadba484200e570a76f7da6be649}\label{namespacehost_a2f80dadba484200e570a76f7da6be649}} 
+{\bfseries server\+Socket} = socket(A\+F\+\_\+\+I\+N\+ET, S\+O\+C\+K\+\_\+\+D\+G\+R\+AM)
+\item 
+\mbox{\Hypertarget{namespacehost_a5f6106680a6c6401191db0633d1af66f}\label{namespacehost_a5f6106680a6c6401191db0633d1af66f}} 
+int {\bfseries mode} = 0
+\item 
+\mbox{\Hypertarget{namespacehost_a54fb6ea367ea77b46ec4c7c5039a5ee2}\label{namespacehost_a54fb6ea367ea77b46ec4c7c5039a5ee2}} 
+{\bfseries height}
+\item 
+\mbox{\Hypertarget{namespacehost_acd576bc5fea4a55f91c3a6caacaf5fa5}\label{namespacehost_acd576bc5fea4a55f91c3a6caacaf5fa5}} 
+{\bfseries width}
+\item 
+\mbox{\Hypertarget{namespacehost_a5ce4996febf6a1d8a3f15308021151b1}\label{namespacehost_a5ce4996febf6a1d8a3f15308021151b1}} 
+{\bfseries mines}
+\item 
+\mbox{\Hypertarget{namespacehost_ab2757d06fb4592190609a0514d9e4ffd}\label{namespacehost_ab2757d06fb4592190609a0514d9e4ffd}} 
+{\bfseries board} = \hyperlink{class_board_1_1_board}{Board}(height, width, mines)
+\item 
+\mbox{\Hypertarget{namespacehost_aae86faa74ad32fcf0ecf13de2667a52a}\label{namespacehost_aae86faa74ad32fcf0ecf13de2667a52a}} 
+bool {\bfseries response} = False
+\item 
+\mbox{\Hypertarget{namespacehost_aedee2c2f1424cd07fcb9a97263ff6b2e}\label{namespacehost_aedee2c2f1424cd07fcb9a97263ff6b2e}} 
+{\bfseries client\+Address}
+\item 
+dictionary {\bfseries data\+\_\+dict}
+\item 
+\mbox{\Hypertarget{namespacehost_a50c4cab8ef7df36e4ed8fb1ca388eb18}\label{namespacehost_a50c4cab8ef7df36e4ed8fb1ca388eb18}} 
+{\bfseries data} = serialize\+\_\+data(data\+\_\+dict)
+\item 
+\mbox{\Hypertarget{namespacehost_a9b9415201f6e29d0eda621113efe49ba}\label{namespacehost_a9b9415201f6e29d0eda621113efe49ba}} 
+{\bfseries temp\+Cell} = convert\+\_\+cell\+\_\+to\+\_\+dictionary(board.\+grid\mbox{[}r\mbox{]}\mbox{[}c\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}host.py
+\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacehost_a4db7985dbc0e87100bf90263d891849e}\label{namespacehost_a4db7985dbc0e87100bf90263d891849e}} 
+\index{host@{host}!data\+\_\+dict@{data\+\_\+dict}}
+\index{data\+\_\+dict@{data\+\_\+dict}!host@{host}}
+\subsubsection{\texorpdfstring{data\+\_\+dict}{data\_dict}}
+{\footnotesize\ttfamily dictionary host.\+data\+\_\+dict}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  \{
+2             \textcolor{stringliteral}{'height'} : height,
+3             \textcolor{stringliteral}{'width'} : width,
+4             \textcolor{stringliteral}{'mines'} : mines
+5         \}
+\end{DoxyCode}

@@ -1,0 +1,155 @@
+\hypertarget{namespace_game_logic}{}\section{Game\+Logic Namespace Reference}
+\label{namespace_game_logic}\index{Game\+Logic@{Game\+Logic}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespace_game_logic_afacbe6e69e6b939244d8c5f0aba5ff34}{show} (board, lose=False)
+\item 
+def \hyperlink{namespace_game_logic_ab23e4dd8920efb5dc428f599388dbc70}{cheat\+\_\+show} (board)
+\item 
+def \hyperlink{namespace_game_logic_ac701e0d880a5e8c09baf395c2f5d2a19}{cheat\+Mode} (board)
+\item 
+def \hyperlink{namespace_game_logic_a9e9b9869e1330923fbe2a0cb04b6c50d}{input\+Number} (prompt)
+\item 
+def \hyperlink{namespace_game_logic_aa208d35c45f200a28a8503ad891fd391}{prompt\+Check} (prompt)
+\item 
+def \hyperlink{namespace_game_logic_a4476538b080b2e54e2cf920d47385884}{game\+\_\+input} ()
+\item 
+def \hyperlink{namespace_game_logic_a8565813a63f94dd1e8325cbc3b2015bb}{click} (board, row, column, action)
+\item 
+def \hyperlink{namespace_game_logic_ae766be9cec703745c4f97f4f85a79dfc}{spread} (board, row, column)
+\item 
+def \hyperlink{namespace_game_logic_aa19068ecba13ba5dae3258c28138983d}{run\+\_\+singleplayer} (board)
+\item 
+def \hyperlink{namespace_game_logic_afc48c64dfaba7c18f642ab23e8e3a3bf}{run\+\_\+coop} (socket, address, turn, board)
+\item 
+\mbox{\Hypertarget{namespace_game_logic_ae210e41405e4a019624993e6eec6b99a}\label{namespace_game_logic_ae210e41405e4a019624993e6eec6b99a}} 
+def {\bfseries run\+\_\+versus} (socket, address, board)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}@package docstring
+GameLogic.py (or, MineSweeper.py) should deal with the handling of the game's
+run time logic.
+
+Question: Maybe both client AND server side logic should be handled here. Since
+we're currently looking at three different game modes, we can throw all of our
+logic here and then just have the three modes do everything on their own?
+
+That way there's no need to worry about client/server stuff if you're in
+single player mode
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespace_game_logic_ab23e4dd8920efb5dc428f599388dbc70}\label{namespace_game_logic_ab23e4dd8920efb5dc428f599388dbc70}} 
+\index{Game\+Logic@{Game\+Logic}!cheat\+\_\+show@{cheat\+\_\+show}}
+\index{cheat\+\_\+show@{cheat\+\_\+show}!Game\+Logic@{Game\+Logic}}
+\subsubsection{\texorpdfstring{cheat\+\_\+show()}{cheat\_show()}}
+{\footnotesize\ttfamily def Game\+Logic.\+cheat\+\_\+show (\begin{DoxyParamCaption}\item[{}]{board }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Fully displays board, regardless of reveals/flags.
+
+:param Board board: The current Board object.
+:return None:
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_game_logic_ac701e0d880a5e8c09baf395c2f5d2a19}\label{namespace_game_logic_ac701e0d880a5e8c09baf395c2f5d2a19}} 
+\index{Game\+Logic@{Game\+Logic}!cheat\+Mode@{cheat\+Mode}}
+\index{cheat\+Mode@{cheat\+Mode}!Game\+Logic@{Game\+Logic}}
+\subsubsection{\texorpdfstring{cheat\+Mode()}{cheatMode()}}
+{\footnotesize\ttfamily def Game\+Logic.\+cheat\+Mode (\begin{DoxyParamCaption}\item[{}]{board }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Activates cheat mode, which reveals the entire board. Only accessible in single-player mode.
+
+:param Board board: The current Board object.
+:return None:
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_game_logic_a8565813a63f94dd1e8325cbc3b2015bb}\label{namespace_game_logic_a8565813a63f94dd1e8325cbc3b2015bb}} 
+\index{Game\+Logic@{Game\+Logic}!click@{click}}
+\index{click@{click}!Game\+Logic@{Game\+Logic}}
+\subsubsection{\texorpdfstring{click()}{click()}}
+{\footnotesize\ttfamily def Game\+Logic.\+click (\begin{DoxyParamCaption}\item[{}]{board,  }\item[{}]{row,  }\item[{}]{column,  }\item[{}]{action }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Selects Cell to perform intended action on.
+
+:param Board board: The current Board object.
+:param int row: The row within the grid.
+:param int column: The column within the grid.
+:param string action: The action to perform on the Cell.
+:return bool: True if the user selects a bomb, False otherwise.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_game_logic_a4476538b080b2e54e2cf920d47385884}\label{namespace_game_logic_a4476538b080b2e54e2cf920d47385884}} 
+\index{Game\+Logic@{Game\+Logic}!game\+\_\+input@{game\+\_\+input}}
+\index{game\+\_\+input@{game\+\_\+input}!Game\+Logic@{Game\+Logic}}
+\subsubsection{\texorpdfstring{game\+\_\+input()}{game\_input()}}
+{\footnotesize\ttfamily def Game\+Logic.\+game\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@pre Handles start game initial board parameters
+@post None
+@return height,width,mines tuple (ints)
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_game_logic_a9e9b9869e1330923fbe2a0cb04b6c50d}\label{namespace_game_logic_a9e9b9869e1330923fbe2a0cb04b6c50d}} 
+\index{Game\+Logic@{Game\+Logic}!input\+Number@{input\+Number}}
+\index{input\+Number@{input\+Number}!Game\+Logic@{Game\+Logic}}
+\subsubsection{\texorpdfstring{input\+Number()}{inputNumber()}}
+{\footnotesize\ttfamily def Game\+Logic.\+input\+Number (\begin{DoxyParamCaption}\item[{}]{prompt }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Catches inputs by user for anything other than an integer.
+
+:param string prompt: The input provided by the user.
+:return int: The prompt converted to an int.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_game_logic_aa208d35c45f200a28a8503ad891fd391}\label{namespace_game_logic_aa208d35c45f200a28a8503ad891fd391}} 
+\index{Game\+Logic@{Game\+Logic}!prompt\+Check@{prompt\+Check}}
+\index{prompt\+Check@{prompt\+Check}!Game\+Logic@{Game\+Logic}}
+\subsubsection{\texorpdfstring{prompt\+Check()}{promptCheck()}}
+{\footnotesize\ttfamily def Game\+Logic.\+prompt\+Check (\begin{DoxyParamCaption}\item[{}]{prompt }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Checks for valid inputs at the menu prompt.
+
+:param string prompt: The input provided by the user.
+:return int: True if the input is valid, False otherwise.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_game_logic_afc48c64dfaba7c18f642ab23e8e3a3bf}\label{namespace_game_logic_afc48c64dfaba7c18f642ab23e8e3a3bf}} 
+\index{Game\+Logic@{Game\+Logic}!run\+\_\+coop@{run\+\_\+coop}}
+\index{run\+\_\+coop@{run\+\_\+coop}!Game\+Logic@{Game\+Logic}}
+\subsubsection{\texorpdfstring{run\+\_\+coop()}{run\_coop()}}
+{\footnotesize\ttfamily def Game\+Logic.\+run\+\_\+coop (\begin{DoxyParamCaption}\item[{}]{socket,  }\item[{}]{address,  }\item[{}]{turn,  }\item[{}]{board }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}client side version of coop multiplayer
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_game_logic_aa19068ecba13ba5dae3258c28138983d}\label{namespace_game_logic_aa19068ecba13ba5dae3258c28138983d}} 
+\index{Game\+Logic@{Game\+Logic}!run\+\_\+singleplayer@{run\+\_\+singleplayer}}
+\index{run\+\_\+singleplayer@{run\+\_\+singleplayer}!Game\+Logic@{Game\+Logic}}
+\subsubsection{\texorpdfstring{run\+\_\+singleplayer()}{run\_singleplayer()}}
+{\footnotesize\ttfamily def Game\+Logic.\+run\+\_\+singleplayer (\begin{DoxyParamCaption}\item[{}]{board }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}User is prompted for board params in host,
+run_singleplayer plays game
+:return None:
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_game_logic_afacbe6e69e6b939244d8c5f0aba5ff34}\label{namespace_game_logic_afacbe6e69e6b939244d8c5f0aba5ff34}} 
+\index{Game\+Logic@{Game\+Logic}!show@{show}}
+\index{show@{show}!Game\+Logic@{Game\+Logic}}
+\subsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily def Game\+Logic.\+show (\begin{DoxyParamCaption}\item[{}]{board,  }\item[{}]{lose = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Shows current state of board in command line.
+
+:param Board board: The current Board object.
+:return None:
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_game_logic_ae766be9cec703745c4f97f4f85a79dfc}\label{namespace_game_logic_ae766be9cec703745c4f97f4f85a79dfc}} 
+\index{Game\+Logic@{Game\+Logic}!spread@{spread}}
+\index{spread@{spread}!Game\+Logic@{Game\+Logic}}
+\subsubsection{\texorpdfstring{spread()}{spread()}}
+{\footnotesize\ttfamily def Game\+Logic.\+spread (\begin{DoxyParamCaption}\item[{}]{board,  }\item[{}]{row,  }\item[{}]{column }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Recursively reveals adjacent Cells if they are empty.
+
+:param Board board: The current Board object.
+:param int row: The row within the grid.
+:param int column: The column within the grid.
+\end{DoxyVerb}
+ 

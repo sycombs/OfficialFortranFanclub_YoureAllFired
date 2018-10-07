@@ -1,0 +1,33 @@
+\hypertarget{namespace_test_suite}{}\section{Test\+Suite Namespace Reference}
+\label{namespace_test_suite}\index{Test\+Suite@{Test\+Suite}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_test_suite_a803da52019f6bc338a584faacc2ca3ca}\label{namespace_test_suite_a803da52019f6bc338a584faacc2ca3ca}} 
+{\bfseries test\+Player} = \hyperlink{class_net_player_1_1_net_player}{Net\+Player}()
+\item 
+\mbox{\Hypertarget{namespace_test_suite_a7c96470adc0052ea780e8b0abea02198}\label{namespace_test_suite_a7c96470adc0052ea780e8b0abea02198}} 
+{\bfseries p\+Data} = json.\+dumps(test\+Player.\+get\+\_\+player\+\_\+data())
+\item 
+\mbox{\Hypertarget{namespace_test_suite_a5ec887ca5d1dbef4d74d18a8e1808cee}\label{namespace_test_suite_a5ec887ca5d1dbef4d74d18a8e1808cee}} 
+{\bfseries client\+Socket} = socket(A\+F\+\_\+\+I\+N\+ET, S\+O\+C\+K\+\_\+\+D\+G\+R\+AM)
+\item 
+\mbox{\Hypertarget{namespace_test_suite_a32ec223ae3857f6deae9bbedea77ea49}\label{namespace_test_suite_a32ec223ae3857f6deae9bbedea77ea49}} 
+{\bfseries response\+Data} = send\+\_\+comm(p\+Data, client\+Socket, S\+E\+R\+V\+E\+R\+\_\+\+I\+N\+FO, True)
+\item 
+\mbox{\Hypertarget{namespace_test_suite_a67467e0fe0b70469b9d84fb41c15ad86}\label{namespace_test_suite_a67467e0fe0b70469b9d84fb41c15ad86}} 
+{\bfseries msg} = serialize\+\_\+data(\char`\"{}Board, please\char`\"{})
+\item 
+\mbox{\Hypertarget{namespace_test_suite_a01df54808b4e4878427cbeceb0a566d7}\label{namespace_test_suite_a01df54808b4e4878427cbeceb0a566d7}} 
+{\bfseries hopefully\+A\+Board} = send\+\_\+comm(msg, client\+Socket, S\+E\+R\+V\+E\+R\+\_\+\+I\+N\+FO, True)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}@package docstring
+Testing suite
+
+I'm just keeping this file around in order to be able to test out whatever
+is necessary
+\end{DoxyVerb}
+ 

@@ -1,0 +1,68 @@
+\hypertarget{class_net_player_1_1_net_player}{}\section{Net\+Player.\+Net\+Player Class Reference}
+\label{class_net_player_1_1_net_player}\index{Net\+Player.\+Net\+Player@{Net\+Player.\+Net\+Player}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{class_net_player_1_1_net_player_ad0d9b41f11f635a8c136418890118ee0}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+def \hyperlink{class_net_player_1_1_net_player_a01fafb3dac9097f8680d49306bc0d32a}{get\+\_\+player\+\_\+data} (self, dict\+Key=None)
+\item 
+def \hyperlink{class_net_player_1_1_net_player_afd23b3ae945a572e87cb57fe0473916f}{set\+\_\+player\+\_\+data} (self, new\+Value, dict\+Key=None)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_net_player_1_1_net_player_acf324aad27f7cf53c5969d1bf72a3005}\label{class_net_player_1_1_net_player_acf324aad27f7cf53c5969d1bf72a3005}} 
+{\bfseries player\+Data}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_net_player_1_1_net_player_ad0d9b41f11f635a8c136418890118ee0}\label{class_net_player_1_1_net_player_ad0d9b41f11f635a8c136418890118ee0}} 
+\index{Net\+Player\+::\+Net\+Player@{Net\+Player\+::\+Net\+Player}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Net\+Player\+::\+Net\+Player@{Net\+Player\+::\+Net\+Player}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Net\+Player.\+Net\+Player.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}__init__ just sets up sets up a basic dictionary with some of the
+information necessary to play a network game
+
+(Note: We can remove win and just use msg to relay that information,
+but there's no real reason to do so since it's such a small amount of
+extra data)
+\end{DoxyVerb}
+\begin{DoxyVerb}When creating any sort of player data, look at the following in order
+to make sure it's formatted properly so that we can send it via JSON
+https://docs.python.org/3/library/json.html#json-to-py-table
+
+(Just make sure to use a dictionary, string, or int and and everything
+will work fine)
+\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_net_player_1_1_net_player_a01fafb3dac9097f8680d49306bc0d32a}\label{class_net_player_1_1_net_player_a01fafb3dac9097f8680d49306bc0d32a}} 
+\index{Net\+Player\+::\+Net\+Player@{Net\+Player\+::\+Net\+Player}!get\+\_\+player\+\_\+data@{get\+\_\+player\+\_\+data}}
+\index{get\+\_\+player\+\_\+data@{get\+\_\+player\+\_\+data}!Net\+Player\+::\+Net\+Player@{Net\+Player\+::\+Net\+Player}}
+\subsubsection{\texorpdfstring{get\+\_\+player\+\_\+data()}{get\_player\_data()}}
+{\footnotesize\ttfamily def Net\+Player.\+Net\+Player.\+get\+\_\+player\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dict\+Key = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}get_player_data() has two cases
+    Case 1: If dictKey is empty, return the entire playerData dictionary
+    Case 2: If dictKey is not empty, return only the specified entry
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_net_player_1_1_net_player_afd23b3ae945a572e87cb57fe0473916f}\label{class_net_player_1_1_net_player_afd23b3ae945a572e87cb57fe0473916f}} 
+\index{Net\+Player\+::\+Net\+Player@{Net\+Player\+::\+Net\+Player}!set\+\_\+player\+\_\+data@{set\+\_\+player\+\_\+data}}
+\index{set\+\_\+player\+\_\+data@{set\+\_\+player\+\_\+data}!Net\+Player\+::\+Net\+Player@{Net\+Player\+::\+Net\+Player}}
+\subsubsection{\texorpdfstring{set\+\_\+player\+\_\+data()}{set\_player\_data()}}
+{\footnotesize\ttfamily def Net\+Player.\+Net\+Player.\+set\+\_\+player\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{new\+Value,  }\item[{}]{dict\+Key = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}set_player_data() has two cases
+    Case 1: If dictKey is empty, update the entire playerData dictionary
+    Case 2: If dictKey is not empty, update only the specified entry
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Net\+Player.\+py\end{DoxyCompactItemize}

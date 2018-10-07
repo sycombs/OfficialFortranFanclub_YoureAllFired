@@ -1,0 +1,59 @@
+\hypertarget{namespace_play}{}\section{Play Namespace Reference}
+\label{namespace_play}\index{Play@{Play}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_play_a044632b9bf77f16d1a9df2bc81ac3129}\label{namespace_play_a044632b9bf77f16d1a9df2bc81ac3129}} 
+{\bfseries server\+Socket} = socket(A\+F\+\_\+\+I\+N\+ET, S\+O\+C\+K\+\_\+\+D\+G\+R\+AM)
+\item 
+\mbox{\Hypertarget{namespace_play_abd2359e94b8e42299015d8b0178b3c3f}\label{namespace_play_abd2359e94b8e42299015d8b0178b3c3f}} 
+int {\bfseries mode} = 0
+\item 
+\mbox{\Hypertarget{namespace_play_a3f79c67aec3aac567a1daaf8fe775e87}\label{namespace_play_a3f79c67aec3aac567a1daaf8fe775e87}} 
+{\bfseries height}
+\item 
+\mbox{\Hypertarget{namespace_play_a26e3b56f122ba00b48e1a88583f66f3f}\label{namespace_play_a26e3b56f122ba00b48e1a88583f66f3f}} 
+{\bfseries width}
+\item 
+\mbox{\Hypertarget{namespace_play_a6b2134f21cedd95a4c45d49d9dd17504}\label{namespace_play_a6b2134f21cedd95a4c45d49d9dd17504}} 
+{\bfseries mines}
+\item 
+\mbox{\Hypertarget{namespace_play_afe04e19157c75be4cc5f72f41a9858f8}\label{namespace_play_afe04e19157c75be4cc5f72f41a9858f8}} 
+{\bfseries board} = \hyperlink{class_board_1_1_board}{Board}(height, width, mines)
+\item 
+\mbox{\Hypertarget{namespace_play_a7cfeb37a7d66635f5793f535339a60b2}\label{namespace_play_a7cfeb37a7d66635f5793f535339a60b2}} 
+bool {\bfseries response} = False
+\item 
+\mbox{\Hypertarget{namespace_play_af5bbed7c9573b88eab860a56ac570474}\label{namespace_play_af5bbed7c9573b88eab860a56ac570474}} 
+{\bfseries client\+Address}
+\item 
+dictionary {\bfseries data\+\_\+dict}
+\item 
+\mbox{\Hypertarget{namespace_play_a6b40175c41f6e2ef9328ec58b717c459}\label{namespace_play_a6b40175c41f6e2ef9328ec58b717c459}} 
+{\bfseries data} = serialize\+\_\+data(data\+\_\+dict)
+\item 
+\mbox{\Hypertarget{namespace_play_a6403484a1168ac57194db75e6bd79fe2}\label{namespace_play_a6403484a1168ac57194db75e6bd79fe2}} 
+{\bfseries temp\+Cell} = convert\+\_\+cell\+\_\+to\+\_\+dictionary(board.\+grid\mbox{[}r\mbox{]}\mbox{[}c\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}host.py
+\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespace_play_a672e7194661c43e0e9bfefa8a22e93de}\label{namespace_play_a672e7194661c43e0e9bfefa8a22e93de}} 
+\index{Play@{Play}!data\+\_\+dict@{data\+\_\+dict}}
+\index{data\+\_\+dict@{data\+\_\+dict}!Play@{Play}}
+\subsubsection{\texorpdfstring{data\+\_\+dict}{data\_dict}}
+{\footnotesize\ttfamily dictionary Play.\+data\+\_\+dict}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  \{
+2             \textcolor{stringliteral}{'height'} : height,
+3             \textcolor{stringliteral}{'width'} : width,
+4             \textcolor{stringliteral}{'mines'} : mines
+5         \}
+\end{DoxyCode}

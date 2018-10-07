@@ -1,0 +1,77 @@
+\hypertarget{class_board_1_1_board}{}\section{Board.\+Board Class Reference}
+\label{class_board_1_1_board}\index{Board.\+Board@{Board.\+Board}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_board_1_1_board_a64e3380089e1c6b86069eed8ef0a4cf9}\label{class_board_1_1_board_a64e3380089e1c6b86069eed8ef0a4cf9}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, height, width, mines)
+\item 
+def \hyperlink{class_board_1_1_board_af52ea18259bf8d2a122de08fcb0ea308}{display\+Board} (self)
+\item 
+\mbox{\Hypertarget{class_board_1_1_board_ac84e7c87ac2407614bf0e63f165a76d5}\label{class_board_1_1_board_ac84e7c87ac2407614bf0e63f165a76d5}} 
+def {\bfseries get\+\_\+string\+\_\+rep} (self)
+\item 
+\mbox{\Hypertarget{class_board_1_1_board_a8b8e0d2e99c02de780604baa141159c3}\label{class_board_1_1_board_a8b8e0d2e99c02de780604baa141159c3}} 
+def {\bfseries brute\+\_\+force} (self, cell, i, j)
+\item 
+\mbox{\Hypertarget{class_board_1_1_board_a9f3fd38d0abf01671f3d8bb0f3ceea5e}\label{class_board_1_1_board_a9f3fd38d0abf01671f3d8bb0f3ceea5e}} 
+def {\bfseries calculate\+\_\+3bv} (self)
+\item 
+def \hyperlink{class_board_1_1_board_a4a027666af1fa52582af6543985a73c6}{rec\+Reveal} (self, rows, cols)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_board_1_1_board_a288daa852b69c17ecbabab9af6dac15a}\label{class_board_1_1_board_a288daa852b69c17ecbabab9af6dac15a}} 
+{\bfseries height}
+\item 
+\mbox{\Hypertarget{class_board_1_1_board_a354a175ae1f399098ac23ed37c58a3f2}\label{class_board_1_1_board_a354a175ae1f399098ac23ed37c58a3f2}} 
+{\bfseries width}
+\item 
+\mbox{\Hypertarget{class_board_1_1_board_a46a8a14d245c71600c5416deab063feb}\label{class_board_1_1_board_a46a8a14d245c71600c5416deab063feb}} 
+{\bfseries mines}
+\item 
+\mbox{\Hypertarget{class_board_1_1_board_a29136b70f21697be0dcccb782d5ee5bf}\label{class_board_1_1_board_a29136b70f21697be0dcccb782d5ee5bf}} 
+{\bfseries grid}
+\item 
+\mbox{\Hypertarget{class_board_1_1_board_a404b2ee0a7cec1fe76688e1da26e4339}\label{class_board_1_1_board_a404b2ee0a7cec1fe76688e1da26e4339}} 
+{\bfseries flag\+Count}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Maintains a 2D array of Cells. Maintains a height, a width, number of mines,
+and the number of Cells within it that are flagged. Upon initiation,
+randomly places the mines in the grid and updates each cells adjecency count
+accordingly.
+
+:param height: The height of the grid.
+:param width: The width of the grid.
+:param mines: The number of mines distributed across the Board.
+\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_board_1_1_board_af52ea18259bf8d2a122de08fcb0ea308}\label{class_board_1_1_board_af52ea18259bf8d2a122de08fcb0ea308}} 
+\index{Board\+::\+Board@{Board\+::\+Board}!display\+Board@{display\+Board}}
+\index{display\+Board@{display\+Board}!Board\+::\+Board@{Board\+::\+Board}}
+\subsubsection{\texorpdfstring{display\+Board()}{displayBoard()}}
+{\footnotesize\ttfamily def Board.\+Board.\+display\+Board (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Prints the Board.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_board_1_1_board_a4a027666af1fa52582af6543985a73c6}\label{class_board_1_1_board_a4a027666af1fa52582af6543985a73c6}} 
+\index{Board\+::\+Board@{Board\+::\+Board}!rec\+Reveal@{rec\+Reveal}}
+\index{rec\+Reveal@{rec\+Reveal}!Board\+::\+Board@{Board\+::\+Board}}
+\subsubsection{\texorpdfstring{rec\+Reveal()}{recReveal()}}
+{\footnotesize\ttfamily def Board.\+Board.\+rec\+Reveal (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{rows,  }\item[{}]{cols }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@pre    Grid is a valid object of type Board, rows and cols is the location in the board to reveal
+    @post   will reveal all
+    @return returns true if the cell in question is a mine, false if it is not
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Board.\+py\end{DoxyCompactItemize}
