@@ -212,6 +212,7 @@ def run_singleplayer(board):
     """
     User is prompted for board params in host,
     run_singleplayer plays game
+    param Board board: require the game board at start
     :return None:
     """
     timeTaken = Time()
@@ -270,9 +271,11 @@ def run_singleplayer(board):
         print("Bomb detonated! You need more practice, young grasshopper.")
         show(board, True)
         leaders.get_leaderboard(10)
+        return timeTaken.show_total()
 
     elif choice == "q":
         print("Thank you for playing... come again!")
+        return timeTaken.show_total()
     else:
         print("*Mario Voice* You are the weiner!")
         score = int(float((board.calculate_3bv()*100)/timeTaken.show_total()))
@@ -281,10 +284,15 @@ def run_singleplayer(board):
             print("Congratulations, you made the leaderboard!")
             leaders.add_entry(score)
         leaders.get_leaderboard(10)
+        return timeTaken.show_total()
 
 def run_coop(socket,address,turn,board):
     """
     client side version of coop multiplayer
+    param Socket socket for sending each move
+    param string address of client socket
+    param bool turn, determine who's turn it is
+    param Board board, game board object
     """
     print("You are: ", end="")
     if turn:
@@ -372,6 +380,14 @@ def run_coop(socket,address,turn,board):
         print("*Mario Voice* You are the weiner!")
 
 def run_versus(socket, address, board):
+    '''
+    simple versus implementation
+    should allow for different ip addresses after some work
+    param Socket socket for communication, the local socket being used to
+        output info
+    param string address, the other player's IP address
+    param Board board object to track game board
+    '''
     print("Starting game with these parameters:\n")
     print("Height: " + str(board.height))
     print("Width: " + str(board.width))
@@ -381,18 +397,22 @@ def run_versus(socket, address, board):
         print (f"{x}...")
         time.sleep(1)
     print("GO!")
-    #start timer
-    run_singleplayer(board)
-    #end timer
-    #my_time is this player's time
-    my_time = 0
-    print("Your time is: " + str(my_time))
+
+    my_time = run_singleplayer(board)
+    my_time = str(my_time)
+    print("Your time is: " + my_time)
     print("Waiting for your opponent's time...")
-    time_dict = {'time' : my_time}
-    time_dict = serialize_data(time_dict)
-    their_time = send_comm(time_dict,socket,address,True)
-    their_time = deserialize_data(their_time)
-    time_diff = my_time - their_time['time']
+    their_time = 'ERROR'
+    while their_time == 'ERROR':
+        try:
+            their_time = send_comm(serialize_data(my_time),socket,address,True)
+            their_time = deserialize_data(their_time)
+        except Exception as e:
+            print(e)
+
+    my_time = float(my_time)
+    their_time = float(their_time)
+    time_diff = my_time - their_time
     if time_diff < 0:
         print("You won!")
     elif time_diff > 0:
