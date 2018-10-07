@@ -18,10 +18,10 @@ NEW ADDRESS GETS ENTERED HERE
 '''
 
 servAddr = input("Enter Server Address: ")
-SERVER_INFO[0] = servAddr
+LAN_SERVER_INFO = servAddr
 
 #send initial connection
-mode = send_comm("True", clientSocket, SERVER_INFO,True)
+mode = send_comm("True", clientSocket, LAN_SERVER_INFO,True)
 mode = mode.decode()
 data = 0
 print("Waiting for player 1 to input board parameters...")
@@ -33,13 +33,13 @@ height,width,mines = data['height'],data['width'],data['mines']
 board = Board(height,width,mines)
 for r in range(0,height):
     for c in range(0, width):
-        tempCell = send_comm("True",clientSocket,SERVER_INFO,True)
+        tempCell = send_comm("True",clientSocket,LAN_SERVER_INFO,True)
         tempCell.decode()
         tempCell = deserialize_data(tempCell)
         newCell  = convert_dictionary_to_cell(tempCell)
         board.brute_force(newCell, r, c)
-send_comm("False", clientSocket, SERVER_INFO)
+send_comm("False", clientSocket, LAN_SERVER_INFO)
 if mode == 'coop':
-    run_coop(clientSocket,SERVER_INFO,False,board)
+    run_coop(clientSocket,LAN_SERVER_INFO,False,board)
 elif mode == 'vs':
-    run_versus(clientSocket,SERVER_INFO,board)
+    run_versus(clientSocket,LAN_SERVER_INFO,board)
