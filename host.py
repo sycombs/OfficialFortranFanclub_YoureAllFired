@@ -23,7 +23,11 @@ if __name__ == "__main__":
         run_singleplayer(board)
     elif mode == 2:
         response = False
-        print("\nYour IP: " + gethostbyname(gethostname()))
+        s = socket(AF_INET, SOCK_DGRAM)
+        s.connect(("8.8.8.8", 80))
+        host_ip = s.getsockname()[0]
+        s.close()
+        print("\nYour IP: " + host_ip)
         print("\nCo-op selected! Waiting for Player 2...\n")
         while not response:
             try:
@@ -48,7 +52,11 @@ if __name__ == "__main__":
         run_coop(serverSocket, clientAddress, True, board)
 
     elif mode == 3:
-        print("\nYour IP: " + gethostbyname(gethostname()))
+        s = socket(AF_INET, SOCK_DGRAM)
+        s.connect(("8.8.8.8", 80))
+        host_ip = s.getsockname()[0]
+        s.close()
+        print("\nYour IP: " + host_ip)
         response = False
         print("\nVersus selected! Waiting for Player 2...\n")
         while not response:

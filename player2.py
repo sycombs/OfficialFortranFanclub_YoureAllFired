@@ -30,6 +30,10 @@ while mode == False:
         print ("\nAddress incorrect! (Get it from player 1!)\n")
         mode = False
 data = 0
+if mode == 'coop':
+    print("Player 1 has selected Co-op mode!\n")
+elif mode == 'vs':
+    print("Player 1 has selected Versus mode!\n")
 print("Waiting for player 1 to input board parameters...")
 while data == 0:
     data, address = clientSocket.recvfrom(2048*2*2)
