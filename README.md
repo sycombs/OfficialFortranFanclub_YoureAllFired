@@ -3,7 +3,9 @@ This is a project that is a mock minesweeper game made in python utilized from c
 
 1. Clone the repo and run python3 Host.py to initialize the game.
 
-2. For Co-op, run Host.py, select option 2, then run player2.py.
+2. For Co-op, run Host.py, select option 2, then run player2.py on your second device.
+
+3. For Versus, run Host.py, select option 3, then run player2.py on your second device
 
 **Warning**
 This game will not run on versions of python less than 3.6
