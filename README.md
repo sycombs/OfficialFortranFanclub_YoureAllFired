@@ -1,11 +1,14 @@
 # Minesweeper Project
 This is a project that is a mock minesweeper game made in python utilized from command line.
 
-1. Clone the repo and run python3 Host.py to initialize the game.
+1. Clone the repo and run python3 Host.py to initialize the game. (Requires internet connection)
 
 2. For Co-op, run Host.py, select option 2, then run player2.py on your second device.
 
+(The game sends a message to Google's recursive DNS server 8.8.8.8 to get your local IP)
+
 3. For Versus, run Host.py, select option 3, then run player2.py on your second device
+
 
 **Warning**
 This game will not run on versions of python less than 3.6
@@ -22,6 +25,8 @@ Must download colorama module "python3 -m pip install colorama"
 The number that appears is the number of adjacent bombs.
 
 5. Use the flag function "f" with (x and y coordinates) to flag a space you thing is a bomb.
+
+**Tip** Activate Cheat mode with -c in single player mode
 
 **Tip** flag a space that is already flagged in order to remove that flag
 
