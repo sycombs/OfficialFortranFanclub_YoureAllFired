@@ -101,6 +101,11 @@ class Board:
     def brute_force(self, cell, i, j):
         self.grid[i][j] = cell
 
+    """
+    Calculates the minimum number of clicks to reveal every space on the board except mines
+    :param None
+    :return Total: The minimum number of clicks
+    """
     def calculate_3bv(self):
         total = 0
         for i in range(self.height):
@@ -122,7 +127,7 @@ class Board:
     def recReveal(self, rows, cols):
         """ @pre    Grid is a valid object of type Board, rows and cols is the location in the board to reveal
             @post   will reveal all
-            @return returns true if the cell in question is a mine, false if it is not
+            @return none
         """
         if rows>=self.height or rows<0 or cols>=self.width or cols<0 or self.grid[rows][cols].isRevealed:
             return
