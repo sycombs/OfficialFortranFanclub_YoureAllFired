@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['minesweeper_20project',['Minesweeper Project',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['leaderboard',['Leaderboard',['../class_leaderboard_1_1_leaderboard.html',1,'Leaderboard.Leaderboard'],['../namespace_leaderboard.html',1,'Leaderboard']]]
 ];
