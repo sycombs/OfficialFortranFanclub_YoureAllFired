@@ -101,12 +101,12 @@ class Board:
     def brute_force(self, cell, i, j):
         self.grid[i][j] = cell
 
-    """
-    Calculates the minimum number of clicks to reveal every space on the board except mines
-    :param None
-    :return Total: The minimum number of clicks
-    """
     def calculate_3bv(self):
+        """
+        Calculates the minimum number of clicks to reveal every space on the board except mines
+        :param None
+        :return Total: The minimum number of clicks
+        """
         total = 0
         for i in range(self.height):
             for j in range(self.width):
