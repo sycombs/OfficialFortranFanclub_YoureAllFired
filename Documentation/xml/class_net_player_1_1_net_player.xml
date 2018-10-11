@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_net_player_1_1_net_player" kind="class" language="Python" prot="public">
+    <compoundname>NetPlayer::NetPlayer</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_net_player_1_1_net_player_1acf324aad27f7cf53c5969d1bf72a3005" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>NetPlayer.NetPlayer::playerData</definition>
+        <argsstring></argsstring>
+        <name>playerData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="NetPlayer.py" line="28" column="1" bodyfile="NetPlayer.py" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_net_player_1_1_net_player_1ad0d9b41f11f635a8c136418890118ee0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def NetPlayer.NetPlayer.__init__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>__init__ just sets up sets up a basic dictionary with some of the
+information necessary to play a network game
+
+(Note: We can remove win and just use msg to relay that information,
+but there&apos;s no real reason to do so since it&apos;s such a small amount of
+extra data)
+</verbatim><verbatim>When creating any sort of player data, look at the following in order
+to make sure it&apos;s formatted properly so that we can send it via JSON
+https://docs.python.org/3/library/json.html#json-to-py-table
+
+(Just make sure to use a dictionary, string, or int and and everything
+will work fine)
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="NetPlayer.py" line="10" column="1" bodyfile="NetPlayer.py" bodystart="10" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_player_1_1_net_player_1a01fafb3dac9097f8680d49306bc0d32a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def NetPlayer.NetPlayer.get_player_data</definition>
+        <argsstring>(self, dictKey=None)</argsstring>
+        <name>get_player_data</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>dictKey</type>
+          <defname>dictKey</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>get_player_data() has two cases
+    Case 1: If dictKey is empty, return the entire playerData dictionary
+    Case 2: If dictKey is not empty, return only the specified entry
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="NetPlayer.py" line="40" column="1" bodyfile="NetPlayer.py" bodystart="40" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_net_player_1_1_net_player_1afd23b3ae945a572e87cb57fe0473916f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def NetPlayer.NetPlayer.set_player_data</definition>
+        <argsstring>(self, newValue, dictKey=None)</argsstring>
+        <name>set_player_data</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>newValue</type>
+          <defname>newValue</defname>
+        </param>
+        <param>
+          <type>dictKey</type>
+          <defname>dictKey</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>set_player_data() has two cases
+    Case 1: If dictKey is empty, update the entire playerData dictionary
+    Case 2: If dictKey is not empty, update only the specified entry
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="NetPlayer.py" line="62" column="1" bodyfile="NetPlayer.py" bodystart="62" bodyend="72"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="NetPlayer.py" line="9" column="1" bodyfile="NetPlayer.py" bodystart="9" bodyend="72"/>
+    <listofallmembers>
+      <member refid="class_net_player_1_1_net_player_1ad0d9b41f11f635a8c136418890118ee0" prot="public" virt="non-virtual"><scope>NetPlayer::NetPlayer</scope><name>__init__</name></member>
+      <member refid="class_net_player_1_1_net_player_1a01fafb3dac9097f8680d49306bc0d32a" prot="public" virt="non-virtual"><scope>NetPlayer::NetPlayer</scope><name>get_player_data</name></member>
+      <member refid="class_net_player_1_1_net_player_1acf324aad27f7cf53c5969d1bf72a3005" prot="public" virt="non-virtual"><scope>NetPlayer::NetPlayer</scope><name>playerData</name></member>
+      <member refid="class_net_player_1_1_net_player_1afd23b3ae945a572e87cb57fe0473916f" prot="public" virt="non-virtual"><scope>NetPlayer::NetPlayer</scope><name>set_player_data</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_o_f_f___network" kind="namespace" language="Python">
+    <compoundname>OFF_Network</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_o_f_f___network_1adffdd99674fb44304159889e45506b8b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>OFF_Network.localAddress</definition>
+        <argsstring></argsstring>
+        <name>localAddress</name>
+        <initializer>=  gethostbyname(gethostname())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OFF_Network.py" line="14" column="1" bodyfile="OFF_Network.py" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_o_f_f___network_1ad86d6e025f98f77f2513ed47b6a9c9ed" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int OFF_Network.SERVER_PORT</definition>
+        <argsstring></argsstring>
+        <name>SERVER_PORT</name>
+        <initializer>=  12000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OFF_Network.py" line="16" column="1" bodyfile="OFF_Network.py" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_o_f_f___network_1a983ac01abcf0c3b7e474984e7ece31b7" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple OFF_Network.SERVER_INFO</definition>
+        <argsstring></argsstring>
+        <name>SERVER_INFO</name>
+        <initializer>=  (localAddress, SERVER_PORT)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OFF_Network.py" line="18" column="1" bodyfile="OFF_Network.py" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_o_f_f___network_1a0ab8439ad8255392538b5966e5168506" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def OFF_Network.send_byte_data</definition>
+        <argsstring>(byteData, sourceSocket, destination)</argsstring>
+        <name>send_byte_data</name>
+        <param>
+          <type>byteData</type>
+          <defname>byteData</defname>
+        </param>
+        <param>
+          <type>sourceSocket</type>
+          <defname>sourceSocket</defname>
+        </param>
+        <param>
+          <type>destination</type>
+          <defname>destination</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>send_byte_data() sends &lt;type: bytes&gt; to some destination. It does not
+accept return data
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OFF_Network.py" line="22" column="1" bodyfile="OFF_Network.py" bodystart="22" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_o_f_f___network_1ad4c88e602c445d2b5a4a32564decf49c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def OFF_Network.send_string_data</definition>
+        <argsstring>(strData, sourceSocket, destination)</argsstring>
+        <name>send_string_data</name>
+        <param>
+          <type>strData</type>
+          <defname>strData</defname>
+        </param>
+        <param>
+          <type>sourceSocket</type>
+          <defname>sourceSocket</defname>
+        </param>
+        <param>
+          <type>destination</type>
+          <defname>destination</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>send_string_data() sends &lt;type: string&gt; to some destination. It does not
+accept return data
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OFF_Network.py" line="34" column="1" bodyfile="OFF_Network.py" bodystart="34" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_o_f_f___network_1a07ee3bf5d20771b38ba37bc09a63988b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def OFF_Network.send_comm</definition>
+        <argsstring>(data, sourceSocket, destination, requiresResponse=None)</argsstring>
+        <name>send_comm</name>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <param>
+          <type>sourceSocket</type>
+          <defname>sourceSocket</defname>
+        </param>
+        <param>
+          <type>destination</type>
+          <defname>destination</defname>
+        </param>
+        <param>
+          <type>requiresResponse</type>
+          <defname>requiresResponse</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>send_comm() sends a &lt;type: Generic&gt; message to some destination and then
+(for my sake) prints out the sender&apos;s response
+
+I say for my sake because it means I don&apos;t want to deal with craziness again
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OFF_Network.py" line="47" column="1" bodyfile="OFF_Network.py" bodystart="47" bodyend="90"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>@package docstring
+Official Fortran Fanclub Network Module</verbatim> </para>    </detaileddescription>
+    <location file="OFF_Network.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

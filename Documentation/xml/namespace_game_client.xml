@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_game_client" kind="namespace" language="Python">
+    <compoundname>GameClient</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_game_client_1aa2410d2d1b920195495aa5141dd79b52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def GameClient.receive_data</definition>
+        <argsstring>()</argsstring>
+        <name>receive_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameClient.py" line="24" column="1" bodyfile="GameClient.py" bodystart="24" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>@package docstring
+GameClient.py deals with client specific functionality such as:
+Update player data
+Provide an interface for network communication
+And... other stuff
+</verbatim> </para>    </detaileddescription>
+    <location file="GameClient.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

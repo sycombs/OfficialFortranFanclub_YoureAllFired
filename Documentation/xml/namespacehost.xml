@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehost" kind="namespace" language="Python">
+    <compoundname>host</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacehost_1a2f80dadba484200e570a76f7da6be649" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>host.serverSocket</definition>
+        <argsstring></argsstring>
+        <name>serverSocket</name>
+        <initializer>=  socket(AF_INET, SOCK_DGRAM)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="host.py" line="5" column="1" bodyfile="host.py" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehost_1a5f6106680a6c6401191db0633d1af66f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>host.mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="host.py" line="14" column="1" bodyfile="host.py" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehost_1a54fb6ea367ea77b46ec4c7c5039a5ee2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>host.height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="host.py" line="19" column="1" bodyfile="host.py" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehost_1acd576bc5fea4a55f91c3a6caacaf5fa5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>host.width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="host.py" line="19" column="1" bodyfile="host.py" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehost_1a5ce4996febf6a1d8a3f15308021151b1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>host.mines</definition>
+        <argsstring></argsstring>
+        <name>mines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="host.py" line="19" column="1" bodyfile="host.py" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehost_1ab2757d06fb4592190609a0514d9e4ffd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>host.board</definition>
+        <argsstring></argsstring>
+        <name>board</name>
+        <initializer>=  <ref refid="class_board_1_1_board" kindref="compound">Board</ref>(height, width, mines)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="host.py" line="21" column="1" bodyfile="host.py" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehost_1aae86faa74ad32fcf0ecf13de2667a52a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool host::response</definition>
+        <argsstring></argsstring>
+        <name>response</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="host.py" line="25" column="1" bodyfile="host.py" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehost_1ad873f768eeedb8bca7db18cc251c7053" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>host.s</definition>
+        <argsstring></argsstring>
+        <name>s</name>
+        <initializer>=  socket(AF_INET, SOCK_DGRAM)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="host.py" line="26" column="1" bodyfile="host.py" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehost_1a21cb3c882570d7bac4b4f9ed2e28f3c7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>host.host_ip</definition>
+        <argsstring></argsstring>
+        <name>host_ip</name>
+        <initializer>=  s.getsockname()[0]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="host.py" line="28" column="1" bodyfile="host.py" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehost_1aedee2c2f1424cd07fcb9a97263ff6b2e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>host.clientAddress</definition>
+        <argsstring></argsstring>
+        <name>clientAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="host.py" line="34" column="1" bodyfile="host.py" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehost_1a4db7985dbc0e87100bf90263d891849e" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary host::data_dict</definition>
+        <argsstring></argsstring>
+        <name>data_dict</name>
+        <initializer>=  {
+            &apos;height&apos; : height,
+            &apos;width&apos; : width,
+            &apos;mines&apos; : mines
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="host.py" line="40" column="1" bodyfile="host.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehost_1a50c4cab8ef7df36e4ed8fb1ca388eb18" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>host.data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <initializer>=  serialize_data(data_dict)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="host.py" line="45" column="1" bodyfile="host.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehost_1a9b9415201f6e29d0eda621113efe49ba" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>host.tempCell</definition>
+        <argsstring></argsstring>
+        <name>tempCell</name>
+        <initializer>=  convert_cell_to_dictionary(board.grid[r][c])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="host.py" line="50" column="1" bodyfile="host.py" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>host.py
+</verbatim> </para>    </detaileddescription>
+    <location file="host.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

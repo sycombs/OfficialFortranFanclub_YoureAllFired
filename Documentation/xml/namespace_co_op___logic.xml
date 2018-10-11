@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_co_op___logic" kind="namespace" language="Python">
+    <compoundname>CoOp_Logic</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_co_op___logic_8py_1ac2e2a0678c27c8de5e5be32701bc6043" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CoOp_Logic::STAGE_1</definition>
+        <argsstring></argsstring>
+        <name>STAGE_1</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CoOp_Logic.py" line="14" column="1" bodyfile="CoOp_Logic.py" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_co_op___logic_8py_1a41044d072b9fcad2c78eacc54e7dd8b8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CoOp_Logic.STAGE_2</definition>
+        <argsstring></argsstring>
+        <name>STAGE_2</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CoOp_Logic.py" line="15" column="1" bodyfile="CoOp_Logic.py" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_co_op___logic_8py_1a32455827af91afb3ba72a6471a158164" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CoOp_Logic.MAIN_LOOP</definition>
+        <argsstring></argsstring>
+        <name>MAIN_LOOP</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CoOp_Logic.py" line="16" column="1" bodyfile="CoOp_Logic.py" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_co_op___logic_8py_1a4a403490ae17db10035db81d88e3cbe8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CoOp_Logic::playerCount</definition>
+        <argsstring></argsstring>
+        <name>playerCount</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CoOp_Logic.py" line="22" column="1" bodyfile="CoOp_Logic.py" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_co_op___logic_8py_1ac821ffadf4f64fcf0abce7e30a12e7c6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>CoOp_Logic.serverSocket</definition>
+        <argsstring></argsstring>
+        <name>serverSocket</name>
+        <initializer>=  socket(AF_INET, SOCK_DGRAM)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CoOp_Logic.py" line="28" column="1" bodyfile="CoOp_Logic.py" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_co_op___logic_8py_1aa4c6de1fe4a84c9271068b8622bba8b7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>CoOp_Logic.dataSerial</definition>
+        <argsstring></argsstring>
+        <name>dataSerial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CoOp_Logic.py" line="34" column="1" bodyfile="CoOp_Logic.py" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_co_op___logic_8py_1a6c0bdd95382d04e311fd4a52030f29e5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>CoOp_Logic.clientAddress</definition>
+        <argsstring></argsstring>
+        <name>clientAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CoOp_Logic.py" line="34" column="1" bodyfile="CoOp_Logic.py" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_co_op___logic_8py_1a51d94cbb23b5444f409e1c1fded2fa99" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>CoOp_Logic.dataDeserial</definition>
+        <argsstring></argsstring>
+        <name>dataDeserial</name>
+        <initializer>=  deserialize_data(dataSerial)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CoOp_Logic.py" line="40" column="1" bodyfile="CoOp_Logic.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_co_op___logic_8py_1a5440435602f7149f8bec86ae2bcf4ec3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>CoOp_Logic.newDataSerial</definition>
+        <argsstring></argsstring>
+        <name>newDataSerial</name>
+        <initializer>=  serialize_data(dataDeserial)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CoOp_Logic.py" line="44" column="1" bodyfile="CoOp_Logic.py" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="CoOp_Logic.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

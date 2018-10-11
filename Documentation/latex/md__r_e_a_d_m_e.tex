@@ -2,8 +2,15 @@ This is a project that is a mock minesweeper game made in python utilized from c
 
 
 \begin{DoxyEnumerate}
-\item Clone the repo and run python3 Host.\+py to initialize the game.
-\item For Co-\/op, run Host.\+py, select option 2, then run player2.\+py.
+\item Clone the repo and run python3 Host.\+py to initialize the game. (Requires internet connection)
+\item For Co-\/op, run Host.\+py, select option 2, then run player2.\+py on your second device.
+\end{DoxyEnumerate}
+
+(The game sends a message to Google\textquotesingle{}s recursive D\+NS server 8.\+8.\+8.\+8 to get your local IP)
+
+
+\begin{DoxyEnumerate}
+\item For Versus, run Host.\+py, select option 3, then run player2.\+py on your second device
 \end{DoxyEnumerate}
 
 {\bfseries Warning} This game will not run on versions of python less than 3.\+6
@@ -23,6 +30,8 @@ Must download colorama module \char`\"{}python3 -\/m pip install colorama\char`\
 \begin{DoxyEnumerate}
 \item Use the flag function \char`\"{}f\char`\"{} with (x and y coordinates) to flag a space you thing is a bomb.
 \end{DoxyEnumerate}
+
+{\bfseries Tip} Activate Cheat mode with -\/c in single player mode
 
 {\bfseries Tip} flag a space that is already flagged in order to remove that flag
 

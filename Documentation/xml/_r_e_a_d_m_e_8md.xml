@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Minesweeper<sp/>Project</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>is<sp/>a<sp/>project<sp/>that<sp/>is<sp/>a<sp/>mock<sp/>minesweeper<sp/>game<sp/>made<sp/>in<sp/>python<sp/>utilized<sp/>from<sp/>command<sp/>line.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Clone<sp/>the<sp/>repo<sp/>and<sp/>run<sp/>python3<sp/>Host.py<sp/>to<sp/>initialize<sp/>the<sp/>game.<sp/>(Requires<sp/>internet<sp/>connection)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">2.<sp/>For<sp/>Co-op,<sp/>run<sp/>Host.py,<sp/>select<sp/>option<sp/>2,<sp/>then<sp/>run<sp/>player2.py<sp/>on<sp/>your<sp/>second<sp/>device.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">(The<sp/>game<sp/>sends<sp/>a<sp/>message<sp/>to<sp/>Google&apos;s<sp/>recursive<sp/>DNS<sp/>server<sp/>8.8.8.8<sp/>to<sp/>get<sp/>your<sp/>local<sp/>IP)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">3.<sp/>For<sp/>Versus,<sp/>run<sp/>Host.py,<sp/>select<sp/>option<sp/>3,<sp/>then<sp/>run<sp/>player2.py<sp/>on<sp/>your<sp/>second<sp/>device</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Warning**</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>game<sp/>will<sp/>not<sp/>run<sp/>on<sp/>versions<sp/>of<sp/>python<sp/>less<sp/>than<sp/>3.6</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Must<sp/>download<sp/>colorama<sp/>module<sp/>&quot;python3<sp/>-m<sp/>pip<sp/>install<sp/>colorama&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">2.<sp/>Enter<sp/>the<sp/>size<sp/>of<sp/>board<sp/>you<sp/>want<sp/>for<sp/>your<sp/>minesweeper<sp/>game.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">3.<sp/>Enter<sp/>the<sp/>number<sp/>of<sp/>bombs<sp/>you<sp/>want<sp/>in<sp/>your<sp/>minesweeper<sp/>game.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">4.<sp/>Use<sp/>the<sp/>reveal<sp/>function<sp/>&quot;r&quot;<sp/>with<sp/>(x<sp/>and<sp/>y<sp/>coordinates)<sp/>to<sp/>reveal<sp/>a<sp/>space<sp/>and<sp/>identify<sp/>the<sp/>adjacent<sp/>bombs.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Tip**</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>number<sp/>that<sp/>appears<sp/>is<sp/>the<sp/>number<sp/>of<sp/>adjacent<sp/>bombs.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">5.<sp/>Use<sp/>the<sp/>flag<sp/>function<sp/>&quot;f&quot;<sp/>with<sp/>(x<sp/>and<sp/>y<sp/>coordinates)<sp/>to<sp/>flag<sp/>a<sp/>space<sp/>you<sp/>thing<sp/>is<sp/>a<sp/>bomb.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Tip**<sp/>Activate<sp/>Cheat<sp/>mode<sp/>with<sp/>-c<sp/>in<sp/>single<sp/>player<sp/>mode</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Tip**<sp/>flag<sp/>a<sp/>space<sp/>that<sp/>is<sp/>already<sp/>flagged<sp/>in<sp/>order<sp/>to<sp/>remove<sp/>that<sp/>flag</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">6.<sp/>Once<sp/>you<sp/>have<sp/>flagged<sp/>all<sp/>of<sp/>the<sp/>bombs,<sp/>the<sp/>game<sp/>is<sp/>over<sp/>and<sp/>you<sp/>win.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">7.<sp/>If<sp/>you<sp/>try<sp/>and<sp/>remove<sp/>a<sp/>space<sp/>that<sp/>has<sp/>a<sp/>bomb,<sp/><sp/>the<sp/>bomb<sp/>will<sp/>detonate<sp/>and<sp/>you<sp/>will<sp/>lose.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">8.<sp/><sp/>Enjoy<sp/>and<sp/>Good<sp/>Luck!</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

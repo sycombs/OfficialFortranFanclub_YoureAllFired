@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_net_player" kind="namespace" language="Python">
+    <compoundname>NetPlayer</compoundname>
+    <innerclass refid="class_net_player_1_1_net_player" prot="public">NetPlayer::NetPlayer</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>@package docstring
+NetPlayer.py should only store, get, and set relevant player data using standard
+Python data structures, preferrably dictionaries.
+
+NetPlayer is only neccessary when playing online and information has to be sent
+or received by a client/server
+</verbatim> </para>    </detaileddescription>
+    <location file="NetPlayer.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

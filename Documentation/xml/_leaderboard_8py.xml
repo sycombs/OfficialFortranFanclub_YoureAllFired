@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_leaderboard_8py" kind="file" language="Python">
+    <compoundname>Leaderboard.py</compoundname>
+    <innerclass refid="class_leaderboard_1_1_leaderboard" prot="public">Leaderboard::Leaderboard</innerclass>
+    <innernamespace refid="namespace_leaderboard">Leaderboard</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespace_leaderboard" refkind="compound"><highlight class="stringliteral">&quot;&quot;&quot;@package<sp/>docstring</highlight></codeline>
+<codeline lineno="2"><highlight class="stringliteral">Leaderboard.py<sp/>is<sp/>in<sp/>charge<sp/>of<sp/>creating<sp/>and<sp/>managing<sp/>a<sp/>leaderboard<sp/>text<sp/>file.<sp/>Currently<sp/>allows<sp/>adding,<sp/>clearing,<sp/>printing,<sp/>and<sp/>searching<sp/>across<sp/>the<sp/>leaderboard.</highlight></codeline>
+<codeline lineno="3"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="class_leaderboard_1_1_leaderboard" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_leaderboard_1_1_leaderboard" kindref="compound">Leaderboard</ref>:</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#score<sp/>variable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="7"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Constructs<sp/>a<sp/>leaderboard<sp/>object<sp/>that<sp/>is<sp/>linked<sp/>to<sp/>the<sp/>text<sp/>file<sp/>of<sp/>fname</highlight></codeline>
+<codeline lineno="8"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:param<sp/>fname:<sp/>The<sp/>name<sp/>of<sp/>the<sp/>leaderboard<sp/>text<sp/>file.</highlight></codeline>
+<codeline lineno="9"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:return<sp/>None</highlight></codeline>
+<codeline lineno="10"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">__init__(self,<sp/>fname):</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="class_leaderboard_1_1_leaderboard_1afe984283cfd21ebd9aac63a6a66c2f94" kindref="member">fileName</ref><sp/>=<sp/>fname</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="15"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Prints<sp/>out<sp/>the<sp/>top<sp/>x<sp/>entries<sp/>on<sp/>the<sp/>leaderboard,<sp/>where<sp/>x<sp/>is<sp/>the<sp/>number<sp/>passed<sp/>in.</highlight></codeline>
+<codeline lineno="16"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:param<sp/>number:<sp/>The<sp/>number<sp/>of<sp/>spaces<sp/>to<sp/>print<sp/>from<sp/>the<sp/>leaderboard</highlight></codeline>
+<codeline lineno="17"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:return<sp/>None</highlight></codeline>
+<codeline lineno="18"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">get_leaderboard(self,<sp/>number):</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#return<sp/>top<sp/>10...20<sp/>scores</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;Players<sp/><sp/>&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;\t&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;Scores&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>players<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>with<sp/>open(self.<ref refid="class_leaderboard_1_1_leaderboard_1afe984283cfd21ebd9aac63a6a66c2f94" kindref="member">fileName</ref>,<sp/></highlight><highlight class="stringliteral">&apos;r&apos;)<sp/>as<sp/>self.file:</highlight></codeline>
+<codeline lineno="24"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>line<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>self.file:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentLine<sp/>=<sp/>line[:-1]</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>players.append(currentLine)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>items<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>players:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(items[2:10],<sp/></highlight><highlight class="stringliteral">&apos;\t&apos;</highlight><highlight class="normal">,<sp/>items[14:len(items)-1])</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>number-=1</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>number==0:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="34"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Returns<sp/>the<sp/>score<sp/>of<sp/>the<sp/>individual<sp/>in<sp/>place<sp/>x<sp/>of<sp/>the<sp/>leaderboard,<sp/>where<sp/>x<sp/>is<sp/>number</highlight></codeline>
+<codeline lineno="35"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:param<sp/>number:<sp/>The<sp/>place<sp/>of<sp/>the<sp/>score<sp/>that<sp/>we<sp/>want<sp/>to<sp/>find.</highlight></codeline>
+<codeline lineno="36"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:return<sp/>score<sp/>of<sp/>that<sp/>place<sp/>in<sp/>the<sp/>leaderboard</highlight></codeline>
+<codeline lineno="37"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">get_score(self,<sp/>number):</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scores<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>players<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>with<sp/>open(self.<ref refid="class_leaderboard_1_1_leaderboard_1afe984283cfd21ebd9aac63a6a66c2f94" kindref="member">fileName</ref>,<sp/></highlight><highlight class="stringliteral">&apos;r&apos;)<sp/>as<sp/>self.file:</highlight></codeline>
+<codeline lineno="42"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>line<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>self.file:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentLine<sp/>=<sp/>line[:-1]</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>players.append(currentLine)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>items<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>players:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scores<sp/>=<sp/>int(items[14:len(items)-1])</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>number-=1</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>number==0:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>scores</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>scores</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Sorts<sp/>the<sp/>leaderboard<sp/>so<sp/>that<sp/>the<sp/>smallest<sp/>number<sp/>is<sp/>at<sp/>the<sp/>bottom,<sp/>while<sp/>the<sp/>largest<sp/>number<sp/>is<sp/>at<sp/>the<sp/>top.</highlight></codeline>
+<codeline lineno="53"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:param<sp/>none</highlight></codeline>
+<codeline lineno="54"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:return<sp/>none</highlight></codeline>
+<codeline lineno="55"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">sort_leaderboard(self):</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#sorts<sp/>Leaderboard</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>players<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>with<sp/>open(self.<ref refid="class_leaderboard_1_1_leaderboard_1afe984283cfd21ebd9aac63a6a66c2f94" kindref="member">fileName</ref>,<sp/></highlight><highlight class="stringliteral">&apos;r&apos;)<sp/>as<sp/>self.file:</highlight></codeline>
+<codeline lineno="60"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>line<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>self.file:</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentLine<sp/>=<sp/>line[:-1]</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>players.append(currentLine)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">player_key(s):</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>int(float(s[14:len(s)-1]))</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>players2=sorted(players,<sp/>key=player_key,<sp/>reverse=</highlight><highlight class="keyword">True</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>with<sp/>open(self.<ref refid="class_leaderboard_1_1_leaderboard_1afe984283cfd21ebd9aac63a6a66c2f94" kindref="member">fileName</ref>,<sp/></highlight><highlight class="stringliteral">&apos;w&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>self.file:</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>items<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>players2:</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>items=items+</highlight><highlight class="stringliteral">&apos;\n&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.file.write(items)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="72"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Takes<sp/>in<sp/>the<sp/>score,<sp/>and<sp/>then<sp/>asks<sp/>for<sp/>the<sp/>individuals<sp/>name.<sp/><sp/>After<sp/>which<sp/>saves<sp/>the<sp/>name<sp/>and<sp/>score<sp/>to<sp/>the<sp/>leaderboard<sp/>text<sp/>file.</highlight></codeline>
+<codeline lineno="73"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:param<sp/>score:<sp/>The<sp/>score<sp/>of<sp/>the<sp/>individual<sp/>who<sp/>would<sp/>be<sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:return<sp/>None</highlight></codeline>
+<codeline lineno="75"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">add_entry(self,<sp/>score):</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#add<sp/>score<sp/>to<sp/>leaderboard</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="class_leaderboard_1_1_leaderboard_1af4f737f3c0e647c287ecbcf88722d908" kindref="member">name</ref>=<sp/>input(</highlight><highlight class="stringliteral">&quot;Please<sp/>enter<sp/>your<sp/>Name<sp/>(9<sp/>letters<sp/>max):<sp/>&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>len(self.<ref refid="class_leaderboard_1_1_leaderboard_1af4f737f3c0e647c287ecbcf88722d908" kindref="member">name</ref>)&gt;9:</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="class_leaderboard_1_1_leaderboard_1af4f737f3c0e647c287ecbcf88722d908" kindref="member">name</ref><sp/>=<sp/>input(</highlight><highlight class="stringliteral">&quot;Invalid<sp/>entry,<sp/>too<sp/>many<sp/>letters.<sp/><sp/>Make<sp/>sure<sp/>it<sp/>is<sp/>only<sp/>9<sp/>letters.\nPlease<sp/>enter<sp/>your<sp/>name<sp/>(9<sp/>letters<sp/>max):<sp/>&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>len(self.<ref refid="class_leaderboard_1_1_leaderboard_1af4f737f3c0e647c287ecbcf88722d908" kindref="member">name</ref>)&lt;9:</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="class_leaderboard_1_1_leaderboard_1af4f737f3c0e647c287ecbcf88722d908" kindref="member">name</ref><sp/>=<sp/>self.<ref refid="class_leaderboard_1_1_leaderboard_1af4f737f3c0e647c287ecbcf88722d908" kindref="member">name</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&apos;<sp/>&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>entry=(self.<ref refid="class_leaderboard_1_1_leaderboard_1af4f737f3c0e647c287ecbcf88722d908" kindref="member">name</ref>,<sp/>score)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>values=str(entry)+</highlight><highlight class="stringliteral">&apos;\n&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>with<sp/>open(self.<ref refid="class_leaderboard_1_1_leaderboard_1afe984283cfd21ebd9aac63a6a66c2f94" kindref="member">fileName</ref>,<sp/></highlight><highlight class="stringliteral">&apos;a&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>self.file:</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.file.write(values)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="class_leaderboard_1_1_leaderboard_1a5d275657e02abc778198a8c4aa6f4304" kindref="member">sort_leaderboard</ref>()</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="90"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Removes<sp/>all<sp/>of<sp/>the<sp/>names<sp/>on<sp/>the<sp/>leaderboard.</highlight></codeline>
+<codeline lineno="91"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:param<sp/>none</highlight></codeline>
+<codeline lineno="92"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:return<sp/>None</highlight></codeline>
+<codeline lineno="93"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">clear(self):</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#clear<sp/>leaderboard</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>with<sp/>open(self.<ref refid="class_leaderboard_1_1_leaderboard_1afe984283cfd21ebd9aac63a6a66c2f94" kindref="member">fileName</ref>,<sp/></highlight><highlight class="stringliteral">&apos;w&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>self.file:</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.file.write(</highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">)</highlight></codeline>
+    </programlisting>
+    <location file="Leaderboard.py"/>
+  </compounddef>
+</doxygen>

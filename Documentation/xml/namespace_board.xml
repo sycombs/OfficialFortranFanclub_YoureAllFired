@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_board" kind="namespace" language="Python">
+    <compoundname>Board</compoundname>
+    <innerclass refid="class_board_1_1_board" prot="public">Board::Board</innerclass>
+    <innerclass refid="class_board_1_1_cell" prot="public">Board::Cell</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_board_8py_1a53b78bf00ec1d97a8b0e5100c5c59987" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Board.convert_cell_to_dictionary</definition>
+        <argsstring>(someCell)</argsstring>
+        <name>convert_cell_to_dictionary</name>
+        <param>
+          <type>someCell</type>
+          <defname>someCell</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.py" line="5" column="1" bodyfile="Board.py" bodystart="5" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="_board_8py_1ae708df3870ba58c6943477053f65c5b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Board.convert_dictionary_to_cell</definition>
+        <argsstring>(someDict)</argsstring>
+        <name>convert_dictionary_to_cell</name>
+        <param>
+          <type>someDict</type>
+          <defname>someDict</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.py" line="13" column="1" bodyfile="Board.py" bodystart="13" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Board.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_time_8py" kind="file" language="Python">
+    <compoundname>Time.py</compoundname>
+    <innerclass refid="class_time_1_1_time" prot="public">Time::Time</innerclass>
+    <innernamespace refid="namespace_time">Time</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespace_time" refkind="compound"><highlight class="stringliteral">&quot;&quot;&quot;@package<sp/>docstring</highlight></codeline>
+<codeline lineno="2"><highlight class="stringliteral">Time.py<sp/>is<sp/>in<sp/>charge<sp/>of<sp/>comparing<sp/>the<sp/>amount<sp/>of<sp/>time<sp/>it<sp/>takes<sp/>to<sp/>complete<sp/>a<sp/>task,<sp/>along<sp/>with<sp/>some<sp/>other<sp/>functions<sp/>regarding<sp/>timing.</highlight></codeline>
+<codeline lineno="3"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>time</highlight></codeline>
+<codeline lineno="5" refid="class_time_1_1_time" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_time_1_1_time" kindref="compound">Time</ref>:</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="7"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Constructs<sp/>a<sp/>Time<sp/>object<sp/>with<sp/>start<sp/>time<sp/>being<sp/>time<sp/>it<sp/>is<sp/>initiated</highlight></codeline>
+<codeline lineno="8"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:param<sp/>none</highlight></codeline>
+<codeline lineno="9"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:return<sp/>None</highlight></codeline>
+<codeline lineno="10"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">__init__(self):</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="class_time_1_1_time_1a979714c0eb21ec0b20e5ba2e092b6579" kindref="member">start</ref><sp/>=<sp/>time.time()</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="class_time_1_1_time_1a61b228c11c6bb3efef5ca1b432c841c0" kindref="member">end</ref><sp/>=<sp/>time.time()</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="class_time_1_1_time_1afe5503bd50131699da71cb9ad56c530d" kindref="member">totalTime</ref><sp/>=<sp/>self.<ref refid="class_time_1_1_time_1afe5503bd50131699da71cb9ad56c530d" kindref="member">totalTime</ref><sp/>=<sp/>self.<ref refid="class_time_1_1_time_1a61b228c11c6bb3efef5ca1b432c841c0" kindref="member">end</ref>-self.<ref refid="class_time_1_1_time_1a979714c0eb21ec0b20e5ba2e092b6579" kindref="member">start</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="class_time_1_1_time_1a2356f3a031befb638919910320e9ab8c" kindref="member">turnStart</ref><sp/>=<sp/>time.time()</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="18"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Changes<sp/>the<sp/>end<sp/>time<sp/>to<sp/>when<sp/>this<sp/>function<sp/>is<sp/>called,<sp/>and<sp/>calculates<sp/>the<sp/>time<sp/>difference</highlight></codeline>
+<codeline lineno="19"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:param<sp/>none</highlight></codeline>
+<codeline lineno="20"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:return<sp/>None</highlight></codeline>
+<codeline lineno="21"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">game_over_time(self):</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="class_time_1_1_time_1a61b228c11c6bb3efef5ca1b432c841c0" kindref="member">end</ref><sp/>=<sp/>time.time()</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="class_time_1_1_time_1afe5503bd50131699da71cb9ad56c530d" kindref="member">totalTime</ref><sp/>=<sp/>self.<ref refid="class_time_1_1_time_1a61b228c11c6bb3efef5ca1b432c841c0" kindref="member">end</ref>-self.<ref refid="class_time_1_1_time_1a979714c0eb21ec0b20e5ba2e092b6579" kindref="member">start</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="27"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Returns<sp/>the<sp/>total<sp/>time<sp/>it<sp/>took<sp/>to<sp/>complete<sp/>from<sp/>beginning<sp/>to<sp/>end</highlight></codeline>
+<codeline lineno="28"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:param<sp/>none</highlight></codeline>
+<codeline lineno="29"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:return<sp/>TotalTime,<sp/>the<sp/>time<sp/>difference<sp/>between<sp/>start<sp/>and<sp/>end</highlight></codeline>
+<codeline lineno="30"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">show_total(self):</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>self.<ref refid="class_time_1_1_time_1afe5503bd50131699da71cb9ad56c530d" kindref="member">totalTime</ref></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="35"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>None</highlight></codeline>
+<codeline lineno="36"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:param<sp/>Time<sp/>Other:<sp/>Prints<sp/>the<sp/>larger<sp/>time<sp/>between<sp/>itself<sp/>and<sp/>other</highlight></codeline>
+<codeline lineno="37"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:return<sp/>None</highlight></codeline>
+<codeline lineno="38"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">compare_time(self,<sp/>other):</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>self.<ref refid="class_time_1_1_time_1afe5503bd50131699da71cb9ad56c530d" kindref="member">totalTime</ref>&gt;other.showTotal:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;You<sp/>Win!&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">elif</highlight><highlight class="normal"><sp/>self.<ref refid="class_time_1_1_time_1afe5503bd50131699da71cb9ad56c530d" kindref="member">totalTime</ref>&lt;other.showTotal:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;You<sp/>Lose...&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;It&apos;s<sp/>a<sp/>draw?&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="48"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Calculates<sp/>a<sp/>turn<sp/>time<sp/>beginning<sp/>to<sp/>measure<sp/>the<sp/>time<sp/>taken<sp/>between<sp/>turns.</highlight></codeline>
+<codeline lineno="49"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:param<sp/>none</highlight></codeline>
+<codeline lineno="50"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:return<sp/>none</highlight></codeline>
+<codeline lineno="51"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">turn_start(self):</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="class_time_1_1_time_1a2356f3a031befb638919910320e9ab8c" kindref="member">turnStart</ref>=time.time()</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="56"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Calculates<sp/>a<sp/>turn<sp/>time<sp/>beginning<sp/>to<sp/>measure<sp/>the<sp/>time<sp/>taken<sp/>between<sp/>turns.</highlight></codeline>
+<codeline lineno="57"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:param<sp/>timeLimit:<sp/>the<sp/>time<sp/>limit<sp/>to<sp/>check<sp/>the<sp/>turnStart<sp/>time<sp/>difference<sp/>to.</highlight></codeline>
+<codeline lineno="58"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:return<sp/>True<sp/>if<sp/>still<sp/>their<sp/>turn,<sp/>false<sp/>if<sp/>not</highlight></codeline>
+<codeline lineno="59"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">time_limit(self,<sp/>timeLimit):</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(self.<ref refid="class_time_1_1_time_1a2356f3a031befb638919910320e9ab8c" kindref="member">turnStart</ref><sp/>+<sp/>timeLimit)<sp/>&gt;=<sp/>time.time():</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">True</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">False</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="67"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>makes<sp/>the<sp/>computer<sp/>sleep<sp/>from<sp/>a<sp/>certain<sp/>amount<sp/>of<sp/>time</highlight></codeline>
+<codeline lineno="68"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:param<sp/>timeLimit:<sp/>the<sp/>amount<sp/>of<sp/>time<sp/>to<sp/>sleep<sp/>the<sp/>computer<sp/>for</highlight></codeline>
+<codeline lineno="69"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:return<sp/>none</highlight></codeline>
+<codeline lineno="70"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">time_delay(self,<sp/>timeLimit):</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time.sleep(timeLimit)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>def<sp/>countDown(hour,<sp/>min,<sp/>sec):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>self.min,<sp/>self.sec<sp/>=<sp/>divmod(sec,<sp/>60)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>self.hour,<sp/>self.min<sp/>=<sp/>divmod(min,<sp/>60)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>timedisplay<sp/>=<sp/>&apos;{:02d}{:02d}:{02d}&apos;.format(hour,<sp/>min,<sp/>sec)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>print(timedisplay,<sp/>end=&apos;\r&apos;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>time.sleep(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>sec<sp/>-=<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Time.py"/>
+  </compounddef>
+</doxygen>

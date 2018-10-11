@@ -23,8 +23,7 @@ def \hyperlink{namespace_game_logic_aa19068ecba13ba5dae3258c28138983d}{run\+\_\+
 \item 
 def \hyperlink{namespace_game_logic_afc48c64dfaba7c18f642ab23e8e3a3bf}{run\+\_\+coop} (socket, address, turn, board)
 \item 
-\mbox{\Hypertarget{namespace_game_logic_ae210e41405e4a019624993e6eec6b99a}\label{namespace_game_logic_ae210e41405e4a019624993e6eec6b99a}} 
-def {\bfseries run\+\_\+versus} (socket, address, board)
+def \hyperlink{namespace_game_logic_ae210e41405e4a019624993e6eec6b99a}{run\+\_\+versus} (socket, address, board)
 \end{DoxyCompactItemize}
 
 
@@ -118,6 +117,10 @@ single player mode
 {\footnotesize\ttfamily def Game\+Logic.\+run\+\_\+coop (\begin{DoxyParamCaption}\item[{}]{socket,  }\item[{}]{address,  }\item[{}]{turn,  }\item[{}]{board }\end{DoxyParamCaption})}
 
 \begin{DoxyVerb}client side version of coop multiplayer
+param Socket socket for sending each move
+param string address of client socket
+param bool turn, determine who's turn it is
+param Board board, game board object
 \end{DoxyVerb}
  \mbox{\Hypertarget{namespace_game_logic_aa19068ecba13ba5dae3258c28138983d}\label{namespace_game_logic_aa19068ecba13ba5dae3258c28138983d}} 
 \index{Game\+Logic@{Game\+Logic}!run\+\_\+singleplayer@{run\+\_\+singleplayer}}
@@ -127,7 +130,21 @@ single player mode
 
 \begin{DoxyVerb}User is prompted for board params in host,
 run_singleplayer plays game
+param Board board: require the game board at start
 :return None:
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespace_game_logic_ae210e41405e4a019624993e6eec6b99a}\label{namespace_game_logic_ae210e41405e4a019624993e6eec6b99a}} 
+\index{Game\+Logic@{Game\+Logic}!run\+\_\+versus@{run\+\_\+versus}}
+\index{run\+\_\+versus@{run\+\_\+versus}!Game\+Logic@{Game\+Logic}}
+\subsubsection{\texorpdfstring{run\+\_\+versus()}{run\_versus()}}
+{\footnotesize\ttfamily def Game\+Logic.\+run\+\_\+versus (\begin{DoxyParamCaption}\item[{}]{socket,  }\item[{}]{address,  }\item[{}]{board }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}simple versus implementation
+should allow for different ip addresses after some work
+param Socket socket for communication, the local socket being used to
+    output info
+param string address, the other player's IP address
+param Board board object to track game board
 \end{DoxyVerb}
  \mbox{\Hypertarget{namespace_game_logic_afacbe6e69e6b939244d8c5f0aba5ff34}\label{namespace_game_logic_afacbe6e69e6b939244d8c5f0aba5ff34}} 
 \index{Game\+Logic@{Game\+Logic}!show@{show}}

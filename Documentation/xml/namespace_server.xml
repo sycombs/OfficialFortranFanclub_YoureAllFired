@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_server" kind="namespace" language="Python">
+    <compoundname>Server</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_server_1a61bdcf9181bf23a9f75d4b21bf33f614" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Server.serverPort</definition>
+        <argsstring></argsstring>
+        <name>serverPort</name>
+        <initializer>=  12000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Server.py" line="28" column="1" bodyfile="Server.py" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_server_1add1bf14e8e27f2efbb9dcd74c5344f1b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Server.serverSocket</definition>
+        <argsstring></argsstring>
+        <name>serverSocket</name>
+        <initializer>=  socket(AF_INET, SOCK_DGRAM)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Server.py" line="29" column="1" bodyfile="Server.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_server_1a457c766fba7cf0d2ce805c202d2daeed" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Server.blocksize</definition>
+        <argsstring></argsstring>
+        <name>blocksize</name>
+        <initializer>=  4096</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Server.py" line="32" column="1" bodyfile="Server.py" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_server_1ad1a623c39628e6a85484ed43248ecd8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Server.interpret_data</definition>
+        <argsstring>(data)</argsstring>
+        <name>interpret_data</name>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>This will be used to deserialize the received data. Once that&apos;s done, the
+kind of data we have will determine what&apos;s done next
+</verbatim><verbatim>Data received should be easily convertable. The following has a table
+with the encode / decode formats for  JSON to Python
+https://docs.python.org/3/library/json.html#json-to-py-table
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Server.py" line="34" column="1" bodyfile="Server.py" bodystart="34" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_server_1afb89b67e4b9b4c3fe2915449f2a450f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Server.send_board</definition>
+        <argsstring>(serverSocket, clientAddress, rawData)</argsstring>
+        <name>send_board</name>
+        <param>
+          <type>serverSocket</type>
+          <defname>serverSocket</defname>
+        </param>
+        <param>
+          <type>clientAddress</type>
+          <defname>clientAddress</defname>
+        </param>
+        <param>
+          <type>rawData</type>
+          <defname>rawData</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>TODO: Fix this
+attempts to send multiple packets over pickle
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Server.py" line="56" column="1" bodyfile="Server.py" bodystart="56" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_server_1a7080c6378acbbd9210c0e277a9ff730c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Server.send_json</definition>
+        <argsstring>(serverSocket, clientAddress, rawData)</argsstring>
+        <name>send_json</name>
+        <param>
+          <type>serverSocket</type>
+          <defname>serverSocket</defname>
+        </param>
+        <param>
+          <type>clientAddress</type>
+          <defname>clientAddress</defname>
+        </param>
+        <param>
+          <type>rawData</type>
+          <defname>rawData</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Server.py" line="71" column="1" bodyfile="Server.py" bodystart="71" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_server_1a46433613af0b25ee488da2db17f095c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Server.send_data</definition>
+        <argsstring>(serverSocket, clientAddress, rawData)</argsstring>
+        <name>send_data</name>
+        <param>
+          <type>serverSocket</type>
+          <defname>serverSocket</defname>
+        </param>
+        <param>
+          <type>clientAddress</type>
+          <defname>clientAddress</defname>
+        </param>
+        <param>
+          <type>rawData</type>
+          <defname>rawData</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Server.py" line="78" column="1" bodyfile="Server.py" bodystart="78" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>@package docstring
+Server.py contains all of the game server functionality. A server should
+1) Be created
+2) Listen for incoming messages
+3) Interpret messages and call other code as necessary
+
+Server.py should not be used to run a server, any instances of a server
+should be created in Play.py . Server.py does not handle game logic either, it
+only facilitates the communication between the client (where the user interacts)
+and the server (where the game specific code is handled).
+
+We may not run a pure client-server model so keep that in mind when moving
+code out of this file... like the server loop
+</verbatim> </para>    </detaileddescription>
+    <location file="Server.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

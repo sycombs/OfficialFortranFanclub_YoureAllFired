@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_board_1_1_board" kind="class" language="Python" prot="public">
+    <compoundname>Board::Board</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_board_1_1_board_1a288daa852b69c17ecbabab9af6dac15a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Board.Board::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.py" line="51" column="1" bodyfile="Board.py" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_board_1_1_board_1a354a175ae1f399098ac23ed37c58a3f2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Board.Board::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.py" line="52" column="1" bodyfile="Board.py" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_board_1_1_board_1a46a8a14d245c71600c5416deab063feb" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Board.Board::mines</definition>
+        <argsstring></argsstring>
+        <name>mines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.py" line="53" column="1" bodyfile="Board.py" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_board_1_1_board_1a29136b70f21697be0dcccb782d5ee5bf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Board.Board::grid</definition>
+        <argsstring></argsstring>
+        <name>grid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.py" line="54" column="1" bodyfile="Board.py" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_board_1_1_board_1a404b2ee0a7cec1fe76688e1da26e4339" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Board.Board::flagCount</definition>
+        <argsstring></argsstring>
+        <name>flagCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.py" line="55" column="1" bodyfile="Board.py" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_board_1_1_board_1a64e3380089e1c6b86069eed8ef0a4cf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Board.Board.__init__</definition>
+        <argsstring>(self, height, width, mines)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>height</type>
+          <defname>height</defname>
+        </param>
+        <param>
+          <type>width</type>
+          <defname>width</defname>
+        </param>
+        <param>
+          <type>mines</type>
+          <defname>mines</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.py" line="50" column="1" bodyfile="Board.py" bodystart="50" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_board_1_1_board_1af52ea18259bf8d2a122de08fcb0ea308" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Board.Board.displayBoard</definition>
+        <argsstring>(self)</argsstring>
+        <name>displayBoard</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Prints the Board.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.py" line="87" column="1" bodyfile="Board.py" bodystart="87" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_board_1_1_board_1ac84e7c87ac2407614bf0e63f165a76d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Board.Board.get_string_rep</definition>
+        <argsstring>(self)</argsstring>
+        <name>get_string_rep</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.py" line="95" column="1" bodyfile="Board.py" bodystart="95" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_board_1_1_board_1a8b8e0d2e99c02de780604baa141159c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Board.Board.brute_force</definition>
+        <argsstring>(self, cell, i, j)</argsstring>
+        <name>brute_force</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>cell</type>
+          <defname>cell</defname>
+        </param>
+        <param>
+          <type>i</type>
+          <defname>i</defname>
+        </param>
+        <param>
+          <type>j</type>
+          <defname>j</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.py" line="101" column="1" bodyfile="Board.py" bodystart="101" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_board_1_1_board_1a9f3fd38d0abf01671f3d8bb0f3ceea5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Board.Board.calculate_3bv</definition>
+        <argsstring>(self)</argsstring>
+        <name>calculate_3bv</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.py" line="109" column="1" bodyfile="Board.py" bodystart="109" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_board_1_1_board_1a4a027666af1fa52582af6543985a73c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Board.Board.recReveal</definition>
+        <argsstring>(self, rows, cols)</argsstring>
+        <name>recReveal</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>rows</type>
+          <defname>rows</defname>
+        </param>
+        <param>
+          <type>cols</type>
+          <defname>cols</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>@pre    Grid is a valid object of type Board, rows and cols is the location in the board to reveal
+    @post   will reveal all
+    @return none
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.py" line="127" column="1" bodyfile="Board.py" bodystart="127" bodyend="155"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Maintains a 2D array of Cells. Maintains a height, a width, number of mines,
+and the number of Cells within it that are flagged. Upon initiation,
+randomly places the mines in the grid and updates each cells adjecency count
+accordingly.
+
+:param height: The height of the grid.
+:param width: The width of the grid.
+:param mines: The number of mines distributed across the Board.
+</verbatim> </para>    </detaileddescription>
+    <location file="Board.py" line="39" column="1" bodyfile="Board.py" bodystart="39" bodyend="155"/>
+    <listofallmembers>
+      <member refid="class_board_1_1_board_1a64e3380089e1c6b86069eed8ef0a4cf9" prot="public" virt="non-virtual"><scope>Board::Board</scope><name>__init__</name></member>
+      <member refid="class_board_1_1_board_1a8b8e0d2e99c02de780604baa141159c3" prot="public" virt="non-virtual"><scope>Board::Board</scope><name>brute_force</name></member>
+      <member refid="class_board_1_1_board_1a9f3fd38d0abf01671f3d8bb0f3ceea5e" prot="public" virt="non-virtual"><scope>Board::Board</scope><name>calculate_3bv</name></member>
+      <member refid="class_board_1_1_board_1af52ea18259bf8d2a122de08fcb0ea308" prot="public" virt="non-virtual"><scope>Board::Board</scope><name>displayBoard</name></member>
+      <member refid="class_board_1_1_board_1a404b2ee0a7cec1fe76688e1da26e4339" prot="public" virt="non-virtual"><scope>Board::Board</scope><name>flagCount</name></member>
+      <member refid="class_board_1_1_board_1ac84e7c87ac2407614bf0e63f165a76d5" prot="public" virt="non-virtual"><scope>Board::Board</scope><name>get_string_rep</name></member>
+      <member refid="class_board_1_1_board_1a29136b70f21697be0dcccb782d5ee5bf" prot="public" virt="non-virtual"><scope>Board::Board</scope><name>grid</name></member>
+      <member refid="class_board_1_1_board_1a288daa852b69c17ecbabab9af6dac15a" prot="public" virt="non-virtual"><scope>Board::Board</scope><name>height</name></member>
+      <member refid="class_board_1_1_board_1a46a8a14d245c71600c5416deab063feb" prot="public" virt="non-virtual"><scope>Board::Board</scope><name>mines</name></member>
+      <member refid="class_board_1_1_board_1a4a027666af1fa52582af6543985a73c6" prot="public" virt="non-virtual"><scope>Board::Board</scope><name>recReveal</name></member>
+      <member refid="class_board_1_1_board_1a354a175ae1f399098ac23ed37c58a3f2" prot="public" virt="non-virtual"><scope>Board::Board</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

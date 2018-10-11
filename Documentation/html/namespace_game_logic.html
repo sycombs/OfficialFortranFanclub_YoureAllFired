@@ -23,7 +23,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Official Fortran Fanclub - Project 2
    </div>
-   <div id="projectbrief">OFF&#39;s extensions to Minesweeper</div>
+   <div id="projectbrief">Minesweeper - Enhanced</div>
   </td>
  </tr>
  </tbody>
@@ -88,8 +88,7 @@ Functions</h2></td></tr>
 <tr class="separator:aa19068ecba13ba5dae3258c28138983d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc48c64dfaba7c18f642ab23e8e3a3bf"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_game_logic.html#afc48c64dfaba7c18f642ab23e8e3a3bf">run_coop</a> (socket, address, turn, board)</td></tr>
 <tr class="separator:afc48c64dfaba7c18f642ab23e8e3a3bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae210e41405e4a019624993e6eec6b99a"><td class="memItemLeft" align="right" valign="top"><a id="ae210e41405e4a019624993e6eec6b99a"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>run_versus</b> (socket, address, board)</td></tr>
+<tr class="memitem:ae210e41405e4a019624993e6eec6b99a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_game_logic.html#ae210e41405e4a019624993e6eec6b99a">run_versus</a> (socket, address, board)</td></tr>
 <tr class="separator:ae210e41405e4a019624993e6eec6b99a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -297,6 +296,10 @@ single player mode
       </table>
 </div><div class="memdoc">
 <pre class="fragment">client side version of coop multiplayer
+param Socket socket for sending each move
+param string address of client socket
+param bool turn, determine who's turn it is
+param Board board, game board object
 </pre> 
 </div>
 </div>
@@ -317,7 +320,48 @@ single player mode
 </div><div class="memdoc">
 <pre class="fragment">User is prompted for board params in host,
 run_singleplayer plays game
+param Board board: require the game board at start
 :return None:
+</pre> 
+</div>
+</div>
+<a id="ae210e41405e4a019624993e6eec6b99a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae210e41405e4a019624993e6eec6b99a">&#9670;&nbsp;</a></span>run_versus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def GameLogic.run_versus </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>socket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>board</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">simple versus implementation
+should allow for different ip addresses after some work
+param Socket socket for communication, the local socket being used to
+    output info
+param string address, the other player's IP address
+param Board board object to track game board
 </pre> 
 </div>
 </div>

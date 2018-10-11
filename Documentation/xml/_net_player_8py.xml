@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_net_player_8py" kind="file" language="Python">
+    <compoundname>NetPlayer.py</compoundname>
+    <innerclass refid="class_net_player_1_1_net_player" prot="public">NetPlayer::NetPlayer</innerclass>
+    <innernamespace refid="namespace_net_player">NetPlayer</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespace_net_player" refkind="compound"><highlight class="stringliteral">&quot;&quot;&quot;@package<sp/>docstring</highlight></codeline>
+<codeline lineno="2"><highlight class="stringliteral">NetPlayer.py<sp/>should<sp/>only<sp/>store,<sp/>get,<sp/>and<sp/>set<sp/>relevant<sp/>player<sp/>data<sp/>using<sp/>standard</highlight></codeline>
+<codeline lineno="3"><highlight class="stringliteral">Python<sp/>data<sp/>structures,<sp/>preferrably<sp/>dictionaries.</highlight></codeline>
+<codeline lineno="4"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="5"><highlight class="stringliteral">NetPlayer<sp/>is<sp/>only<sp/>neccessary<sp/>when<sp/>playing<sp/>online<sp/>and<sp/>information<sp/>has<sp/>to<sp/>be<sp/>sent</highlight></codeline>
+<codeline lineno="6"><highlight class="stringliteral">or<sp/>received<sp/>by<sp/>a<sp/>client/server</highlight></codeline>
+<codeline lineno="7"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="class_net_player_1_1_net_player" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_net_player_1_1_net_player" kindref="compound">NetPlayer</ref>:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="class_net_player_1_1_net_player_1ad0d9b41f11f635a8c136418890118ee0" kindref="member">__init__</ref>(self):</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="12"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__init__<sp/>just<sp/>sets<sp/>up<sp/>sets<sp/>up<sp/>a<sp/>basic<sp/>dictionary<sp/>with<sp/>some<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>information<sp/>necessary<sp/>to<sp/>play<sp/>a<sp/>network<sp/>game</highlight></codeline>
+<codeline lineno="14"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="15"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(Note:<sp/>We<sp/>can<sp/>remove<sp/>win<sp/>and<sp/>just<sp/>use<sp/>msg<sp/>to<sp/>relay<sp/>that<sp/>information,</highlight></codeline>
+<codeline lineno="16"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>but<sp/>there&apos;s<sp/>no<sp/>real<sp/>reason<sp/>to<sp/>do<sp/>so<sp/>since<sp/>it&apos;s<sp/>such<sp/>a<sp/>small<sp/>amount<sp/>of</highlight></codeline>
+<codeline lineno="17"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>extra<sp/>data)</highlight></codeline>
+<codeline lineno="18"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;&apos;&apos;</highlight></codeline>
+<codeline lineno="21"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>When<sp/>creating<sp/>any<sp/>sort<sp/>of<sp/>player<sp/>data,<sp/>look<sp/>at<sp/>the<sp/>following<sp/>in<sp/>order</highlight></codeline>
+<codeline lineno="22"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>to<sp/>make<sp/>sure<sp/>it&apos;s<sp/>formatted<sp/>properly<sp/>so<sp/>that<sp/>we<sp/>can<sp/>send<sp/>it<sp/>via<sp/>JSON</highlight></codeline>
+<codeline lineno="23"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>https://docs.python.org/3/library/json.html#json-to-py-table</highlight></codeline>
+<codeline lineno="24"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="25"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(Just<sp/>make<sp/>sure<sp/>to<sp/>use<sp/>a<sp/>dictionary,<sp/>string,<sp/>or<sp/>int<sp/>and<sp/>and<sp/>everything</highlight></codeline>
+<codeline lineno="26"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>will<sp/>work<sp/>fine)</highlight></codeline>
+<codeline lineno="27"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="class_net_player_1_1_net_player_1acf324aad27f7cf53c5969d1bf72a3005" kindref="member">playerData</ref><sp/>=<sp/>{</highlight><highlight class="stringliteral">&apos;ID&apos;</highlight><highlight class="normal">:<sp/>0,<sp/></highlight><highlight class="stringliteral">&apos;msg&apos;</highlight><highlight class="normal">:<sp/></highlight><highlight class="stringliteral">&apos;Just<sp/>a<sp/>message&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;win&apos;</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">False</highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;&apos;&apos;<sp/>GET<sp/>FUNCTION</highlight></codeline>
+<codeline lineno="32"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>We<sp/>only<sp/>need<sp/>one<sp/>function<sp/>right<sp/>now<sp/>since<sp/>all<sp/>player<sp/>data<sp/>is<sp/>in<sp/>a</highlight></codeline>
+<codeline lineno="33"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>single<sp/>dictionary,<sp/>but<sp/>here&apos;s<sp/>a<sp/>quick<sp/>template<sp/>to<sp/>return<sp/>any<sp/>data<sp/>that</highlight></codeline>
+<codeline lineno="34"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>is<sp/>added<sp/>later<sp/>on</highlight></codeline>
+<codeline lineno="35"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="36"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>def<sp/>get_player_INFO(self,<sp/>dictID):</highlight></codeline>
+<codeline lineno="37"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>self.playerINFO[dictID]</highlight></codeline>
+<codeline lineno="38"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&apos;&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="class_net_player_1_1_net_player_1a01fafb3dac9097f8680d49306bc0d32a" kindref="member">get_player_data</ref>(self,<sp/>dictKey<sp/>=<sp/>None):</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="42"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get_player_data()<sp/>has<sp/>two<sp/>cases</highlight></codeline>
+<codeline lineno="43"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Case<sp/>1:<sp/>If<sp/>dictKey<sp/>is<sp/>empty,<sp/>return<sp/>the<sp/>entire<sp/>playerData<sp/>dictionary</highlight></codeline>
+<codeline lineno="44"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Case<sp/>2:<sp/>If<sp/>dictKey<sp/>is<sp/>not<sp/>empty,<sp/>return<sp/>only<sp/>the<sp/>specified<sp/>entry</highlight></codeline>
+<codeline lineno="45"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>If<sp/>no<sp/>value<sp/>is<sp/>passed,<sp/>return<sp/>the<sp/>entire<sp/>playerData<sp/>structure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>self.<ref refid="class_net_player_1_1_net_player_1acf324aad27f7cf53c5969d1bf72a3005" kindref="member">playerData</ref></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#if<sp/>dictKey<sp/>==<sp/>None:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#return<sp/>self.playerData</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#else:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#return<sp/>self.playerData[dictKey]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;&apos;&apos;<sp/>SET<sp/>FUNCTION</highlight></codeline>
+<codeline lineno="54"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>We<sp/>only<sp/>need<sp/>one<sp/>function<sp/>right<sp/>now<sp/>since<sp/>all<sp/>player<sp/>data<sp/>is<sp/>in<sp/>a</highlight></codeline>
+<codeline lineno="55"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>single<sp/>dictionary,<sp/>but<sp/>here&apos;s<sp/>a<sp/>quick<sp/>template<sp/>to<sp/>set<sp/>any<sp/>data<sp/>that<sp/>is</highlight></codeline>
+<codeline lineno="56"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>added<sp/>later<sp/>on</highlight></codeline>
+<codeline lineno="57"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="58"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>def<sp/>set_player_INFO(self,<sp/>newValue,<sp/>dictKey<sp/>=<sp/>None):</highlight></codeline>
+<codeline lineno="59"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.playerINFO[dictKey]<sp/>=<sp/>newValue</highlight></codeline>
+<codeline lineno="60"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&apos;&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="class_net_player_1_1_net_player_1afd23b3ae945a572e87cb57fe0473916f" kindref="member">set_player_data</ref>(self,<sp/>newValue,<sp/>dictKey<sp/>=<sp/>None):</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="64"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set_player_data()<sp/>has<sp/>two<sp/>cases</highlight></codeline>
+<codeline lineno="65"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Case<sp/>1:<sp/>If<sp/>dictKey<sp/>is<sp/>empty,<sp/>update<sp/>the<sp/>entire<sp/>playerData<sp/>dictionary</highlight></codeline>
+<codeline lineno="66"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Case<sp/>2:<sp/>If<sp/>dictKey<sp/>is<sp/>not<sp/>empty,<sp/>update<sp/>only<sp/>the<sp/>specified<sp/>entry</highlight></codeline>
+<codeline lineno="67"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>dictKey<sp/>==<sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="class_net_player_1_1_net_player_1acf324aad27f7cf53c5969d1bf72a3005" kindref="member">playerData</ref><sp/>=<sp/>newValue</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="class_net_player_1_1_net_player_1acf324aad27f7cf53c5969d1bf72a3005" kindref="member">playerData</ref>[dictKey]<sp/>=<sp/>newValue</highlight></codeline>
+    </programlisting>
+    <location file="NetPlayer.py"/>
+  </compounddef>
+</doxygen>

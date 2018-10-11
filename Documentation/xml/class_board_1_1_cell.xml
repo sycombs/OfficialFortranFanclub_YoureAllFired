@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_board_1_1_cell" kind="class" language="Python" prot="public">
+    <compoundname>Board::Cell</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_board_1_1_cell_1a913c21935677a853af4aaa8a9739119f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Board.Cell::isBomb</definition>
+        <argsstring></argsstring>
+        <name>isBomb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.py" line="29" column="1" bodyfile="Board.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_board_1_1_cell_1a73d7ca13c0037b291b5b5e1fd5e9196c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Board.Cell::isRevealed</definition>
+        <argsstring></argsstring>
+        <name>isRevealed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.py" line="30" column="1" bodyfile="Board.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_board_1_1_cell_1a58f47096e8869d206f3df85ef8035d0c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Board.Cell::isFlagged</definition>
+        <argsstring></argsstring>
+        <name>isFlagged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.py" line="31" column="1" bodyfile="Board.py" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_board_1_1_cell_1a7b2f5856db6bd715a1c55517ee3b1400" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Board.Cell::adj</definition>
+        <argsstring></argsstring>
+        <name>adj</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.py" line="32" column="1" bodyfile="Board.py" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_board_1_1_cell_1a2548d93fc7bc01d0eecf54adf83000b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Board.Cell.__init__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.py" line="28" column="1" bodyfile="Board.py" bodystart="28" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_board_1_1_cell_1a6dc4959d477451024c9fe91c42fa0cfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Board.Cell.__repr__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__repr__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Board.py" line="34" column="1" bodyfile="Board.py" bodystart="34" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Store data for each cell in the grid. Upon initiation, a Cell is not a bomb,
+not revealed, not flagged, and adjacent to no bombs.
+</verbatim> </para>    </detaileddescription>
+    <location file="Board.py" line="23" column="1" bodyfile="Board.py" bodystart="23" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_board_1_1_cell_1a2548d93fc7bc01d0eecf54adf83000b4" prot="public" virt="non-virtual"><scope>Board::Cell</scope><name>__init__</name></member>
+      <member refid="class_board_1_1_cell_1a6dc4959d477451024c9fe91c42fa0cfc" prot="public" virt="non-virtual"><scope>Board::Cell</scope><name>__repr__</name></member>
+      <member refid="class_board_1_1_cell_1a7b2f5856db6bd715a1c55517ee3b1400" prot="public" virt="non-virtual"><scope>Board::Cell</scope><name>adj</name></member>
+      <member refid="class_board_1_1_cell_1a913c21935677a853af4aaa8a9739119f" prot="public" virt="non-virtual"><scope>Board::Cell</scope><name>isBomb</name></member>
+      <member refid="class_board_1_1_cell_1a58f47096e8869d206f3df85ef8035d0c" prot="public" virt="non-virtual"><scope>Board::Cell</scope><name>isFlagged</name></member>
+      <member refid="class_board_1_1_cell_1a73d7ca13c0037b291b5b5e1fd5e9196c" prot="public" virt="non-virtual"><scope>Board::Cell</scope><name>isRevealed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

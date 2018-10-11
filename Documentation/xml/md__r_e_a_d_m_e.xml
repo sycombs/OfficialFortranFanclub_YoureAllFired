@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="md__r_e_a_d_m_e" kind="page">
+    <compoundname>md_README</compoundname>
+    <title>Minesweeper Project</title>
+    <detaileddescription>
+<para>This is a project that is a mock minesweeper game made in python utilized from command line.</para><para><orderedlist>
+<listitem><para>Clone the repo and run python3 Host.py to initialize the game. (Requires internet connection)</para></listitem><listitem><para>For Co-op, run Host.py, select option 2, then run player2.py on your second device.</para></listitem></orderedlist>
+</para><para>(The game sends a message to Google&apos;s recursive DNS server 8.8.8.8 to get your local IP)</para><para><orderedlist>
+<listitem><para>For Versus, run Host.py, select option 3, then run player2.py on your second device</para></listitem></orderedlist>
+</para><para><bold>Warning</bold> This game will not run on versions of python less than 3.6</para><para>Must download colorama module &quot;python3 -m pip install colorama&quot;</para><para><orderedlist>
+<listitem><para>Enter the size of board you want for your minesweeper game.</para></listitem><listitem><para>Enter the number of bombs you want in your minesweeper game.</para></listitem><listitem><para>Use the reveal function &quot;r&quot; with (x and y coordinates) to reveal a space and identify the adjacent bombs.</para></listitem></orderedlist>
+</para><para><bold>Tip</bold> The number that appears is the number of adjacent bombs.</para><para><orderedlist>
+<listitem><para>Use the flag function &quot;f&quot; with (x and y coordinates) to flag a space you thing is a bomb.</para></listitem></orderedlist>
+</para><para><bold>Tip</bold> Activate Cheat mode with -c in single player mode</para><para><bold>Tip</bold> flag a space that is already flagged in order to remove that flag</para><para><orderedlist>
+<listitem><para>Once you have flagged all of the bombs, the game is over and you win.</para></listitem><listitem><para>If you try and remove a space that has a bomb, the bomb will detonate and you will lose.</para></listitem><listitem><para>Enjoy and Good Luck! </para></listitem></orderedlist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

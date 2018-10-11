@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_play" kind="namespace" language="Python">
+    <compoundname>Play</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_play_1a044632b9bf77f16d1a9df2bc81ac3129" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Play.serverSocket</definition>
+        <argsstring></argsstring>
+        <name>serverSocket</name>
+        <initializer>=  socket(AF_INET, SOCK_DGRAM)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Play.py" line="5" column="1" bodyfile="Play.py" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_play_1abd2359e94b8e42299015d8b0178b3c3f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>Play.mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Play.py" line="14" column="1" bodyfile="Play.py" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_play_1a3f79c67aec3aac567a1daaf8fe775e87" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Play.height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Play.py" line="19" column="1" bodyfile="Play.py" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_play_1a26e3b56f122ba00b48e1a88583f66f3f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Play.width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Play.py" line="19" column="1" bodyfile="Play.py" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_play_1a6b2134f21cedd95a4c45d49d9dd17504" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Play.mines</definition>
+        <argsstring></argsstring>
+        <name>mines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Play.py" line="19" column="1" bodyfile="Play.py" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_play_1afe04e19157c75be4cc5f72f41a9858f8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Play.board</definition>
+        <argsstring></argsstring>
+        <name>board</name>
+        <initializer>=  <ref refid="class_board_1_1_board" kindref="compound">Board</ref>(height, width, mines)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Play.py" line="21" column="1" bodyfile="Play.py" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_play_1a7cfeb37a7d66635f5793f535339a60b2" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Play::response</definition>
+        <argsstring></argsstring>
+        <name>response</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Play.py" line="25" column="1" bodyfile="Play.py" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_play_1af5bbed7c9573b88eab860a56ac570474" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Play.clientAddress</definition>
+        <argsstring></argsstring>
+        <name>clientAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Play.py" line="29" column="1" bodyfile="Play.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_play_1a672e7194661c43e0e9bfefa8a22e93de" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary Play::data_dict</definition>
+        <argsstring></argsstring>
+        <name>data_dict</name>
+        <initializer>=  {
+            &apos;height&apos; : height,
+            &apos;width&apos; : width,
+            &apos;mines&apos; : mines
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Play.py" line="35" column="1" bodyfile="Play.py" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_play_1a6b40175c41f6e2ef9328ec58b717c459" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Play.data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <initializer>=  serialize_data(data_dict)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Play.py" line="40" column="1" bodyfile="Play.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_play_1a6403484a1168ac57194db75e6bd79fe2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Play.tempCell</definition>
+        <argsstring></argsstring>
+        <name>tempCell</name>
+        <initializer>=  convert_cell_to_dictionary(board.grid[r][c])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Play.py" line="45" column="1" bodyfile="Play.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>host.py
+</verbatim> </para>    </detaileddescription>
+    <location file="Play.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

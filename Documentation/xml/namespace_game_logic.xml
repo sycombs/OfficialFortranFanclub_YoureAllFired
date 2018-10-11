@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_game_logic" kind="namespace" language="Python">
+    <compoundname>GameLogic</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_game_logic_1afacbe6e69e6b939244d8c5f0aba5ff34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def GameLogic.show</definition>
+        <argsstring>(board, lose=False)</argsstring>
+        <name>show</name>
+        <param>
+          <type>board</type>
+          <defname>board</defname>
+        </param>
+        <param>
+          <type>lose</type>
+          <defname>lose</defname>
+          <defval>False</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Shows current state of board in command line.
+
+:param Board board: The current Board object.
+:return None:
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameLogic.py" line="19" column="1" bodyfile="GameLogic.py" bodystart="19" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_game_logic_1ab23e4dd8920efb5dc428f599388dbc70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def GameLogic.cheat_show</definition>
+        <argsstring>(board)</argsstring>
+        <name>cheat_show</name>
+        <param>
+          <type>board</type>
+          <defname>board</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Fully displays board, regardless of reveals/flags.
+
+:param Board board: The current Board object.
+:return None:
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameLogic.py" line="59" column="1" bodyfile="GameLogic.py" bodystart="59" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_game_logic_1ac701e0d880a5e8c09baf395c2f5d2a19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def GameLogic.cheatMode</definition>
+        <argsstring>(board)</argsstring>
+        <name>cheatMode</name>
+        <param>
+          <type>board</type>
+          <defname>board</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Activates cheat mode, which reveals the entire board. Only accessible in single-player mode.
+
+:param Board board: The current Board object.
+:return None:
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameLogic.py" line="86" column="1" bodyfile="GameLogic.py" bodystart="86" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_game_logic_1a9e9b9869e1330923fbe2a0cb04b6c50d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def GameLogic.inputNumber</definition>
+        <argsstring>(prompt)</argsstring>
+        <name>inputNumber</name>
+        <param>
+          <type>prompt</type>
+          <defname>prompt</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Catches inputs by user for anything other than an integer.
+
+:param string prompt: The input provided by the user.
+:return int: The prompt converted to an int.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameLogic.py" line="99" column="1" bodyfile="GameLogic.py" bodystart="99" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_game_logic_1aa208d35c45f200a28a8503ad891fd391" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def GameLogic.promptCheck</definition>
+        <argsstring>(prompt)</argsstring>
+        <name>promptCheck</name>
+        <param>
+          <type>prompt</type>
+          <defname>prompt</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Checks for valid inputs at the menu prompt.
+
+:param string prompt: The input provided by the user.
+:return int: True if the input is valid, False otherwise.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameLogic.py" line="114" column="1" bodyfile="GameLogic.py" bodystart="114" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_game_logic_1a4476538b080b2e54e2cf920d47385884" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def GameLogic.game_input</definition>
+        <argsstring>()</argsstring>
+        <name>game_input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>@pre Handles start game initial board parameters
+@post None
+@return height,width,mines tuple (ints)
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameLogic.py" line="134" column="1" bodyfile="GameLogic.py" bodystart="134" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_game_logic_1a8565813a63f94dd1e8325cbc3b2015bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def GameLogic.click</definition>
+        <argsstring>(board, row, column, action)</argsstring>
+        <name>click</name>
+        <param>
+          <type>board</type>
+          <defname>board</defname>
+        </param>
+        <param>
+          <type>row</type>
+          <defname>row</defname>
+        </param>
+        <param>
+          <type>column</type>
+          <defname>column</defname>
+        </param>
+        <param>
+          <type>action</type>
+          <defname>action</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Selects Cell to perform intended action on.
+
+:param Board board: The current Board object.
+:param int row: The row within the grid.
+:param int column: The column within the grid.
+:param string action: The action to perform on the Cell.
+:return bool: True if the user selects a bomb, False otherwise.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameLogic.py" line="156" column="1" bodyfile="GameLogic.py" bodystart="156" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_game_logic_1ae766be9cec703745c4f97f4f85a79dfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def GameLogic.spread</definition>
+        <argsstring>(board, row, column)</argsstring>
+        <name>spread</name>
+        <param>
+          <type>board</type>
+          <defname>board</defname>
+        </param>
+        <param>
+          <type>row</type>
+          <defname>row</defname>
+        </param>
+        <param>
+          <type>column</type>
+          <defname>column</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Recursively reveals adjacent Cells if they are empty.
+
+:param Board board: The current Board object.
+:param int row: The row within the grid.
+:param int column: The column within the grid.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameLogic.py" line="190" column="1" bodyfile="GameLogic.py" bodystart="190" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_game_logic_1aa19068ecba13ba5dae3258c28138983d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def GameLogic.run_singleplayer</definition>
+        <argsstring>(board)</argsstring>
+        <name>run_singleplayer</name>
+        <param>
+          <type>board</type>
+          <defname>board</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>User is prompted for board params in host,
+run_singleplayer plays game
+param Board board: require the game board at start
+:return None:
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameLogic.py" line="211" column="1" bodyfile="GameLogic.py" bodystart="211" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_game_logic_1afc48c64dfaba7c18f642ab23e8e3a3bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def GameLogic.run_coop</definition>
+        <argsstring>(socket, address, turn, board)</argsstring>
+        <name>run_coop</name>
+        <param>
+          <type>socket</type>
+          <defname>socket</defname>
+        </param>
+        <param>
+          <type>address</type>
+          <defname>address</defname>
+        </param>
+        <param>
+          <type>turn</type>
+          <defname>turn</defname>
+        </param>
+        <param>
+          <type>board</type>
+          <defname>board</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>client side version of coop multiplayer
+param Socket socket for sending each move
+param string address of client socket
+param bool turn, determine who&apos;s turn it is
+param Board board, game board object
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameLogic.py" line="289" column="1" bodyfile="GameLogic.py" bodystart="289" bodyend="381"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_game_logic_1ae210e41405e4a019624993e6eec6b99a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def GameLogic.run_versus</definition>
+        <argsstring>(socket, address, board)</argsstring>
+        <name>run_versus</name>
+        <param>
+          <type>socket</type>
+          <defname>socket</defname>
+        </param>
+        <param>
+          <type>address</type>
+          <defname>address</defname>
+        </param>
+        <param>
+          <type>board</type>
+          <defname>board</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>simple versus implementation
+should allow for different ip addresses after some work
+param Socket socket for communication, the local socket being used to
+    output info
+param string address, the other player&apos;s IP address
+param Board board object to track game board
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameLogic.py" line="382" column="1" bodyfile="GameLogic.py" bodystart="382" bodyend="422"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>@package docstring
+GameLogic.py (or, MineSweeper.py) should deal with the handling of the game&apos;s
+run time logic.
+
+Question: Maybe both client AND server side logic should be handled here. Since
+we&apos;re currently looking at three different game modes, we can throw all of our
+logic here and then just have the three modes do everything on their own?
+
+That way there&apos;s no need to worry about client/server stuff if you&apos;re in
+single player mode
+</verbatim> </para>    </detaileddescription>
+    <location file="GameLogic.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

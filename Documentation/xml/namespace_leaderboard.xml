@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_leaderboard" kind="namespace" language="Python">
+    <compoundname>Leaderboard</compoundname>
+    <innerclass refid="class_leaderboard_1_1_leaderboard" prot="public">Leaderboard::Leaderboard</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>@package docstring
+Leaderboard.py is in charge of creating and managing a leaderboard text file. Currently allows adding, clearing, printing, and searching across the leaderboard.
+</verbatim> </para>    </detaileddescription>
+    <location file="Leaderboard.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

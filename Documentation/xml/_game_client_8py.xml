@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_game_client_8py" kind="file" language="Python">
+    <compoundname>GameClient.py</compoundname>
+    <innernamespace refid="namespace_game_client">GameClient</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespace_game_client" refkind="compound"><highlight class="stringliteral">&quot;&quot;&quot;@package<sp/>docstring</highlight></codeline>
+<codeline lineno="2"><highlight class="stringliteral">GameClient.py<sp/>deals<sp/>with<sp/>client<sp/>specific<sp/>functionality<sp/>such<sp/>as:</highlight></codeline>
+<codeline lineno="3"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Update<sp/>player<sp/>data</highlight></codeline>
+<codeline lineno="4"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Provide<sp/>an<sp/>interface<sp/>for<sp/>network<sp/>communication</highlight></codeline>
+<codeline lineno="5"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>And...<sp/>other<sp/>stuff</highlight></codeline>
+<codeline lineno="6"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">#<sp/>By<sp/>importing<sp/>OFF_Network<sp/>we<sp/>should<sp/>have<sp/>access<sp/>to<sp/>all<sp/>of<sp/>the<sp/>server</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>OFF_Network</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;&apos;&apos;<sp/>Do<sp/>we<sp/>even<sp/>need<sp/>a<sp/>separate<sp/>receive_data()<sp/>function?<sp/>Currently<sp/>all<sp/>it<sp/>does<sp/>is</highlight></codeline>
+<codeline lineno="13"><highlight class="stringliteral">just<sp/>pings<sp/>the<sp/>server<sp/>with<sp/>&apos;hi&apos;<sp/>and<sp/>then<sp/>waits<sp/>for<sp/>a<sp/>response.<sp/>That&apos;s...</highlight></codeline>
+<codeline lineno="14"><highlight class="stringliteral">pointless<sp/>since<sp/>the<sp/>send_comm()<sp/>function<sp/>can<sp/>be<sp/>made<sp/>to<sp/>do<sp/>that<sp/>easily</highlight></codeline>
+<codeline lineno="15"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="16"><highlight class="stringliteral">This<sp/>will<sp/>only<sp/>be<sp/>useful<sp/>if<sp/>we<sp/>have<sp/>it<sp/>wait<sp/>for<sp/>data<sp/>in<sp/>a<sp/>drastically<sp/>different</highlight></codeline>
+<codeline lineno="17"><highlight class="stringliteral">way?</highlight></codeline>
+<codeline lineno="18"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="19"><highlight class="stringliteral">Instead<sp/>we<sp/>could<sp/>just<sp/>constantly<sp/>ping<sp/>the<sp/>server<sp/>with<sp/>an<sp/>update<sp/>request.<sp/>Just</highlight></codeline>
+<codeline lineno="20"><highlight class="stringliteral">send<sp/>it<sp/>the<sp/>string<sp/>&apos;Update<sp/>please&apos;<sp/>or<sp/>some<sp/>other<sp/>nonsense<sp/>and<sp/>wait<sp/>for<sp/>a</highlight></codeline>
+<codeline lineno="21"><highlight class="stringliteral">response</highlight></codeline>
+<codeline lineno="22"><highlight class="stringliteral">&apos;&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">receive_data():</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>clientSocket<sp/>=<sp/><ref refid="namespacesocket" kindref="compound">socket</ref>(AF_INET,<sp/>SOCK_DGRAM)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>clientSocket.sendto(</highlight><highlight class="stringliteral">&quot;hi&quot;</highlight><highlight class="normal">.encode(),<sp/>serverInfo)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>serData,<sp/>serverAddress<sp/>=<sp/>clientSocket.recvfrom(2048)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>serData</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Connect<sp/>to<sp/>the<sp/>server</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Once<sp/>connected,<sp/>check<sp/>to<sp/>see<sp/>what<sp/>the<sp/>server<sp/>wants<sp/>from<sp/>us</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="GameClient.py"/>
+  </compounddef>
+</doxygen>

@@ -23,7 +23,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Official Fortran Fanclub - Project 2
    </div>
-   <div id="projectbrief">OFF&#39;s extensions to Minesweeper</div>
+   <div id="projectbrief">Minesweeper - Enhanced</div>
   </td>
  </tr>
  </tbody>
@@ -65,8 +65,12 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p>This is a project that is a mock minesweeper game made in python utilized from command line.</p>
 <ol type="1">
-<li>Clone the repo and run python3 Host.py to initialize the game.</li>
-<li>For Co-op, run Host.py, select option 2, then run player2.py.</li>
+<li>Clone the repo and run python3 Host.py to initialize the game. (Requires internet connection)</li>
+<li>For Co-op, run Host.py, select option 2, then run player2.py on your second device.</li>
+</ol>
+<p>(The game sends a message to Google's recursive DNS server 8.8.8.8 to get your local IP)</p>
+<ol type="1">
+<li>For Versus, run Host.py, select option 3, then run player2.py on your second device</li>
 </ol>
 <p><b>Warning</b> This game will not run on versions of python less than 3.6</p>
 <p>Must download colorama module "python3 -m pip install colorama"</p>
@@ -79,6 +83,7 @@ $(function() {
 <ol type="1">
 <li>Use the flag function "f" with (x and y coordinates) to flag a space you thing is a bomb.</li>
 </ol>
+<p><b>Tip</b> Activate Cheat mode with -c in single player mode</p>
 <p><b>Tip</b> flag a space that is already flagged in order to remove that flag</p>
 <ol type="1">
 <li>Once you have flagged all of the bombs, the game is over and you win.</li>

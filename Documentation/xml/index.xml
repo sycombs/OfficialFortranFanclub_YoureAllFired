@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
+  <compound refid="class_board_1_1_board" kind="class"><name>Board::Board</name>
+    <member refid="class_board_1_1_board_1a288daa852b69c17ecbabab9af6dac15a" kind="variable"><name>height</name></member>
+    <member refid="class_board_1_1_board_1a354a175ae1f399098ac23ed37c58a3f2" kind="variable"><name>width</name></member>
+    <member refid="class_board_1_1_board_1a46a8a14d245c71600c5416deab063feb" kind="variable"><name>mines</name></member>
+    <member refid="class_board_1_1_board_1a29136b70f21697be0dcccb782d5ee5bf" kind="variable"><name>grid</name></member>
+    <member refid="class_board_1_1_board_1a404b2ee0a7cec1fe76688e1da26e4339" kind="variable"><name>flagCount</name></member>
+    <member refid="class_board_1_1_board_1a64e3380089e1c6b86069eed8ef0a4cf9" kind="function"><name>__init__</name></member>
+    <member refid="class_board_1_1_board_1af52ea18259bf8d2a122de08fcb0ea308" kind="function"><name>displayBoard</name></member>
+    <member refid="class_board_1_1_board_1ac84e7c87ac2407614bf0e63f165a76d5" kind="function"><name>get_string_rep</name></member>
+    <member refid="class_board_1_1_board_1a8b8e0d2e99c02de780604baa141159c3" kind="function"><name>brute_force</name></member>
+    <member refid="class_board_1_1_board_1a9f3fd38d0abf01671f3d8bb0f3ceea5e" kind="function"><name>calculate_3bv</name></member>
+    <member refid="class_board_1_1_board_1a4a027666af1fa52582af6543985a73c6" kind="function"><name>recReveal</name></member>
+  </compound>
+  <compound refid="class_board_1_1_cell" kind="class"><name>Board::Cell</name>
+    <member refid="class_board_1_1_cell_1a913c21935677a853af4aaa8a9739119f" kind="variable"><name>isBomb</name></member>
+    <member refid="class_board_1_1_cell_1a73d7ca13c0037b291b5b5e1fd5e9196c" kind="variable"><name>isRevealed</name></member>
+    <member refid="class_board_1_1_cell_1a58f47096e8869d206f3df85ef8035d0c" kind="variable"><name>isFlagged</name></member>
+    <member refid="class_board_1_1_cell_1a7b2f5856db6bd715a1c55517ee3b1400" kind="variable"><name>adj</name></member>
+    <member refid="class_board_1_1_cell_1a2548d93fc7bc01d0eecf54adf83000b4" kind="function"><name>__init__</name></member>
+    <member refid="class_board_1_1_cell_1a6dc4959d477451024c9fe91c42fa0cfc" kind="function"><name>__repr__</name></member>
+  </compound>
+  <compound refid="class_leaderboard_1_1_leaderboard" kind="class"><name>Leaderboard::Leaderboard</name>
+    <member refid="class_leaderboard_1_1_leaderboard_1afe984283cfd21ebd9aac63a6a66c2f94" kind="variable"><name>fileName</name></member>
+    <member refid="class_leaderboard_1_1_leaderboard_1af4f737f3c0e647c287ecbcf88722d908" kind="variable"><name>name</name></member>
+    <member refid="class_leaderboard_1_1_leaderboard_1affaf4d66aef087946bdd8807bf7f5179" kind="function"><name>__init__</name></member>
+    <member refid="class_leaderboard_1_1_leaderboard_1a3e17718a0ee4803bce571e3577fa75de" kind="function"><name>get_leaderboard</name></member>
+    <member refid="class_leaderboard_1_1_leaderboard_1aa1a10cb11235dc6ba207e0cff6586906" kind="function"><name>get_score</name></member>
+    <member refid="class_leaderboard_1_1_leaderboard_1a5d275657e02abc778198a8c4aa6f4304" kind="function"><name>sort_leaderboard</name></member>
+    <member refid="class_leaderboard_1_1_leaderboard_1a5843c7b6939076a386b2636f85e6596c" kind="function"><name>add_entry</name></member>
+    <member refid="class_leaderboard_1_1_leaderboard_1a0e63ac70057d6e900598b04492b3634c" kind="function"><name>clear</name></member>
+  </compound>
+  <compound refid="class_net_player_1_1_net_player" kind="class"><name>NetPlayer::NetPlayer</name>
+    <member refid="class_net_player_1_1_net_player_1acf324aad27f7cf53c5969d1bf72a3005" kind="variable"><name>playerData</name></member>
+    <member refid="class_net_player_1_1_net_player_1ad0d9b41f11f635a8c136418890118ee0" kind="function"><name>__init__</name></member>
+    <member refid="class_net_player_1_1_net_player_1a01fafb3dac9097f8680d49306bc0d32a" kind="function"><name>get_player_data</name></member>
+    <member refid="class_net_player_1_1_net_player_1afd23b3ae945a572e87cb57fe0473916f" kind="function"><name>set_player_data</name></member>
+  </compound>
+  <compound refid="class_time_1_1_time" kind="class"><name>Time::Time</name>
+    <member refid="class_time_1_1_time_1a979714c0eb21ec0b20e5ba2e092b6579" kind="variable"><name>start</name></member>
+    <member refid="class_time_1_1_time_1a61b228c11c6bb3efef5ca1b432c841c0" kind="variable"><name>end</name></member>
+    <member refid="class_time_1_1_time_1afe5503bd50131699da71cb9ad56c530d" kind="variable"><name>totalTime</name></member>
+    <member refid="class_time_1_1_time_1a2356f3a031befb638919910320e9ab8c" kind="variable"><name>turnStart</name></member>
+    <member refid="class_time_1_1_time_1a2fcd7309de0e40d3550b6fd97c2551bc" kind="function"><name>__init__</name></member>
+    <member refid="class_time_1_1_time_1aafb2c5f50e604069848cf5dea89a0594" kind="function"><name>game_over_time</name></member>
+    <member refid="class_time_1_1_time_1aaf3b423ec6a81c3737a01b89e76051b0" kind="function"><name>show_total</name></member>
+    <member refid="class_time_1_1_time_1ae62071f9db0a182d0ccc85bfbf8b2ebc" kind="function"><name>compare_time</name></member>
+    <member refid="class_time_1_1_time_1abab694cc273962120aa1260e46634436" kind="function"><name>turn_start</name></member>
+    <member refid="class_time_1_1_time_1a431f5589ccc49f1292dac1e7d9ac264f" kind="function"><name>time_limit</name></member>
+    <member refid="class_time_1_1_time_1ae284d02dadb90298689d4711a8c6f992" kind="function"><name>time_delay</name></member>
+  </compound>
+  <compound refid="namespace_board" kind="namespace"><name>Board</name>
+    <member refid="_board_8py_1a53b78bf00ec1d97a8b0e5100c5c59987" kind="function"><name>convert_cell_to_dictionary</name></member>
+    <member refid="_board_8py_1ae708df3870ba58c6943477053f65c5b1" kind="function"><name>convert_dictionary_to_cell</name></member>
+  </compound>
+  <compound refid="namespace_co_op___logic" kind="namespace"><name>CoOp_Logic</name>
+    <member refid="_co_op___logic_8py_1ac2e2a0678c27c8de5e5be32701bc6043" kind="variable"><name>STAGE_1</name></member>
+    <member refid="_co_op___logic_8py_1a41044d072b9fcad2c78eacc54e7dd8b8" kind="variable"><name>STAGE_2</name></member>
+    <member refid="_co_op___logic_8py_1a32455827af91afb3ba72a6471a158164" kind="variable"><name>MAIN_LOOP</name></member>
+    <member refid="_co_op___logic_8py_1a4a403490ae17db10035db81d88e3cbe8" kind="variable"><name>playerCount</name></member>
+    <member refid="_co_op___logic_8py_1ac821ffadf4f64fcf0abce7e30a12e7c6" kind="variable"><name>serverSocket</name></member>
+    <member refid="_co_op___logic_8py_1aa4c6de1fe4a84c9271068b8622bba8b7" kind="variable"><name>dataSerial</name></member>
+    <member refid="_co_op___logic_8py_1a6c0bdd95382d04e311fd4a52030f29e5" kind="variable"><name>clientAddress</name></member>
+    <member refid="_co_op___logic_8py_1a51d94cbb23b5444f409e1c1fded2fa99" kind="variable"><name>dataDeserial</name></member>
+    <member refid="_co_op___logic_8py_1a5440435602f7149f8bec86ae2bcf4ec3" kind="variable"><name>newDataSerial</name></member>
+  </compound>
+  <compound refid="namespace_game_client" kind="namespace"><name>GameClient</name>
+    <member refid="namespace_game_client_1aa2410d2d1b920195495aa5141dd79b52" kind="function"><name>receive_data</name></member>
+  </compound>
+  <compound refid="namespace_game_logic" kind="namespace"><name>GameLogic</name>
+    <member refid="namespace_game_logic_1afacbe6e69e6b939244d8c5f0aba5ff34" kind="function"><name>show</name></member>
+    <member refid="namespace_game_logic_1ab23e4dd8920efb5dc428f599388dbc70" kind="function"><name>cheat_show</name></member>
+    <member refid="namespace_game_logic_1ac701e0d880a5e8c09baf395c2f5d2a19" kind="function"><name>cheatMode</name></member>
+    <member refid="namespace_game_logic_1a9e9b9869e1330923fbe2a0cb04b6c50d" kind="function"><name>inputNumber</name></member>
+    <member refid="namespace_game_logic_1aa208d35c45f200a28a8503ad891fd391" kind="function"><name>promptCheck</name></member>
+    <member refid="namespace_game_logic_1a4476538b080b2e54e2cf920d47385884" kind="function"><name>game_input</name></member>
+    <member refid="namespace_game_logic_1a8565813a63f94dd1e8325cbc3b2015bb" kind="function"><name>click</name></member>
+    <member refid="namespace_game_logic_1ae766be9cec703745c4f97f4f85a79dfc" kind="function"><name>spread</name></member>
+    <member refid="namespace_game_logic_1aa19068ecba13ba5dae3258c28138983d" kind="function"><name>run_singleplayer</name></member>
+    <member refid="namespace_game_logic_1afc48c64dfaba7c18f642ab23e8e3a3bf" kind="function"><name>run_coop</name></member>
+    <member refid="namespace_game_logic_1ae210e41405e4a019624993e6eec6b99a" kind="function"><name>run_versus</name></member>
+  </compound>
+  <compound refid="namespacehost" kind="namespace"><name>host</name>
+    <member refid="namespacehost_1a2f80dadba484200e570a76f7da6be649" kind="variable"><name>serverSocket</name></member>
+    <member refid="namespacehost_1a5f6106680a6c6401191db0633d1af66f" kind="variable"><name>mode</name></member>
+    <member refid="namespacehost_1a54fb6ea367ea77b46ec4c7c5039a5ee2" kind="variable"><name>height</name></member>
+    <member refid="namespacehost_1acd576bc5fea4a55f91c3a6caacaf5fa5" kind="variable"><name>width</name></member>
+    <member refid="namespacehost_1a5ce4996febf6a1d8a3f15308021151b1" kind="variable"><name>mines</name></member>
+    <member refid="namespacehost_1ab2757d06fb4592190609a0514d9e4ffd" kind="variable"><name>board</name></member>
+    <member refid="namespacehost_1aae86faa74ad32fcf0ecf13de2667a52a" kind="variable"><name>response</name></member>
+    <member refid="namespacehost_1ad873f768eeedb8bca7db18cc251c7053" kind="variable"><name>s</name></member>
+    <member refid="namespacehost_1a21cb3c882570d7bac4b4f9ed2e28f3c7" kind="variable"><name>host_ip</name></member>
+    <member refid="namespacehost_1aedee2c2f1424cd07fcb9a97263ff6b2e" kind="variable"><name>clientAddress</name></member>
+    <member refid="namespacehost_1a4db7985dbc0e87100bf90263d891849e" kind="variable"><name>data_dict</name></member>
+    <member refid="namespacehost_1a50c4cab8ef7df36e4ed8fb1ca388eb18" kind="variable"><name>data</name></member>
+    <member refid="namespacehost_1a9b9415201f6e29d0eda621113efe49ba" kind="variable"><name>tempCell</name></member>
+  </compound>
+  <compound refid="namespace_leaderboard" kind="namespace"><name>Leaderboard</name>
+  </compound>
+  <compound refid="namespace_net_player" kind="namespace"><name>NetPlayer</name>
+  </compound>
+  <compound refid="namespace_o_f_f___data" kind="namespace"><name>OFF_Data</name>
+    <member refid="namespace_o_f_f___data_1a826cab3cf308a0e882e8386544f49f7b" kind="function"><name>serialize_data</name></member>
+    <member refid="namespace_o_f_f___data_1a59279364cc977ebb5b368377494c10ef" kind="function"><name>deserialize_data</name></member>
+  </compound>
+  <compound refid="namespace_o_f_f___network" kind="namespace"><name>OFF_Network</name>
+    <member refid="namespace_o_f_f___network_1adffdd99674fb44304159889e45506b8b" kind="variable"><name>localAddress</name></member>
+    <member refid="namespace_o_f_f___network_1ad86d6e025f98f77f2513ed47b6a9c9ed" kind="variable"><name>SERVER_PORT</name></member>
+    <member refid="namespace_o_f_f___network_1a983ac01abcf0c3b7e474984e7ece31b7" kind="variable"><name>SERVER_INFO</name></member>
+    <member refid="namespace_o_f_f___network_1a0ab8439ad8255392538b5966e5168506" kind="function"><name>send_byte_data</name></member>
+    <member refid="namespace_o_f_f___network_1ad4c88e602c445d2b5a4a32564decf49c" kind="function"><name>send_string_data</name></member>
+    <member refid="namespace_o_f_f___network_1a07ee3bf5d20771b38ba37bc09a63988b" kind="function"><name>send_comm</name></member>
+  </compound>
+  <compound refid="namespace_play" kind="namespace"><name>Play</name>
+    <member refid="namespace_play_1a044632b9bf77f16d1a9df2bc81ac3129" kind="variable"><name>serverSocket</name></member>
+    <member refid="namespace_play_1abd2359e94b8e42299015d8b0178b3c3f" kind="variable"><name>mode</name></member>
+    <member refid="namespace_play_1a3f79c67aec3aac567a1daaf8fe775e87" kind="variable"><name>height</name></member>
+    <member refid="namespace_play_1a26e3b56f122ba00b48e1a88583f66f3f" kind="variable"><name>width</name></member>
+    <member refid="namespace_play_1a6b2134f21cedd95a4c45d49d9dd17504" kind="variable"><name>mines</name></member>
+    <member refid="namespace_play_1afe04e19157c75be4cc5f72f41a9858f8" kind="variable"><name>board</name></member>
+    <member refid="namespace_play_1a7cfeb37a7d66635f5793f535339a60b2" kind="variable"><name>response</name></member>
+    <member refid="namespace_play_1af5bbed7c9573b88eab860a56ac570474" kind="variable"><name>clientAddress</name></member>
+    <member refid="namespace_play_1a672e7194661c43e0e9bfefa8a22e93de" kind="variable"><name>data_dict</name></member>
+    <member refid="namespace_play_1a6b40175c41f6e2ef9328ec58b717c459" kind="variable"><name>data</name></member>
+    <member refid="namespace_play_1a6403484a1168ac57194db75e6bd79fe2" kind="variable"><name>tempCell</name></member>
+  </compound>
+  <compound refid="namespaceplayer2" kind="namespace"><name>player2</name>
+    <member refid="namespaceplayer2_1ae5f64fc8f7b0b98b23d8ea60c1c6deaa" kind="variable"><name>clientSocket</name></member>
+    <member refid="namespaceplayer2_1a01deaf52d969f20b720b3cabce3ac31e" kind="variable"><name>mode</name></member>
+    <member refid="namespaceplayer2_1aadcd3911a13c6335dfde84f87701baf3" kind="variable"><name>servAddr</name></member>
+    <member refid="namespaceplayer2_1a9b9852c1f6f08b00a4db38b0d4bea7af" kind="variable"><name>LAN_SERVER_INFO</name></member>
+    <member refid="namespaceplayer2_1a70135f2d915e69537aacd2ecca420a9e" kind="variable"><name>data</name></member>
+    <member refid="namespaceplayer2_1adb60efd98bad791213c17bc6602c7fec" kind="variable"><name>address</name></member>
+    <member refid="namespaceplayer2_1a2cf61b54bed5824e48868c19315ea58c" kind="variable"><name>height</name></member>
+    <member refid="namespaceplayer2_1ae56b0f965a4c5af6e38a7a547c03447c" kind="variable"><name>width</name></member>
+    <member refid="namespaceplayer2_1a93741307f314f9eb09e964944e05e728" kind="variable"><name>mines</name></member>
+    <member refid="namespaceplayer2_1ad170142e87f5109fa10893b3863dae6a" kind="variable"><name>board</name></member>
+    <member refid="namespaceplayer2_1ae13161ccd361fd36c6cbd757f33d639b" kind="variable"><name>tempCell</name></member>
+    <member refid="namespaceplayer2_1a025745245d0584f1418eb0898b79057a" kind="variable"><name>newCell</name></member>
+  </compound>
+  <compound refid="namespace_server" kind="namespace"><name>Server</name>
+    <member refid="namespace_server_1a61bdcf9181bf23a9f75d4b21bf33f614" kind="variable"><name>serverPort</name></member>
+    <member refid="namespace_server_1add1bf14e8e27f2efbb9dcd74c5344f1b" kind="variable"><name>serverSocket</name></member>
+    <member refid="namespace_server_1a457c766fba7cf0d2ce805c202d2daeed" kind="variable"><name>blocksize</name></member>
+    <member refid="namespace_server_1ad1a623c39628e6a85484ed43248ecd8d" kind="function"><name>interpret_data</name></member>
+    <member refid="namespace_server_1afb89b67e4b9b4c3fe2915449f2a450f6" kind="function"><name>send_board</name></member>
+    <member refid="namespace_server_1a7080c6378acbbd9210c0e277a9ff730c" kind="function"><name>send_json</name></member>
+    <member refid="namespace_server_1a46433613af0b25ee488da2db17f095c7" kind="function"><name>send_data</name></member>
+  </compound>
+  <compound refid="namespacesocket" kind="namespace"><name>socket</name>
+  </compound>
+  <compound refid="namespace_time" kind="namespace"><name>Time</name>
+  </compound>
+  <compound refid="_board_8py" kind="file"><name>Board.py</name>
+  </compound>
+  <compound refid="_co_op___logic_8py" kind="file"><name>CoOp_Logic.py</name>
+  </compound>
+  <compound refid="_game_client_8py" kind="file"><name>GameClient.py</name>
+  </compound>
+  <compound refid="_game_logic_8py" kind="file"><name>GameLogic.py</name>
+  </compound>
+  <compound refid="host_8py" kind="file"><name>host.py</name>
+  </compound>
+  <compound refid="_leaderboard_8py" kind="file"><name>Leaderboard.py</name>
+  </compound>
+  <compound refid="_net_player_8py" kind="file"><name>NetPlayer.py</name>
+  </compound>
+  <compound refid="_o_f_f___data_8py" kind="file"><name>OFF_Data.py</name>
+  </compound>
+  <compound refid="_o_f_f___network_8py" kind="file"><name>OFF_Network.py</name>
+  </compound>
+  <compound refid="_play_8py" kind="file"><name>Play.py</name>
+  </compound>
+  <compound refid="player2_8py" kind="file"><name>player2.py</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="_server_8py" kind="file"><name>Server.py</name>
+  </compound>
+  <compound refid="_time_8py" kind="file"><name>Time.py</name>
+  </compound>
+  <compound refid="md__r_e_a_d_m_e" kind="page"><name>md_README</name>
+  </compound>
+</doxygenindex>

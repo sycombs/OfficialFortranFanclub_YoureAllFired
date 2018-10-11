@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespaceplayer2" kind="namespace" language="Python">
+    <compoundname>player2</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceplayer2_1ae5f64fc8f7b0b98b23d8ea60c1c6deaa" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>player2.clientSocket</definition>
+        <argsstring></argsstring>
+        <name>clientSocket</name>
+        <initializer>=  socket(AF_INET, SOCK_DGRAM)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="player2.py" line="9" column="1" bodyfile="player2.py" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceplayer2_1a01deaf52d969f20b720b3cabce3ac31e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool player2::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="player2.py" line="22" column="1" bodyfile="player2.py" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceplayer2_1aadcd3911a13c6335dfde84f87701baf3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>player2.servAddr</definition>
+        <argsstring></argsstring>
+        <name>servAddr</name>
+        <initializer>=  input(&quot;Enter Server Address: &quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="player2.py" line="24" column="1" bodyfile="player2.py" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceplayer2_1a9b9852c1f6f08b00a4db38b0d4bea7af" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple player2.LAN_SERVER_INFO</definition>
+        <argsstring></argsstring>
+        <name>LAN_SERVER_INFO</name>
+        <initializer>=  (servAddr, SERVER_PORT)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="player2.py" line="25" column="1" bodyfile="player2.py" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceplayer2_1a70135f2d915e69537aacd2ecca420a9e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>player2.data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="player2.py" line="32" column="1" bodyfile="player2.py" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceplayer2_1adb60efd98bad791213c17bc6602c7fec" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>player2.address</definition>
+        <argsstring></argsstring>
+        <name>address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="player2.py" line="39" column="1" bodyfile="player2.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceplayer2_1a2cf61b54bed5824e48868c19315ea58c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>player2.height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="player2.py" line="41" column="1" bodyfile="player2.py" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceplayer2_1ae56b0f965a4c5af6e38a7a547c03447c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>player2.width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="player2.py" line="41" column="1" bodyfile="player2.py" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceplayer2_1a93741307f314f9eb09e964944e05e728" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>player2.mines</definition>
+        <argsstring></argsstring>
+        <name>mines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="player2.py" line="41" column="1" bodyfile="player2.py" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceplayer2_1ad170142e87f5109fa10893b3863dae6a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>player2.board</definition>
+        <argsstring></argsstring>
+        <name>board</name>
+        <initializer>=  <ref refid="class_board_1_1_board" kindref="compound">Board</ref>(height,width,mines)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="player2.py" line="43" column="1" bodyfile="player2.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceplayer2_1ae13161ccd361fd36c6cbd757f33d639b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>player2.tempCell</definition>
+        <argsstring></argsstring>
+        <name>tempCell</name>
+        <initializer>=  send_comm(&quot;True&quot;,clientSocket,LAN_SERVER_INFO,True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="player2.py" line="46" column="1" bodyfile="player2.py" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceplayer2_1a025745245d0584f1418eb0898b79057a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>player2.newCell</definition>
+        <argsstring></argsstring>
+        <name>newCell</name>
+        <initializer>=  convert_dictionary_to_cell(tempCell)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="player2.py" line="49" column="1" bodyfile="player2.py" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>player2.py
+initiates client connection to host
+</verbatim> </para>    </detaileddescription>
+    <location file="player2.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

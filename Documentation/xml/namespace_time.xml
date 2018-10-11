@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespace_time" kind="namespace" language="Python">
+    <compoundname>Time</compoundname>
+    <innerclass refid="class_time_1_1_time" prot="public">Time::Time</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>@package docstring
+Time.py is in charge of comparing the amount of time it takes to complete a task, along with some other functions regarding timing.
+</verbatim> </para>    </detaileddescription>
+    <location file="Time.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_time_1_1_time" kind="class" language="Python" prot="public">
+    <compoundname>Time::Time</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_time_1_1_time_1a979714c0eb21ec0b20e5ba2e092b6579" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Time.Time::start</definition>
+        <argsstring></argsstring>
+        <name>start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Time.py" line="12" column="1" bodyfile="Time.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_time_1_1_time_1a61b228c11c6bb3efef5ca1b432c841c0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Time.Time::end</definition>
+        <argsstring></argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Time.py" line="13" column="1" bodyfile="Time.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_time_1_1_time_1afe5503bd50131699da71cb9ad56c530d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Time.Time::totalTime</definition>
+        <argsstring></argsstring>
+        <name>totalTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Time.py" line="14" column="1" bodyfile="Time.py" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_time_1_1_time_1a2356f3a031befb638919910320e9ab8c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Time.Time::turnStart</definition>
+        <argsstring></argsstring>
+        <name>turnStart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Time.py" line="15" column="1" bodyfile="Time.py" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_time_1_1_time_1a2fcd7309de0e40d3550b6fd97c2551bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Time.Time.__init__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Time.py" line="11" column="1" bodyfile="Time.py" bodystart="11" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_time_1_1_time_1aafb2c5f50e604069848cf5dea89a0594" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Time.Time.game_over_time</definition>
+        <argsstring>(self)</argsstring>
+        <name>game_over_time</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Time.py" line="22" column="1" bodyfile="Time.py" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_time_1_1_time_1aaf3b423ec6a81c3737a01b89e76051b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Time.Time.show_total</definition>
+        <argsstring>(self)</argsstring>
+        <name>show_total</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Time.py" line="31" column="1" bodyfile="Time.py" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_time_1_1_time_1ae62071f9db0a182d0ccc85bfbf8b2ebc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Time.Time.compare_time</definition>
+        <argsstring>(self, other)</argsstring>
+        <name>compare_time</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>other</type>
+          <defname>other</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Time.py" line="39" column="1" bodyfile="Time.py" bodystart="39" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_time_1_1_time_1abab694cc273962120aa1260e46634436" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Time.Time.turn_start</definition>
+        <argsstring>(self)</argsstring>
+        <name>turn_start</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Time.py" line="52" column="1" bodyfile="Time.py" bodystart="52" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_time_1_1_time_1a431f5589ccc49f1292dac1e7d9ac264f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Time.Time.time_limit</definition>
+        <argsstring>(self, timeLimit)</argsstring>
+        <name>time_limit</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>timeLimit</type>
+          <defname>timeLimit</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Time.py" line="60" column="1" bodyfile="Time.py" bodystart="60" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_time_1_1_time_1ae284d02dadb90298689d4711a8c6f992" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Time.Time.time_delay</definition>
+        <argsstring>(self, timeLimit)</argsstring>
+        <name>time_delay</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>timeLimit</type>
+          <defname>timeLimit</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Time.py" line="71" column="1" bodyfile="Time.py" bodystart="71" bodyend="72"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Constructs a Time object with start time being time it is initiated
+:param none
+:return None
+</verbatim> </para>    </detaileddescription>
+    <location file="Time.py" line="5" column="1" bodyfile="Time.py" bodystart="5" bodyend="80"/>
+    <listofallmembers>
+      <member refid="class_time_1_1_time_1a2fcd7309de0e40d3550b6fd97c2551bc" prot="public" virt="non-virtual"><scope>Time::Time</scope><name>__init__</name></member>
+      <member refid="class_time_1_1_time_1ae62071f9db0a182d0ccc85bfbf8b2ebc" prot="public" virt="non-virtual"><scope>Time::Time</scope><name>compare_time</name></member>
+      <member refid="class_time_1_1_time_1a61b228c11c6bb3efef5ca1b432c841c0" prot="public" virt="non-virtual"><scope>Time::Time</scope><name>end</name></member>
+      <member refid="class_time_1_1_time_1aafb2c5f50e604069848cf5dea89a0594" prot="public" virt="non-virtual"><scope>Time::Time</scope><name>game_over_time</name></member>
+      <member refid="class_time_1_1_time_1aaf3b423ec6a81c3737a01b89e76051b0" prot="public" virt="non-virtual"><scope>Time::Time</scope><name>show_total</name></member>
+      <member refid="class_time_1_1_time_1a979714c0eb21ec0b20e5ba2e092b6579" prot="public" virt="non-virtual"><scope>Time::Time</scope><name>start</name></member>
+      <member refid="class_time_1_1_time_1ae284d02dadb90298689d4711a8c6f992" prot="public" virt="non-virtual"><scope>Time::Time</scope><name>time_delay</name></member>
+      <member refid="class_time_1_1_time_1a431f5589ccc49f1292dac1e7d9ac264f" prot="public" virt="non-virtual"><scope>Time::Time</scope><name>time_limit</name></member>
+      <member refid="class_time_1_1_time_1afe5503bd50131699da71cb9ad56c530d" prot="public" virt="non-virtual"><scope>Time::Time</scope><name>totalTime</name></member>
+      <member refid="class_time_1_1_time_1abab694cc273962120aa1260e46634436" prot="public" virt="non-virtual"><scope>Time::Time</scope><name>turn_start</name></member>
+      <member refid="class_time_1_1_time_1a2356f3a031befb638919910320e9ab8c" prot="public" virt="non-virtual"><scope>Time::Time</scope><name>turnStart</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

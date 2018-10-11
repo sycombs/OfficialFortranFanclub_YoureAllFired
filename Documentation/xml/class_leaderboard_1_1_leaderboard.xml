@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_leaderboard_1_1_leaderboard" kind="class" language="Python" prot="public">
+    <compoundname>Leaderboard::Leaderboard</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_leaderboard_1_1_leaderboard_1afe984283cfd21ebd9aac63a6a66c2f94" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Leaderboard.Leaderboard::fileName</definition>
+        <argsstring></argsstring>
+        <name>fileName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Leaderboard.py" line="12" column="1" bodyfile="Leaderboard.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_leaderboard_1_1_leaderboard_1af4f737f3c0e647c287ecbcf88722d908" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Leaderboard.Leaderboard::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Leaderboard.py" line="78" column="1" bodyfile="Leaderboard.py" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_leaderboard_1_1_leaderboard_1affaf4d66aef087946bdd8807bf7f5179" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Leaderboard.Leaderboard.__init__</definition>
+        <argsstring>(self, fname)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>fname</type>
+          <defname>fname</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Leaderboard.py" line="11" column="1" bodyfile="Leaderboard.py" bodystart="11" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaderboard_1_1_leaderboard_1a3e17718a0ee4803bce571e3577fa75de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Leaderboard.Leaderboard.get_leaderboard</definition>
+        <argsstring>(self, number)</argsstring>
+        <name>get_leaderboard</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>number</type>
+          <defname>number</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Leaderboard.py" line="19" column="1" bodyfile="Leaderboard.py" bodystart="19" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaderboard_1_1_leaderboard_1aa1a10cb11235dc6ba207e0cff6586906" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Leaderboard.Leaderboard.get_score</definition>
+        <argsstring>(self, number)</argsstring>
+        <name>get_score</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>number</type>
+          <defname>number</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Leaderboard.py" line="38" column="1" bodyfile="Leaderboard.py" bodystart="38" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaderboard_1_1_leaderboard_1a5d275657e02abc778198a8c4aa6f4304" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Leaderboard.Leaderboard.sort_leaderboard</definition>
+        <argsstring>(self)</argsstring>
+        <name>sort_leaderboard</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Leaderboard.py" line="56" column="1" bodyfile="Leaderboard.py" bodystart="56" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaderboard_1_1_leaderboard_1a5843c7b6939076a386b2636f85e6596c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Leaderboard.Leaderboard.add_entry</definition>
+        <argsstring>(self, score)</argsstring>
+        <name>add_entry</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>score</type>
+          <defname>score</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Leaderboard.py" line="76" column="1" bodyfile="Leaderboard.py" bodystart="76" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leaderboard_1_1_leaderboard_1a0e63ac70057d6e900598b04492b3634c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Leaderboard.Leaderboard.clear</definition>
+        <argsstring>(self)</argsstring>
+        <name>clear</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Leaderboard.py" line="94" column="1" bodyfile="Leaderboard.py" bodystart="94" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Constructs a leaderboard object that is linked to the text file of fname
+:param fname: The name of the leaderboard text file.
+:return None
+</verbatim> </para>    </detaileddescription>
+    <location file="Leaderboard.py" line="4" column="1" bodyfile="Leaderboard.py" bodystart="4" bodyend="98"/>
+    <listofallmembers>
+      <member refid="class_leaderboard_1_1_leaderboard_1affaf4d66aef087946bdd8807bf7f5179" prot="public" virt="non-virtual"><scope>Leaderboard::Leaderboard</scope><name>__init__</name></member>
+      <member refid="class_leaderboard_1_1_leaderboard_1a5843c7b6939076a386b2636f85e6596c" prot="public" virt="non-virtual"><scope>Leaderboard::Leaderboard</scope><name>add_entry</name></member>
+      <member refid="class_leaderboard_1_1_leaderboard_1a0e63ac70057d6e900598b04492b3634c" prot="public" virt="non-virtual"><scope>Leaderboard::Leaderboard</scope><name>clear</name></member>
+      <member refid="class_leaderboard_1_1_leaderboard_1afe984283cfd21ebd9aac63a6a66c2f94" prot="public" virt="non-virtual"><scope>Leaderboard::Leaderboard</scope><name>fileName</name></member>
+      <member refid="class_leaderboard_1_1_leaderboard_1a3e17718a0ee4803bce571e3577fa75de" prot="public" virt="non-virtual"><scope>Leaderboard::Leaderboard</scope><name>get_leaderboard</name></member>
+      <member refid="class_leaderboard_1_1_leaderboard_1aa1a10cb11235dc6ba207e0cff6586906" prot="public" virt="non-virtual"><scope>Leaderboard::Leaderboard</scope><name>get_score</name></member>
+      <member refid="class_leaderboard_1_1_leaderboard_1af4f737f3c0e647c287ecbcf88722d908" prot="public" virt="non-virtual"><scope>Leaderboard::Leaderboard</scope><name>name</name></member>
+      <member refid="class_leaderboard_1_1_leaderboard_1a5d275657e02abc778198a8c4aa6f4304" prot="public" virt="non-virtual"><scope>Leaderboard::Leaderboard</scope><name>sort_leaderboard</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

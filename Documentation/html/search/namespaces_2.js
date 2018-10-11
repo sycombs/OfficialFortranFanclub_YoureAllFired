@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['netplayer',['NetPlayer',['../namespace_net_player.html',1,'']]]
+  ['leaderboard',['Leaderboard',['../namespace_leaderboard.html',1,'']]]
 ];

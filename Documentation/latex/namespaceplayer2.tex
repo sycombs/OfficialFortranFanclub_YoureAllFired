@@ -6,8 +6,14 @@
 \mbox{\Hypertarget{namespaceplayer2_ae5f64fc8f7b0b98b23d8ea60c1c6deaa}\label{namespaceplayer2_ae5f64fc8f7b0b98b23d8ea60c1c6deaa}} 
 {\bfseries client\+Socket} = socket(A\+F\+\_\+\+I\+N\+ET, S\+O\+C\+K\+\_\+\+D\+G\+R\+AM)
 \item 
-\mbox{\Hypertarget{namespaceplayer2_ad5d3b4c917dd3f13de162bc446fc95ac}\label{namespaceplayer2_ad5d3b4c917dd3f13de162bc446fc95ac}} 
-{\bfseries mode} = send\+\_\+comm(\char`\"{}True\char`\"{}, client\+Socket, S\+E\+R\+V\+E\+R\+\_\+\+I\+N\+FO,True)
+\mbox{\Hypertarget{namespaceplayer2_a01deaf52d969f20b720b3cabce3ac31e}\label{namespaceplayer2_a01deaf52d969f20b720b3cabce3ac31e}} 
+bool {\bfseries mode} = False
+\item 
+\mbox{\Hypertarget{namespaceplayer2_aadcd3911a13c6335dfde84f87701baf3}\label{namespaceplayer2_aadcd3911a13c6335dfde84f87701baf3}} 
+{\bfseries serv\+Addr} = input(\char`\"{}Enter Server Address\+: \char`\"{})
+\item 
+\mbox{\Hypertarget{namespaceplayer2_a9b9852c1f6f08b00a4db38b0d4bea7af}\label{namespaceplayer2_a9b9852c1f6f08b00a4db38b0d4bea7af}} 
+tuple {\bfseries L\+A\+N\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+I\+N\+FO} = (serv\+Addr, S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT)
 \item 
 \mbox{\Hypertarget{namespaceplayer2_a70135f2d915e69537aacd2ecca420a9e}\label{namespaceplayer2_a70135f2d915e69537aacd2ecca420a9e}} 
 int {\bfseries data} = 0
@@ -28,7 +34,7 @@ int {\bfseries data} = 0
 {\bfseries board} = \hyperlink{class_board_1_1_board}{Board}(height,width,mines)
 \item 
 \mbox{\Hypertarget{namespaceplayer2_ae13161ccd361fd36c6cbd757f33d639b}\label{namespaceplayer2_ae13161ccd361fd36c6cbd757f33d639b}} 
-{\bfseries temp\+Cell} = send\+\_\+comm(\char`\"{}True\char`\"{},client\+Socket,S\+E\+R\+V\+E\+R\+\_\+\+I\+N\+FO,True)
+{\bfseries temp\+Cell} = send\+\_\+comm(\char`\"{}True\char`\"{},client\+Socket,L\+A\+N\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+I\+N\+FO,True)
 \item 
 \mbox{\Hypertarget{namespaceplayer2_a025745245d0584f1418eb0898b79057a}\label{namespaceplayer2_a025745245d0584f1418eb0898b79057a}} 
 {\bfseries new\+Cell} = convert\+\_\+dictionary\+\_\+to\+\_\+cell(temp\+Cell)

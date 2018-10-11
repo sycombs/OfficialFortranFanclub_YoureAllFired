@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_o_f_f___network_8py" kind="file" language="Python">
+    <compoundname>OFF_Network.py</compoundname>
+    <innernamespace refid="namespace_o_f_f___network">OFF_Network</innernamespace>
+    <innernamespace refid="namespacesocket">socket</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespace_o_f_f___network" refkind="compound"><highlight class="stringliteral">&quot;&quot;&quot;@package<sp/>docstring</highlight></codeline>
+<codeline lineno="2"><highlight class="stringliteral">Official<sp/>Fortran<sp/>Fanclub<sp/>Network<sp/>Module</highlight></codeline>
+<codeline lineno="3"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="4"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Socket<sp/>allows<sp/>us<sp/>to<sp/>create<sp/>and<sp/>deal<sp/>with<sp/>networks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>socket<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">#<sp/>I<sp/>don&apos;t<sp/>like<sp/>this...<sp/>I<sp/>wanted<sp/>to<sp/>keep<sp/>things<sp/>separate,<sp/>but<sp/>time<sp/>is<sp/>off</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">#<sp/>the<sp/>essence<sp/>and<sp/>not<sp/>doing<sp/>this<sp/>is<sp/>sort<sp/>of<sp/>annoying<sp/>:(</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>OFF_Data<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Get<sp/>and<sp/>print<sp/>the<sp/>local<sp/>network<sp/>address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">localAddress<sp/>=<sp/>gethostbyname(gethostname())</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">#SERVER_ADDRESS<sp/>=<sp/>&apos;127.0.0.1&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">SERVER_PORT<sp/><sp/><sp/><sp/>=<sp/>12000</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">SERVER_INFO<sp/>=<sp/>(localAddress,<sp/>SERVER_PORT)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;&apos;&apos;<sp/>NETWORK<sp/>COMMUNICATION<sp/>FUNCTIONS<sp/>&apos;&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespace_o_f_f___network_1a0ab8439ad8255392538b5966e5168506" kindref="member">send_byte_data</ref>(byteData,<sp/>sourceSocket,<sp/>destination):</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="24"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>send_byte_data()<sp/>sends<sp/>&lt;type:<sp/>bytes&gt;<sp/>to<sp/>some<sp/>destination.<sp/>It<sp/>does<sp/>not</highlight></codeline>
+<codeline lineno="25"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>accept<sp/>return<sp/>data</highlight></codeline>
+<codeline lineno="26"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sourceSocket.sendto(byteData,<sp/>destination)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">except</highlight><highlight class="normal"><sp/>Exception<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>e:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;ERROR<sp/>IN<sp/>send_byte_data&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;CAUSED<sp/>BY:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>str(byteData))</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(e)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespace_o_f_f___network_1ad4c88e602c445d2b5a4a32564decf49c" kindref="member">send_string_data</ref>(strData,<sp/>sourceSocket,<sp/>destination):</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="36"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>send_string_data()<sp/>sends<sp/>&lt;type:<sp/>string&gt;<sp/>to<sp/>some<sp/>destination.<sp/>It<sp/>does<sp/>not</highlight></codeline>
+<codeline lineno="37"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>accept<sp/>return<sp/>data</highlight></codeline>
+<codeline lineno="38"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sourceSocket.send(strData,<sp/>destination)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">except</highlight><highlight class="normal"><sp/>Exception<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>e:</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;ERROR<sp/>IN<sp/>send_string_data&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;CAUSED<sp/>BY:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>str(strData))</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(e)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespace_o_f_f___network_1a07ee3bf5d20771b38ba37bc09a63988b" kindref="member">send_comm</ref>(data,<sp/>sourceSocket,<sp/>destination,<sp/>requiresResponse<sp/>=<sp/>None):</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="49"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>send_comm()<sp/>sends<sp/>a<sp/>&lt;type:<sp/>Generic&gt;<sp/>message<sp/>to<sp/>some<sp/>destination<sp/>and<sp/>then</highlight></codeline>
+<codeline lineno="50"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>(for<sp/>my<sp/>sake)<sp/>prints<sp/>out<sp/>the<sp/>sender&apos;s<sp/>response</highlight></codeline>
+<codeline lineno="51"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="52"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>I<sp/>say<sp/>for<sp/>my<sp/>sake<sp/>because<sp/>it<sp/>means<sp/>I<sp/>don&apos;t<sp/>want<sp/>to<sp/>deal<sp/>with<sp/>craziness<sp/>again</highlight></codeline>
+<codeline lineno="53"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sourceSocket.sendto(data.encode(),<sp/>destination)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Return<sp/>the<sp/>response.<sp/>We<sp/>keep<sp/>senderAddress<sp/>because...<sp/>...<sp/>...!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#print(&quot;WAITING<sp/>FOR<sp/>A<sp/>RESPONSE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>requiresResponse:</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>response,<sp/>senderAddress<sp/>=<sp/>sourceSocket.recvfrom(2048)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#print(&quot;GOT<sp/>A<sp/>RESPONSE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>response</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">except</highlight><highlight class="normal"><sp/>Exception<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>e:</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">raise</highlight><highlight class="normal"><sp/>e</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;&apos;&apos;<sp/>I<sp/>realized<sp/>it&apos;ll<sp/>quickly<sp/>get<sp/>very<sp/>annoying<sp/>to<sp/>manually<sp/>(de)serialize<sp/>data</highlight></codeline>
+<codeline lineno="68"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>so<sp/>often<sp/>so...<sp/>use<sp/>this<sp/>when<sp/>you<sp/>don&apos;t<sp/>want<sp/>to<sp/>do<sp/>all<sp/>of<sp/>that</highlight></codeline>
+<codeline lineno="69"><highlight class="stringliteral">&apos;&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;&apos;&apos;</highlight></codeline>
+<codeline lineno="71"><highlight class="stringliteral">def<sp/>nice_send_comm(rawData,<sp/>sourceSocket,<sp/>destination):</highlight></codeline>
+<codeline lineno="72"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="73"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>send_raw_comm()<sp/>serializes<sp/>and<sp/>then<sp/>sends<sp/>data<sp/>using...<sp/>serialize_data<sp/>and</highlight></codeline>
+<codeline lineno="74"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>send_comm</highlight></codeline>
+<codeline lineno="75"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="76"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>data<sp/>=<sp/>serialize_data(rawData)</highlight></codeline>
+<codeline lineno="77"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="78"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>try:</highlight></codeline>
+<codeline lineno="79"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Send<sp/>the<sp/>data</highlight></codeline>
+<codeline lineno="80"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#sourceSocket.sendto(data,<sp/>destination)</highlight></codeline>
+<codeline lineno="81"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>send_comm(data,<sp/>sourceSocket,<sp/>destination)</highlight></codeline>
+<codeline lineno="82"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="83"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Return<sp/>the<sp/>response.<sp/>We<sp/>keep<sp/>senderAddress<sp/>because...<sp/>...<sp/>...!</highlight></codeline>
+<codeline lineno="84"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#response,<sp/>senderAddress<sp/>=<sp/>sourceSocket.recvfrom(2048)</highlight></codeline>
+<codeline lineno="85"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>deserialize_data(response)</highlight></codeline>
+<codeline lineno="86"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="87"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>except<sp/>Exception<sp/>as<sp/>e:</highlight></codeline>
+<codeline lineno="88"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(e)</highlight></codeline>
+<codeline lineno="89"><highlight class="stringliteral">&apos;&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="OFF_Network.py"/>
+  </compounddef>
+</doxygen>
